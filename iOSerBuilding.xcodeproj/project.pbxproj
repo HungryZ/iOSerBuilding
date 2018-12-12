@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06B3E3C9902480B5108F1E60 /* libPods-iOSerBuilding.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B853B922B0B24DE3439D5A82 /* libPods-iOSerBuilding.a */; };
 		33C7572321C0BA1A00B11706 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7572221C0BA1A00B11706 /* AppDelegate.m */; };
 		33C7572621C0BA1A00B11706 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7572521C0BA1A00B11706 /* ViewController.m */; };
 		33C7572921C0BA1A00B11706 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33C7572721C0BA1A00B11706 /* Main.storyboard */; };
@@ -51,6 +52,9 @@
 		33C7574121C0BA1B00B11706 /* iOSerBuildingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSerBuildingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33C7574521C0BA1B00B11706 /* iOSerBuildingUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSerBuildingUITests.m; sourceTree = "<group>"; };
 		33C7574721C0BA1B00B11706 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66BF80B4859833650A1175BD /* Pods-iOSerBuilding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSerBuilding.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSerBuilding/Pods-iOSerBuilding.debug.xcconfig"; sourceTree = "<group>"; };
+		B178817138B031B8C485B1FA /* Pods-iOSerBuilding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSerBuilding.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSerBuilding/Pods-iOSerBuilding.release.xcconfig"; sourceTree = "<group>"; };
+		B853B922B0B24DE3439D5A82 /* libPods-iOSerBuilding.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSerBuilding.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06B3E3C9902480B5108F1E60 /* libPods-iOSerBuilding.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1406175019A37AF76F67F7C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B853B922B0B24DE3439D5A82 /* libPods-iOSerBuilding.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		17EAAE4D42382EF8BAF7993E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				66BF80B4859833650A1175BD /* Pods-iOSerBuilding.debug.xcconfig */,
+				B178817138B031B8C485B1FA /* Pods-iOSerBuilding.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		33C7571521C0BA1A00B11706 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +107,8 @@
 				33C7573921C0BA1B00B11706 /* iOSerBuildingTests */,
 				33C7574421C0BA1B00B11706 /* iOSerBuildingUITests */,
 				33C7571F21C0BA1A00B11706 /* Products */,
+				17EAAE4D42382EF8BAF7993E /* Pods */,
+				1406175019A37AF76F67F7C2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,9 +163,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 33C7574A21C0BA1B00B11706 /* Build configuration list for PBXNativeTarget "iOSerBuilding" */;
 			buildPhases = (
+				FF6A9815C4A53FFEB90AB3D8 /* [CP] Check Pods Manifest.lock */,
 				33C7571A21C0BA1A00B11706 /* Sources */,
 				33C7571B21C0BA1A00B11706 /* Frameworks */,
 				33C7571C21C0BA1A00B11706 /* Resources */,
+				F352F0DB2293210D58FB43B6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -255,6 +281,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F352F0DB2293210D58FB43B6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-iOSerBuilding/Pods-iOSerBuilding-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSerBuilding/Pods-iOSerBuilding-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF6A9815C4A53FFEB90AB3D8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOSerBuilding-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		33C7571A21C0BA1A00B11706 /* Sources */ = {
@@ -432,6 +505,7 @@
 		};
 		33C7574B21C0BA1B00B11706 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66BF80B4859833650A1175BD /* Pods-iOSerBuilding.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -448,6 +522,7 @@
 		};
 		33C7574C21C0BA1B00B11706 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B178817138B031B8C485B1FA /* Pods-iOSerBuilding.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
