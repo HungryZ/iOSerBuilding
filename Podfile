@@ -10,6 +10,7 @@ targetsArray.each do |t|
         pod 'MJRefresh'
         pod 'MJExtension'
         pod 'CYLTabBarController'
+        pod 'OHMySQL'
     end
     
 end

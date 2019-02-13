@@ -2,6 +2,18 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:iOSerBuilding/Main/Core Data/Student+CoreDataClass.h">
+   </FileRef>
+   <FileRef
+      location = "group:iOSerBuilding/Main/Core Data/Student+CoreDataClass.m">
+   </FileRef>
+   <FileRef
+      location = "group:iOSerBuilding/Main/Core Data/Student+CoreDataProperties.h">
+   </FileRef>
+   <FileRef
+      location = "group:iOSerBuilding/Main/Core Data/Student+CoreDataProperties.m">
+   </FileRef>
+   <FileRef
       location = "group:iOSerBuilding.xcodeproj">
    </FileRef>
    <FileRef
