@@ -14,6 +14,11 @@
 		335529712212AA7D0027C0A1 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 335529702212AA7D0027C0A1 /* HomeViewController.m */; };
 		335529752212AF3C0027C0A1 /* BezierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 335529742212AF3C0027C0A1 /* BezierViewController.m */; };
 		335529782212B78B0027C0A1 /* BezierView.m in Sources */ = {isa = PBXBuildFile; fileRef = 335529772212B78B0027C0A1 /* BezierView.m */; };
+		335AC3C2221519C800D5470A /* AnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 335AC3C1221519C800D5470A /* AnimationViewController.m */; };
+		335AC3C622156A8A00D5470A /* TransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 335AC3C522156A8A00D5470A /* TransitionViewController.m */; };
+		335AC3D32215709100D5470A /* 2.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 335AC3CF2215709100D5470A /* 2.JPG */; };
+		335AC3D52215709100D5470A /* 0.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 335AC3D12215709100D5470A /* 0.JPG */; };
+		335AC3D62215709100D5470A /* 1.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 335AC3D22215709100D5470A /* 1.JPG */; };
 		33711B3121C7783C00D69E0C /* CoreDataTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33711B3021C7783C00D69E0C /* CoreDataTestViewController.m */; };
 		33C7572321C0BA1A00B11706 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7572221C0BA1A00B11706 /* AppDelegate.m */; };
 		33C7572921C0BA1A00B11706 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33C7572721C0BA1A00B11706 /* Main.storyboard */; };
@@ -57,6 +62,13 @@
 		335529742212AF3C0027C0A1 /* BezierViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BezierViewController.m; sourceTree = "<group>"; };
 		335529762212B78B0027C0A1 /* BezierView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BezierView.h; sourceTree = "<group>"; };
 		335529772212B78B0027C0A1 /* BezierView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BezierView.m; sourceTree = "<group>"; };
+		335AC3C0221519C800D5470A /* AnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationViewController.h; sourceTree = "<group>"; };
+		335AC3C1221519C800D5470A /* AnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationViewController.m; sourceTree = "<group>"; };
+		335AC3C422156A8A00D5470A /* TransitionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransitionViewController.h; sourceTree = "<group>"; };
+		335AC3C522156A8A00D5470A /* TransitionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransitionViewController.m; sourceTree = "<group>"; };
+		335AC3CF2215709100D5470A /* 2.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.JPG; sourceTree = "<group>"; };
+		335AC3D12215709100D5470A /* 0.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.JPG; sourceTree = "<group>"; };
+		335AC3D22215709100D5470A /* 1.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.JPG; sourceTree = "<group>"; };
 		33711B2F21C7783C00D69E0C /* CoreDataTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataTestViewController.h; sourceTree = "<group>"; };
 		33711B3021C7783C00D69E0C /* CoreDataTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataTestViewController.m; sourceTree = "<group>"; };
 		33C7571E21C0BA1A00B11706 /* iOSerBuilding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSerBuilding.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,6 +194,27 @@
 			path = Bezier;
 			sourceTree = "<group>";
 		};
+		335AC3BF221519AF00D5470A /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				335AC3C0221519C800D5470A /* AnimationViewController.h */,
+				335AC3C1221519C800D5470A /* AnimationViewController.m */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		335AC3C322156A7000D5470A /* CATransition */ = {
+			isa = PBXGroup;
+			children = (
+				335AC3D12215709100D5470A /* 0.JPG */,
+				335AC3CF2215709100D5470A /* 2.JPG */,
+				335AC3D22215709100D5470A /* 1.JPG */,
+				335AC3C422156A8A00D5470A /* TransitionViewController.h */,
+				335AC3C522156A8A00D5470A /* TransitionViewController.m */,
+			);
+			path = CATransition;
+			sourceTree = "<group>";
+		};
 		33C7571521C0BA1A00B11706 = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +290,8 @@
 				3341736521C3B3E1008B0C90 /* Core Data */,
 				333F592C21D75EAF0081132C /* ScrollWithMasonry */,
 				335529722212AF2A0027C0A1 /* Bezier */,
+				335AC3BF221519AF00D5470A /* Animation */,
+				335AC3C322156A7000D5470A /* CATransition */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -374,9 +409,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				335AC3D52215709100D5470A /* 0.JPG in Resources */,
 				33C7572E21C0BA1B00B11706 /* LaunchScreen.storyboard in Resources */,
 				33C7572B21C0BA1B00B11706 /* Assets.xcassets in Resources */,
+				335AC3D62215709100D5470A /* 1.JPG in Resources */,
 				33C7572921C0BA1A00B11706 /* Main.storyboard in Resources */,
+				335AC3D32215709100D5470A /* 2.JPG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,10 +489,12 @@
 				3341736821C3B5C0008B0C90 /* StudentModel.xcdatamodeld in Sources */,
 				33711B3121C7783C00D69E0C /* CoreDataTestViewController.m in Sources */,
 				33C7573121C0BA1B00B11706 /* main.m in Sources */,
+				335AC3C2221519C800D5470A /* AnimationViewController.m in Sources */,
 				33C7575B21C0E96D00B11706 /* ScrollViewWithMasonryController.m in Sources */,
 				33C7572321C0BA1A00B11706 /* AppDelegate.m in Sources */,
 				335529752212AF3C0027C0A1 /* BezierViewController.m in Sources */,
 				333F593021D75EE50081132C /* MySQLTestViewController.m in Sources */,
+				335AC3C622156A8A00D5470A /* TransitionViewController.m in Sources */,
 				335529782212B78B0027C0A1 /* BezierView.m in Sources */,
 				33C7575821C0E0A000B11706 /* BaseTabBarManager.m in Sources */,
 				3343CBE82214091500C41B3E /* BezierDropView.m in Sources */,

@@ -9,6 +9,8 @@
 
 #import "HomeViewController.h"
 #import "BezierViewController.h"
+#import "AnimationViewController.h"
+#import "TransitionViewController.h"
 
 @interface HomeViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -48,7 +50,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UIViewController * pushedVC = self.dataArray[indexPath.row][@"controller"];
+    UIViewController * pushedVC = [self.dataArray[indexPath.row][@"controller"] new];
+    pushedVC.view.backgroundColor = [UIColor whiteColor];
+    pushedVC.hidesBottomBarWhenPushed = YES;
     pushedVC.title = self.dataArray[indexPath.row][@"title"];
     [self.navigationController pushViewController:pushedVC animated:YES];
 }
@@ -60,7 +64,7 @@
         _mainTableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
         _mainTableView.delegate = self;
         _mainTableView.dataSource = self;
-        _mainTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+//        _mainTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         
         [_mainTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellID];
     }
@@ -72,7 +76,15 @@
         _dataArray = @[
                        @{
                            @"title" : @"Bezier绘图",
-                           @"controller" : [BezierViewController new],
+                           @"controller" : [BezierViewController class],
+                           },
+                       @{
+                           @"title" : @"动画",
+                           @"controller" : [AnimationViewController class],
+                           },
+                       @{
+                           @"title" : @"转场动画",
+                           @"controller" : [TransitionViewController class],
                            },
                        ];
     }

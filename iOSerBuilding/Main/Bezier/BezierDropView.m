@@ -24,7 +24,6 @@
     UIBezierPath * path = [UIBezierPath bezierPath];
     [path moveToPoint:CGPointMake(0, 0)];
     [path addQuadCurveToPoint:CGPointMake(ScreenWidth, 0) controlPoint:CGPointMake(ScreenWidth / 2, -_offsetY * 2)];
-    NSLog(@"%f", _offsetY);
     [[UIColor orangeColor] set];
     [path closePath];
     [path fill];
