@@ -21,7 +21,7 @@
 // 状态栏高度
 #define StatusBarHeight                     [[UIApplication sharedApplication] statusBarFrame].size.height
 // 导航栏高度
-#define NaviBarHeight                        (StatusBarHeight + 44.0)
+#define NaviBarHeight                       (StatusBarHeight + 44.0)
 // 底部TabBar高度
 #define TabBarHeight                        (StatusBarHeight > 21.0 ? 83.0 : 49.0)
 

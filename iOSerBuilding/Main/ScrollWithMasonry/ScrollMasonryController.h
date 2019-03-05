@@ -1,5 +1,5 @@
 //
-//  ScrollViewWithMasonryController.h
+//  ScrollMasonryController.h
 //  iOSerBuilding
 //
 //  Created by 张海川 on 2018/12/12.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ScrollViewWithMasonryController : UIViewController
+@interface ScrollMasonryController : UIViewController
 
 @end
 

@@ -11,6 +11,7 @@
 #import "BezierViewController.h"
 #import "AnimationViewController.h"
 #import "TransitionViewController.h"
+#import "ScrollMasonryController.h"
 
 @interface HomeViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -85,6 +86,10 @@
                        @{
                            @"title" : @"转场动画",
                            @"controller" : [TransitionViewController class],
+                           },
+                       @{
+                           @"title" : @"Scroll Masonry",
+                           @"controller" : [ScrollMasonryController class],
                            },
                        ];
     }

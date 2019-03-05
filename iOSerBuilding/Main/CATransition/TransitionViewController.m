@@ -5,11 +5,16 @@
 //  Created by 张海川 on 2019/2/14.
 //
 
+#define CellID @"cell"
+
 #import "TransitionViewController.h"
+#import "ViewTransitionController.h"
 
-@interface TransitionViewController ()
+@interface TransitionViewController () <UITableViewDelegate, UITableViewDataSource>
 
-@property (strong, nonatomic) UIImageView *imageV;
+@property (nonatomic, strong) NSArray<NSDictionary *> * dataArray;
+
+@property (nonatomic, strong) UITableView * mainTableView;
 
 @end
 
@@ -17,67 +22,62 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
     
-    self.imageV = [UIImageView new];
-    self.imageV.image = [UIImage imageNamed:@"0.JPG"];
-    self.imageV.userInteractionEnabled = YES;
-    self.imageV.contentMode = UIViewContentModeScaleAspectFill;
-    [self.view addSubview:self.imageV];
-    [self.imageV mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.view addSubview:self.mainTableView];
+    [self.mainTableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(0);
     }];
-    //添加手势
-    UISwipeGestureRecognizer *leftSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
-    leftSwipe.direction = UISwipeGestureRecognizerDirectionLeft;
-    [self.imageV addGestureRecognizer:leftSwipe];
-    
-    UISwipeGestureRecognizer *rightSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
-    
-    rightSwipe.direction = UISwipeGestureRecognizerDirectionRight;
-    [self.imageV addGestureRecognizer:rightSwipe];
-    
 }
 
-static int _imageIndex = 0;
-- (void)swipe:(UISwipeGestureRecognizer *)swipe {
-    //转场代码与转场动画必须得在同一个方法当中.
-    NSString *dir = nil;
-    if (swipe.direction == UISwipeGestureRecognizerDirectionLeft) {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.dataArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:CellID forIndexPath:indexPath];
+    
+    cell.accessoryType = 1;
+    cell.selectionStyle = 0;
+    cell.textLabel.text = self.dataArray[indexPath.row][@"title"];
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UIViewController * pushedVC = [self.dataArray[indexPath.row][@"controller"] new];
+    pushedVC.view.backgroundColor = [UIColor whiteColor];
+    pushedVC.hidesBottomBarWhenPushed = YES;
+    pushedVC.title = self.dataArray[indexPath.row][@"title"];
+    [self.navigationController pushViewController:pushedVC animated:YES];
+}
+
+#pragma mark ----------------Init
+
+- (UITableView *)mainTableView {
+    if (!_mainTableView) {
+        _mainTableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
+        _mainTableView.delegate = self;
+        _mainTableView.dataSource = self;
         
-        _imageIndex++;
-        if (_imageIndex > 3) {
-            _imageIndex = 0;
-        }
-        NSString *imageName = [NSString stringWithFormat:@"%d.JPG",_imageIndex];
-        self.imageV.image = [UIImage imageNamed:imageName];
-        
-        dir = @"fromRight";
-    }else if (swipe.direction == UISwipeGestureRecognizerDirectionRight) {
-        
-        _imageIndex--;
-        if (_imageIndex < 0) {
-            _imageIndex = 3;
-        }
-        NSString *imageName = [NSString stringWithFormat:@"%d.JPG",_imageIndex];
-        self.imageV.image = [UIImage imageNamed:imageName];
-        
-        dir = @"fromLeft";
+        [_mainTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellID];
     }
-    
-    //添加动画
-    CATransition *anim = [CATransition animation];
-    //设置转场类型
-    anim.type = @"cube";
-    //设置转场的方向
-    anim.subtype = dir;
-    
-    anim.duration = 0.5;
-    //动画从哪个点开始
-    //    anim.startProgress = 0.2;
-    //    anim.endProgress = 0.3;
-    
-    [self.imageV.layer addAnimation:anim forKey:nil];
-    
+    return _mainTableView;
+}
+
+- (NSArray *)dataArray {
+    if (!_dataArray) {
+        _dataArray = @[
+                       @{
+                           @"title" : @"View转场",
+                           @"controller" : [ViewTransitionController class],
+                           },
+                       ];
+    }
+    return _dataArray;
 }
 
 @end

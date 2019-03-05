@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		06B3E3C9902480B5108F1E60 /* libPods-iOSerBuilding.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B853B922B0B24DE3439D5A82 /* libPods-iOSerBuilding.a */; };
+		331C32F6222E223F00CB5F6C /* ScrollMasonryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7575A21C0E96D00B11706 /* ScrollMasonryController.m */; };
 		333F593021D75EE50081132C /* MySQLTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 333F592F21D75EE50081132C /* MySQLTestViewController.m */; };
 		3341736821C3B5C0008B0C90 /* StudentModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3341736621C3B5C0008B0C90 /* StudentModel.xcdatamodeld */; };
 		3343CBE82214091500C41B3E /* BezierDropView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3343CBE72214091500C41B3E /* BezierDropView.m */; };
@@ -28,7 +29,9 @@
 		33C7573B21C0BA1B00B11706 /* iOSerBuildingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7573A21C0BA1B00B11706 /* iOSerBuildingTests.m */; };
 		33C7574621C0BA1B00B11706 /* iOSerBuildingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7574521C0BA1B00B11706 /* iOSerBuildingUITests.m */; };
 		33C7575821C0E0A000B11706 /* BaseTabBarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7575721C0E0A000B11706 /* BaseTabBarManager.m */; };
-		33C7575B21C0E96D00B11706 /* ScrollViewWithMasonryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7575A21C0E96D00B11706 /* ScrollViewWithMasonryController.m */; };
+		33E343D822169AEB0022A5C9 /* ViewTransitionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E343D722169AEB0022A5C9 /* ViewTransitionController.m */; };
+		33E343DB22169CE20022A5C9 /* XWPresentOneTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E343DA22169CE20022A5C9 /* XWPresentOneTransition.m */; };
+		33E343DE2216A4C80022A5C9 /* PresentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E343DD2216A4C80022A5C9 /* PresentViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,8 +90,14 @@
 		33C7574721C0BA1B00B11706 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33C7575621C0E0A000B11706 /* BaseTabBarManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTabBarManager.h; sourceTree = "<group>"; };
 		33C7575721C0E0A000B11706 /* BaseTabBarManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarManager.m; sourceTree = "<group>"; };
-		33C7575921C0E96D00B11706 /* ScrollViewWithMasonryController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollViewWithMasonryController.h; sourceTree = "<group>"; };
-		33C7575A21C0E96D00B11706 /* ScrollViewWithMasonryController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollViewWithMasonryController.m; sourceTree = "<group>"; };
+		33C7575921C0E96D00B11706 /* ScrollMasonryController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollMasonryController.h; sourceTree = "<group>"; };
+		33C7575A21C0E96D00B11706 /* ScrollMasonryController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollMasonryController.m; sourceTree = "<group>"; };
+		33E343D622169AEB0022A5C9 /* ViewTransitionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewTransitionController.h; sourceTree = "<group>"; };
+		33E343D722169AEB0022A5C9 /* ViewTransitionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewTransitionController.m; sourceTree = "<group>"; };
+		33E343D922169CE20022A5C9 /* XWPresentOneTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XWPresentOneTransition.h; sourceTree = "<group>"; };
+		33E343DA22169CE20022A5C9 /* XWPresentOneTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XWPresentOneTransition.m; sourceTree = "<group>"; };
+		33E343DC2216A4C80022A5C9 /* PresentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PresentViewController.h; sourceTree = "<group>"; };
+		33E343DD2216A4C80022A5C9 /* PresentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PresentViewController.m; sourceTree = "<group>"; };
 		66BF80B4859833650A1175BD /* Pods-iOSerBuilding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSerBuilding.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSerBuilding/Pods-iOSerBuilding.debug.xcconfig"; sourceTree = "<group>"; };
 		B178817138B031B8C485B1FA /* Pods-iOSerBuilding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSerBuilding.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSerBuilding/Pods-iOSerBuilding.release.xcconfig"; sourceTree = "<group>"; };
 		B853B922B0B24DE3439D5A82 /* libPods-iOSerBuilding.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSerBuilding.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,8 +149,8 @@
 		333F592C21D75EAF0081132C /* ScrollWithMasonry */ = {
 			isa = PBXGroup;
 			children = (
-				33C7575921C0E96D00B11706 /* ScrollViewWithMasonryController.h */,
-				33C7575A21C0E96D00B11706 /* ScrollViewWithMasonryController.m */,
+				33C7575921C0E96D00B11706 /* ScrollMasonryController.h */,
+				33C7575A21C0E96D00B11706 /* ScrollMasonryController.m */,
 			);
 			path = ScrollWithMasonry;
 			sourceTree = "<group>";
@@ -211,6 +220,12 @@
 				335AC3D22215709100D5470A /* 1.JPG */,
 				335AC3C422156A8A00D5470A /* TransitionViewController.h */,
 				335AC3C522156A8A00D5470A /* TransitionViewController.m */,
+				33E343D922169CE20022A5C9 /* XWPresentOneTransition.h */,
+				33E343DA22169CE20022A5C9 /* XWPresentOneTransition.m */,
+				33E343D622169AEB0022A5C9 /* ViewTransitionController.h */,
+				33E343D722169AEB0022A5C9 /* ViewTransitionController.m */,
+				33E343DC2216A4C80022A5C9 /* PresentViewController.h */,
+				33E343DD2216A4C80022A5C9 /* PresentViewController.m */,
 			);
 			path = CATransition;
 			sourceTree = "<group>";
@@ -486,11 +501,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				331C32F6222E223F00CB5F6C /* ScrollMasonryController.m in Sources */,
+				33E343D822169AEB0022A5C9 /* ViewTransitionController.m in Sources */,
 				3341736821C3B5C0008B0C90 /* StudentModel.xcdatamodeld in Sources */,
+				33E343DE2216A4C80022A5C9 /* PresentViewController.m in Sources */,
 				33711B3121C7783C00D69E0C /* CoreDataTestViewController.m in Sources */,
 				33C7573121C0BA1B00B11706 /* main.m in Sources */,
 				335AC3C2221519C800D5470A /* AnimationViewController.m in Sources */,
-				33C7575B21C0E96D00B11706 /* ScrollViewWithMasonryController.m in Sources */,
+				33E343DB22169CE20022A5C9 /* XWPresentOneTransition.m in Sources */,
 				33C7572321C0BA1A00B11706 /* AppDelegate.m in Sources */,
 				335529752212AF3C0027C0A1 /* BezierViewController.m in Sources */,
 				333F593021D75EE50081132C /* MySQLTestViewController.m in Sources */,
@@ -670,6 +688,7 @@
 			baseConfigurationReference = 66BF80B4859833650A1175BD /* Pods-iOSerBuilding.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MH5HJ2B6RM;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -681,6 +700,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = OragnizationID.iOSerBuilding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -690,6 +710,7 @@
 			baseConfigurationReference = B178817138B031B8C485B1FA /* Pods-iOSerBuilding.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MH5HJ2B6RM;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -701,6 +722,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = OragnizationID.iOSerBuilding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
