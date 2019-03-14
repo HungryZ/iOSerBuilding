@@ -21,9 +21,6 @@
  简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。
  */
 
-#define kLineW ScreenWidth-10*2
-#define kMargin 10
-
 #import "BezierView.h"
 
 @implementation BezierView

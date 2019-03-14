@@ -12,6 +12,7 @@
 #import "AnimationViewController.h"
 #import "TransitionViewController.h"
 #import "ScrollMasonryController.h"
+#import "RegexViewController.h"
 
 @interface HomeViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -32,6 +33,7 @@
     [self.mainTableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(0);
     }];
+    NSLog(@"%@", self.mainTableView.backgroundColor);
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -41,10 +43,19 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:CellID forIndexPath:indexPath];
-    
     cell.accessoryType = 1;
     cell.selectionStyle = 0;
-    cell.textLabel.text = self.dataArray[indexPath.row][@"title"];
+    
+    NSString * title = self.dataArray[indexPath.row][@"title"];
+#if APPSTATUS == 0
+    title = [title stringByAppendingString:@"    测试"];
+#elif APPSTATUS == 1
+    title = [title stringByAppendingString:@"    正式"];
+#elif APPSTATUS == 2
+    title = [title stringByAppendingString:@"    预发"];
+#endif
+    
+    cell.textLabel.text = title;
     
     return cell;
 }
@@ -52,7 +63,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UIViewController * pushedVC = [self.dataArray[indexPath.row][@"controller"] new];
-    pushedVC.view.backgroundColor = [UIColor whiteColor];
+    pushedVC.view.backgroundColor = self.mainTableView.backgroundColor;
     pushedVC.hidesBottomBarWhenPushed = YES;
     pushedVC.title = self.dataArray[indexPath.row][@"title"];
     [self.navigationController pushViewController:pushedVC animated:YES];
@@ -90,6 +101,10 @@
                        @{
                            @"title" : @"Scroll Masonry",
                            @"controller" : [ScrollMasonryController class],
+                           },
+                       @{
+                           @"title" : @"正则表达式",
+                           @"controller" : [RegexViewController class],
                            },
                        ];
     }
