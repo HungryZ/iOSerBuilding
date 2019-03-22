@@ -93,6 +93,18 @@
 		335AC3D32215709100D5470A /* 2.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 335AC3CF2215709100D5470A /* 2.JPG */; };
 		335AC3D52215709100D5470A /* 0.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 335AC3D12215709100D5470A /* 0.JPG */; };
 		335AC3D62215709100D5470A /* 1.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 335AC3D22215709100D5470A /* 1.JPG */; };
+		335B3BA122420D2200DED730 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 335B3BA022420D2200DED730 /* PageViewController.m */; };
+		335B3BA222420D2200DED730 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 335B3BA022420D2200DED730 /* PageViewController.m */; };
+		335B3BA322420D2200DED730 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 335B3BA022420D2200DED730 /* PageViewController.m */; };
+		335B3BAB2242115B00DED730 /* UIImage+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 335B3BA62242115A00DED730 /* UIImage+Chameleon.m */; };
+		335B3BAC2242115B00DED730 /* UIImage+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 335B3BA62242115A00DED730 /* UIImage+Chameleon.m */; };
+		335B3BAD2242115B00DED730 /* UIImage+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 335B3BA62242115A00DED730 /* UIImage+Chameleon.m */; };
+		335B3BAE2242115B00DED730 /* UIButton+Initializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 335B3BA72242115B00DED730 /* UIButton+Initializer.m */; };
+		335B3BAF2242115B00DED730 /* UIButton+Initializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 335B3BA72242115B00DED730 /* UIButton+Initializer.m */; };
+		335B3BB02242115B00DED730 /* UIButton+Initializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 335B3BA72242115B00DED730 /* UIButton+Initializer.m */; };
+		335B3BB12242115B00DED730 /* UILabel+Initializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 335B3BAA2242115B00DED730 /* UILabel+Initializer.m */; };
+		335B3BB22242115B00DED730 /* UILabel+Initializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 335B3BAA2242115B00DED730 /* UILabel+Initializer.m */; };
+		335B3BB32242115B00DED730 /* UILabel+Initializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 335B3BAA2242115B00DED730 /* UILabel+Initializer.m */; };
 		33711B3121C7783C00D69E0C /* CoreDataTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33711B3021C7783C00D69E0C /* CoreDataTestViewController.m */; };
 		33C7572321C0BA1A00B11706 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7572221C0BA1A00B11706 /* AppDelegate.m */; };
 		33C7572921C0BA1A00B11706 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33C7572721C0BA1A00B11706 /* Main.storyboard */; };
@@ -218,6 +230,14 @@
 		335AC3CF2215709100D5470A /* 2.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.JPG; sourceTree = "<group>"; };
 		335AC3D12215709100D5470A /* 0.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.JPG; sourceTree = "<group>"; };
 		335AC3D22215709100D5470A /* 1.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.JPG; sourceTree = "<group>"; };
+		335B3B9F22420D2200DED730 /* PageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
+		335B3BA022420D2200DED730 /* PageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
+		335B3BA52242115A00DED730 /* UIButton+Initializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Initializer.h"; sourceTree = "<group>"; };
+		335B3BA62242115A00DED730 /* UIImage+Chameleon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Chameleon.m"; sourceTree = "<group>"; };
+		335B3BA72242115B00DED730 /* UIButton+Initializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Initializer.m"; sourceTree = "<group>"; };
+		335B3BA82242115B00DED730 /* UILabel+Initializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Initializer.h"; sourceTree = "<group>"; };
+		335B3BA92242115B00DED730 /* UIImage+Chameleon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Chameleon.h"; sourceTree = "<group>"; };
+		335B3BAA2242115B00DED730 /* UILabel+Initializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Initializer.m"; sourceTree = "<group>"; };
 		33711B2F21C7783C00D69E0C /* CoreDataTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataTestViewController.h; sourceTree = "<group>"; };
 		33711B3021C7783C00D69E0C /* CoreDataTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataTestViewController.m; sourceTree = "<group>"; };
 		33C7571E21C0BA1A00B11706 /* Release.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Release.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -389,6 +409,7 @@
 		3355296D2212AA130027C0A1 /* Expand */ = {
 			isa = PBXGroup;
 			children = (
+				335B3BA42242114D00DED730 /* Category */,
 				3355296E2212AA130027C0A1 /* Macro */,
 			);
 			path = Expand;
@@ -440,6 +461,28 @@
 				33E343DD2216A4C80022A5C9 /* PresentViewController.m */,
 			);
 			path = CATransition;
+			sourceTree = "<group>";
+		};
+		335B3B9E22420D0900DED730 /* PageView */ = {
+			isa = PBXGroup;
+			children = (
+				335B3B9F22420D2200DED730 /* PageViewController.h */,
+				335B3BA022420D2200DED730 /* PageViewController.m */,
+			);
+			path = PageView;
+			sourceTree = "<group>";
+		};
+		335B3BA42242114D00DED730 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				335B3BA52242115A00DED730 /* UIButton+Initializer.h */,
+				335B3BA72242115B00DED730 /* UIButton+Initializer.m */,
+				335B3BA92242115B00DED730 /* UIImage+Chameleon.h */,
+				335B3BA62242115A00DED730 /* UIImage+Chameleon.m */,
+				335B3BA82242115B00DED730 /* UILabel+Initializer.h */,
+				335B3BAA2242115B00DED730 /* UILabel+Initializer.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		33C7571521C0BA1A00B11706 = {
@@ -525,6 +568,7 @@
 				335AC3BF221519AF00D5470A /* Animation */,
 				335AC3C322156A7000D5470A /* CATransition */,
 				3348CCA7223A024F0020F41C /* RegularExpression */,
+				335B3B9E22420D0900DED730 /* PageView */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -941,22 +985,26 @@
 			files = (
 				3348CC722239EC3E0020F41C /* ScrollMasonryController.m in Sources */,
 				3348CCAB223A027F0020F41C /* RegexViewController.m in Sources */,
+				335B3BAC2242115B00DED730 /* UIImage+Chameleon.m in Sources */,
 				3348CC732239EC3E0020F41C /* ViewTransitionController.m in Sources */,
 				3348CC742239EC3E0020F41C /* StudentModel.xcdatamodeld in Sources */,
 				3348CC752239EC3E0020F41C /* PresentViewController.m in Sources */,
 				3348CC762239EC3E0020F41C /* CoreDataTestViewController.m in Sources */,
+				335B3BB22242115B00DED730 /* UILabel+Initializer.m in Sources */,
 				3348CCB0223A27E70020F41C /* NSString+Check.m in Sources */,
 				3348CC772239EC3E0020F41C /* main.m in Sources */,
 				3348CC782239EC3E0020F41C /* AnimationViewController.m in Sources */,
 				3348CC792239EC3E0020F41C /* XWPresentOneTransition.m in Sources */,
 				3348CC7A2239EC3E0020F41C /* AppDelegate.m in Sources */,
 				3348CC7B2239EC3E0020F41C /* BezierViewController.m in Sources */,
+				335B3BAF2242115B00DED730 /* UIButton+Initializer.m in Sources */,
 				3348CC7C2239EC3E0020F41C /* MySQLTestViewController.m in Sources */,
 				3348CC7D2239EC3E0020F41C /* TransitionViewController.m in Sources */,
 				3348CC7E2239EC3E0020F41C /* BezierView.m in Sources */,
 				3348CC7F2239EC3E0020F41C /* BaseTabBarManager.m in Sources */,
 				3348CC802239EC3E0020F41C /* BezierDropView.m in Sources */,
 				3348CC812239EC3E0020F41C /* HomeViewController.m in Sources */,
+				335B3BA222420D2200DED730 /* PageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -966,22 +1014,26 @@
 			files = (
 				331C32F6222E223F00CB5F6C /* ScrollMasonryController.m in Sources */,
 				3348CCAA223A027F0020F41C /* RegexViewController.m in Sources */,
+				335B3BAB2242115B00DED730 /* UIImage+Chameleon.m in Sources */,
 				33E343D822169AEB0022A5C9 /* ViewTransitionController.m in Sources */,
 				3341736821C3B5C0008B0C90 /* StudentModel.xcdatamodeld in Sources */,
 				33E343DE2216A4C80022A5C9 /* PresentViewController.m in Sources */,
 				33711B3121C7783C00D69E0C /* CoreDataTestViewController.m in Sources */,
+				335B3BB12242115B00DED730 /* UILabel+Initializer.m in Sources */,
 				3348CCAF223A27E70020F41C /* NSString+Check.m in Sources */,
 				33C7573121C0BA1B00B11706 /* main.m in Sources */,
 				335AC3C2221519C800D5470A /* AnimationViewController.m in Sources */,
 				33E343DB22169CE20022A5C9 /* XWPresentOneTransition.m in Sources */,
 				33C7572321C0BA1A00B11706 /* AppDelegate.m in Sources */,
 				335529752212AF3C0027C0A1 /* BezierViewController.m in Sources */,
+				335B3BAE2242115B00DED730 /* UIButton+Initializer.m in Sources */,
 				333F593021D75EE50081132C /* MySQLTestViewController.m in Sources */,
 				335AC3C622156A8A00D5470A /* TransitionViewController.m in Sources */,
 				335529782212B78B0027C0A1 /* BezierView.m in Sources */,
 				33C7575821C0E0A000B11706 /* BaseTabBarManager.m in Sources */,
 				3343CBE82214091500C41B3E /* BezierDropView.m in Sources */,
 				335529712212AA7D0027C0A1 /* HomeViewController.m in Sources */,
+				335B3BA122420D2200DED730 /* PageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1007,22 +1059,26 @@
 			files = (
 				33C7E1B422375FD50004BC50 /* ScrollMasonryController.m in Sources */,
 				3348CCAC223A027F0020F41C /* RegexViewController.m in Sources */,
+				335B3BAD2242115B00DED730 /* UIImage+Chameleon.m in Sources */,
 				33C7E1B522375FD50004BC50 /* ViewTransitionController.m in Sources */,
 				33C7E1B622375FD50004BC50 /* StudentModel.xcdatamodeld in Sources */,
 				33C7E1B722375FD50004BC50 /* PresentViewController.m in Sources */,
 				33C7E1B822375FD50004BC50 /* CoreDataTestViewController.m in Sources */,
+				335B3BB32242115B00DED730 /* UILabel+Initializer.m in Sources */,
 				3348CCB1223A27E70020F41C /* NSString+Check.m in Sources */,
 				33C7E1B922375FD50004BC50 /* main.m in Sources */,
 				33C7E1BA22375FD50004BC50 /* AnimationViewController.m in Sources */,
 				33C7E1BB22375FD50004BC50 /* XWPresentOneTransition.m in Sources */,
 				33C7E1BC22375FD50004BC50 /* AppDelegate.m in Sources */,
 				33C7E1BD22375FD50004BC50 /* BezierViewController.m in Sources */,
+				335B3BB02242115B00DED730 /* UIButton+Initializer.m in Sources */,
 				33C7E1BE22375FD50004BC50 /* MySQLTestViewController.m in Sources */,
 				33C7E1BF22375FD50004BC50 /* TransitionViewController.m in Sources */,
 				33C7E1C022375FD50004BC50 /* BezierView.m in Sources */,
 				33C7E1C122375FD50004BC50 /* BaseTabBarManager.m in Sources */,
 				33C7E1C222375FD50004BC50 /* BezierDropView.m in Sources */,
 				33C7E1C322375FD50004BC50 /* HomeViewController.m in Sources */,
+				335B3BA322420D2200DED730 /* PageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

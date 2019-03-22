@@ -28,6 +28,8 @@
 #define ScreenWidth                         [[UIScreen mainScreen] bounds].size.width
 
 #define ScreenHeight                        [[UIScreen mainScreen] bounds].size.height
+// iPhone6 屏幕宽度375
+#define AdaptedWidth(x)                     (ScreenWidth / 375 * (x))
 
 #define ViewWidth(v)                        v.frame.size.width
 

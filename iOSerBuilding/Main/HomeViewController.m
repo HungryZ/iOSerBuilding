@@ -13,6 +13,7 @@
 #import "TransitionViewController.h"
 #import "ScrollMasonryController.h"
 #import "RegexViewController.h"
+#import "PageViewController.h"
 
 @interface HomeViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -33,7 +34,6 @@
     [self.mainTableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(0);
     }];
-    NSLog(@"%@", self.mainTableView.backgroundColor);
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -105,6 +105,10 @@
                        @{
                            @"title" : @"正则表达式",
                            @"controller" : [RegexViewController class],
+                           },
+                       @{
+                           @"title" : @"滑页浏览",
+                           @"controller" : [PageViewController class],
                            },
                        ];
     }

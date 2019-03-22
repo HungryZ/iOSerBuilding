@@ -15,4 +15,9 @@
 
 #import "Masonry.h"
 
+#import "UILabel+Initializer.h"
+#import "UIButton+Initializer.h"
+#import "UIImage+Chameleon.h"
+
+
 #endif /* PrefixHeader_pch */
