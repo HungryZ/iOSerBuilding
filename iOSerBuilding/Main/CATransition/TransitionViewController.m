@@ -27,7 +27,7 @@
     
     [self.view addSubview:self.mainTableView];
     [self.mainTableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(0);
+        make.edges.mas_equalTo(UIEdgeInsetsMake(NaviBarHeight, 0, 0, 0));
     }];
 }
 

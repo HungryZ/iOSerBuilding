@@ -42,11 +42,24 @@
 //    return [BaseTabBarManager sharedManager];
 //}
 
-#pragma mark Init
+#pragma mark - Init
 
 - (CYLTabBarController *)tabBarController {
     if (!_tabBarController) {
         _tabBarController = [CYLTabBarController tabBarControllerWithViewControllers:self.controllersArray tabBarItemsAttributes:self.attributesArray];
+        
+        // 普通状态下的文字属性
+        NSMutableDictionary *normalAttrs = [NSMutableDictionary dictionary];
+        normalAttrs[NSForegroundColorAttributeName] = [UIColor lightGrayColor];
+        
+        // 选中状态下的文字属性
+        NSMutableDictionary *selectedAttrs = [NSMutableDictionary dictionary];
+        selectedAttrs[NSForegroundColorAttributeName] = [UIColor grayColor];
+        
+        // 设置文字属性
+        UITabBarItem *tabBarItem = [UITabBarItem appearance];
+        [tabBarItem setTitleTextAttributes:normalAttrs forState:UIControlStateNormal];
+        [tabBarItem setTitleTextAttributes:selectedAttrs forState:UIControlStateSelected];
     }
     return _tabBarController;
 }
@@ -65,7 +78,8 @@
     if (!_attributesArray) {
         
         NSDictionary *item1 = @{
-                                CYLTabBarItemTitle :@"列表",
+                                CYLTabBarItemTitle : @"列表",
+                                CYLTabBarItemImage : @"home_tab",
                                 };
         
         _attributesArray = @[item1];

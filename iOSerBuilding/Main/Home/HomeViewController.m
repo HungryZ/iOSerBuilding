@@ -14,6 +14,7 @@
 #import "ScrollMasonryController.h"
 #import "RegexViewController.h"
 #import "PageViewController.h"
+#import "APPConfigController.h"
 
 @interface HomeViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -29,10 +30,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
+#if APPSTATUS == 0
+    self.title = @"测试";
+#elif APPSTATUS == 1
+    self.title = @"正式";
+#elif APPSTATUS == 2
+    self.title = @"预发";
+#endif
     
     [self.view addSubview:self.mainTableView];
     [self.mainTableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(0);
+        make.edges.mas_equalTo(UIEdgeInsetsMake(NaviBarHeight, 0, TabBarHeight, 0));
     }];
 }
 
@@ -47,13 +55,6 @@
     cell.selectionStyle = 0;
     
     NSString * title = self.dataArray[indexPath.row][@"title"];
-#if APPSTATUS == 0
-    title = [title stringByAppendingString:@"    测试"];
-#elif APPSTATUS == 1
-    title = [title stringByAppendingString:@"    正式"];
-#elif APPSTATUS == 2
-    title = [title stringByAppendingString:@"    预发"];
-#endif
     
     cell.textLabel.text = title;
     
@@ -109,6 +110,10 @@
                        @{
                            @"title" : @"滑页浏览",
                            @"controller" : [PageViewController class],
+                           },
+                       @{
+                           @"title" : @"应用初始化配置",
+                           @"controller" : [APPConfigController class],
                            },
                        ];
     }

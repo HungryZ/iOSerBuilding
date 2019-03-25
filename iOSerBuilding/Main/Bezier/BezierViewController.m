@@ -26,13 +26,13 @@
     
     [self.view addSubview:self.mainTableView];
     [self.mainTableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(0);
+        make.edges.mas_equalTo(UIEdgeInsetsMake(NaviBarHeight, 0, 0, 0));
     }];
     
     _dropView = [BezierDropView new];
     [self.view addSubview:_dropView];
     [_dropView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(UIEdgeInsetsMake(NaviBarHeight, 0, 0, 0));
+        make.edges.mas_equalTo(self.mainTableView);
     }];
 }
 
@@ -55,7 +55,7 @@
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    _dropView.offsetY = scrollView.contentOffset.y + NaviBarHeight;
+    _dropView.offsetY = scrollView.contentOffset.y;
     [_dropView setNeedsDisplay];
 }
 
