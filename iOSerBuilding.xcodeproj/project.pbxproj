@@ -165,6 +165,9 @@
 		33E343D822169AEB0022A5C9 /* ViewTransitionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E343D722169AEB0022A5C9 /* ViewTransitionController.m */; };
 		33E343DB22169CE20022A5C9 /* XWPresentOneTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E343DA22169CE20022A5C9 /* XWPresentOneTransition.m */; };
 		33E343DE2216A4C80022A5C9 /* PresentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E343DD2216A4C80022A5C9 /* PresentViewController.m */; };
+		6B4D74926A5F6580CC1E1274 /* libPods-Pre.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C5CE5651C96770E638DFC6 /* libPods-Pre.a */; };
+		7F0D2AA3C31A30673EFD7F89 /* libPods-Release.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 34DF162A2ECFF3105D87ED36 /* libPods-Release.a */; };
+		9DAD236760A17BD39C4F2D8E /* libPods-Debug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66DB583E91049DDE126CAA66 /* libPods-Debug.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -272,9 +275,18 @@
 		33E343DA22169CE20022A5C9 /* XWPresentOneTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XWPresentOneTransition.m; sourceTree = "<group>"; };
 		33E343DC2216A4C80022A5C9 /* PresentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PresentViewController.h; sourceTree = "<group>"; };
 		33E343DD2216A4C80022A5C9 /* PresentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PresentViewController.m; sourceTree = "<group>"; };
+		34DF162A2ECFF3105D87ED36 /* libPods-Release.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Release.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66BF80B4859833650A1175BD /* Pods-iOSerBuilding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSerBuilding.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSerBuilding/Pods-iOSerBuilding.debug.xcconfig"; sourceTree = "<group>"; };
+		66DB583E91049DDE126CAA66 /* libPods-Debug.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Debug.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		67C5CE5651C96770E638DFC6 /* libPods-Pre.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Pre.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A1BA29EECC0A7415F11C276 /* Pods-Release.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Release.release.xcconfig"; path = "Pods/Target Support Files/Pods-Release/Pods-Release.release.xcconfig"; sourceTree = "<group>"; };
+		A680C4D0E786F14AE6AE37CE /* Pods-Release.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Release.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Release/Pods-Release.debug.xcconfig"; sourceTree = "<group>"; };
 		B178817138B031B8C485B1FA /* Pods-iOSerBuilding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSerBuilding.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSerBuilding/Pods-iOSerBuilding.release.xcconfig"; sourceTree = "<group>"; };
+		B219DC3BB212916625467C40 /* Pods-Debug.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Debug.release.xcconfig"; path = "Pods/Target Support Files/Pods-Debug/Pods-Debug.release.xcconfig"; sourceTree = "<group>"; };
+		B4C4CDA4AD1EA420053B94D4 /* Pods-Debug.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Debug.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Debug/Pods-Debug.debug.xcconfig"; sourceTree = "<group>"; };
 		B853B922B0B24DE3439D5A82 /* libPods-iOSerBuilding.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSerBuilding.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4154A553847754CC63E1B12 /* Pods-Pre.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pre.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pre/Pods-Pre.release.xcconfig"; sourceTree = "<group>"; };
+		DA5C1D82F0CAF536272611A6 /* Pods-Pre.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pre.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pre/Pods-Pre.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3348CC832239EC3E0020F41C /* libPods-iOSerBuilding.a in Frameworks */,
+				6B4D74926A5F6580CC1E1274 /* libPods-Pre.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06B3E3C9902480B5108F1E60 /* libPods-iOSerBuilding.a in Frameworks */,
+				7F0D2AA3C31A30673EFD7F89 /* libPods-Release.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33C7E1C522375FD50004BC50 /* libPods-iOSerBuilding.a in Frameworks */,
+				9DAD236760A17BD39C4F2D8E /* libPods-Debug.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +338,9 @@
 			isa = PBXGroup;
 			children = (
 				B853B922B0B24DE3439D5A82 /* libPods-iOSerBuilding.a */,
+				66DB583E91049DDE126CAA66 /* libPods-Debug.a */,
+				67C5CE5651C96770E638DFC6 /* libPods-Pre.a */,
+				34DF162A2ECFF3105D87ED36 /* libPods-Release.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -332,6 +350,12 @@
 			children = (
 				66BF80B4859833650A1175BD /* Pods-iOSerBuilding.debug.xcconfig */,
 				B178817138B031B8C485B1FA /* Pods-iOSerBuilding.release.xcconfig */,
+				B4C4CDA4AD1EA420053B94D4 /* Pods-Debug.debug.xcconfig */,
+				B219DC3BB212916625467C40 /* Pods-Debug.release.xcconfig */,
+				DA5C1D82F0CAF536272611A6 /* Pods-Pre.debug.xcconfig */,
+				C4154A553847754CC63E1B12 /* Pods-Pre.release.xcconfig */,
+				A680C4D0E786F14AE6AE37CE /* Pods-Release.debug.xcconfig */,
+				6A1BA29EECC0A7415F11C276 /* Pods-Release.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -352,6 +376,13 @@
 				335529702212AA7D0027C0A1 /* HomeViewController.m */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		3306B37F2248D864001945C4 /* ThirdSDK */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ThirdSDK;
 			sourceTree = "<group>";
 		};
 		333F592C21D75EAF0081132C /* ScrollWithMasonry */ = {
@@ -545,6 +576,7 @@
 				33C7575421C0E01600B11706 /* Main */,
 				3355296D2212AA130027C0A1 /* Expand */,
 				33407F2222312022005259E2 /* Resource */,
+				3306B37F2248D864001945C4 /* ThirdSDK */,
 				33C7575321C0E01600B11706 /* Other */,
 			);
 			path = iOSerBuilding;
@@ -884,7 +916,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-iOSerBuilding-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Pre-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -899,7 +931,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-iOSerBuilding/Pods-iOSerBuilding-resources.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-Pre/Pods-Pre-resources.sh",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -910,7 +942,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSerBuilding/Pods-iOSerBuilding-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pre/Pods-Pre-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		33C7E1B222375FD50004BC50 /* [CP] Check Pods Manifest.lock */ = {
@@ -928,7 +960,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-iOSerBuilding-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Debug-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -943,7 +975,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-iOSerBuilding/Pods-iOSerBuilding-resources.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-Debug/Pods-Debug-resources.sh",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -954,7 +986,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSerBuilding/Pods-iOSerBuilding-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Debug/Pods-Debug-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F352F0DB2293210D58FB43B6 /* [CP] Copy Pods Resources */ = {
@@ -965,7 +997,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-iOSerBuilding/Pods-iOSerBuilding-resources.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-Release/Pods-Release-resources.sh",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -976,7 +1008,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSerBuilding/Pods-iOSerBuilding-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Release/Pods-Release-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FF6A9815C4A53FFEB90AB3D8 /* [CP] Check Pods Manifest.lock */ = {
@@ -994,7 +1026,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-iOSerBuilding-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Release-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1147,7 +1179,7 @@
 /* Begin XCBuildConfiguration section */
 		3348CCA32239EC3E0020F41C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 66BF80B4859833650A1175BD /* Pods-iOSerBuilding.debug.xcconfig */;
+			baseConfigurationReference = DA5C1D82F0CAF536272611A6 /* Pods-Pre.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1156,13 +1188,17 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iOSerBuilding/Other/PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"COCOAPODS=1",
 					"APPSTATUS=2",
+					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Debug copy-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iOSerBuilding/ThirdSDK/FMDevice",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = OragnizationID.iOSerBuilding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1173,7 +1209,7 @@
 		};
 		3348CCA42239EC3E0020F41C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B178817138B031B8C485B1FA /* Pods-iOSerBuilding.release.xcconfig */;
+			baseConfigurationReference = C4154A553847754CC63E1B12 /* Pods-Pre.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1182,13 +1218,17 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iOSerBuilding/Other/PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"COCOAPODS=1",
 					"APPSTATUS=2",
+					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Debug copy-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iOSerBuilding/ThirdSDK/FMDevice",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = OragnizationID.iOSerBuilding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1311,7 +1351,7 @@
 		};
 		33C7574B21C0BA1B00B11706 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 66BF80B4859833650A1175BD /* Pods-iOSerBuilding.debug.xcconfig */;
+			baseConfigurationReference = A680C4D0E786F14AE6AE37CE /* Pods-Release.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1320,13 +1360,17 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iOSerBuilding/Other/PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"COCOAPODS=1",
 					"APPSTATUS=1",
+					"$(inherited)",
 				);
 				INFOPLIST_FILE = iOSerBuilding/Other/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iOSerBuilding/ThirdSDK/FMDevice",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = OragnizationID.iOSerBuilding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1337,7 +1381,7 @@
 		};
 		33C7574C21C0BA1B00B11706 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B178817138B031B8C485B1FA /* Pods-iOSerBuilding.release.xcconfig */;
+			baseConfigurationReference = 6A1BA29EECC0A7415F11C276 /* Pods-Release.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1346,13 +1390,17 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iOSerBuilding/Other/PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"COCOAPODS=1",
 					"APPSTATUS=1",
+					"$(inherited)",
 				);
 				INFOPLIST_FILE = iOSerBuilding/Other/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iOSerBuilding/ThirdSDK/FMDevice",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = OragnizationID.iOSerBuilding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1433,7 +1481,7 @@
 		};
 		33C7E1E522375FD50004BC50 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 66BF80B4859833650A1175BD /* Pods-iOSerBuilding.debug.xcconfig */;
+			baseConfigurationReference = B4C4CDA4AD1EA420053B94D4 /* Pods-Debug.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1442,25 +1490,30 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iOSerBuilding/Other/PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"COCOAPODS=1",
-					"DEBUG=1",
+					"$(inherited)",
 					"APPSTATUS=0",
 				);
 				INFOPLIST_FILE = "iOSerBuilding copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iOSerBuilding/ThirdSDK/FMDevice",
+				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = OragnizationID.iOSerBuilding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		33C7E1E622375FD50004BC50 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B178817138B031B8C485B1FA /* Pods-iOSerBuilding.release.xcconfig */;
+			baseConfigurationReference = B219DC3BB212916625467C40 /* Pods-Debug.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1469,19 +1522,23 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iOSerBuilding/Other/PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"COCOAPODS=1",
-					"DEBUG=1",
+					"$(inherited)",
 					"APPSTATUS=0",
 				);
 				INFOPLIST_FILE = "iOSerBuilding copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iOSerBuilding/ThirdSDK/FMDevice",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = OragnizationID.iOSerBuilding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

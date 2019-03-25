@@ -2,7 +2,7 @@ platform :ios, '8.0'
 #use_frameworks!个别需要用到它，比如reactiveCocoa 或Swift
 
 # ruby grammar
-targetsArray = [‘iOSerBuilding’]
+targetsArray = ['Debug', 'Release', 'Pre']
 targetsArray.each do |t|
     target t do
         pod 'AFNetworking'
