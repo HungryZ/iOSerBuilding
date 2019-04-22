@@ -97,7 +97,6 @@
 		3341736721C3B5C0008B0C90 /* StudentModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StudentModel.xcdatamodel; sourceTree = "<group>"; };
 		3343CBE62214091500C41B3E /* BezierDropView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BezierDropView.h; sourceTree = "<group>"; };
 		3343CBE72214091500C41B3E /* BezierDropView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BezierDropView.m; sourceTree = "<group>"; };
-		3348CCA62239EC3E0020F41C /* Debug copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Debug copy-Info.plist"; path = "/Users/zhanghaichuan/Documents/iOSerBuilding/Debug copy-Info.plist"; sourceTree = "<absolute>"; };
 		3348CCA8223A027F0020F41C /* RegexViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegexViewController.h; sourceTree = "<group>"; };
 		3348CCA9223A027F0020F41C /* RegexViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegexViewController.m; sourceTree = "<group>"; };
 		3348CCAD223A27E70020F41C /* NSString+Check.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Check.h"; sourceTree = "<group>"; };
@@ -143,7 +142,6 @@
 		33C7575921C0E96D00B11706 /* ScrollMasonryController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollMasonryController.h; sourceTree = "<group>"; };
 		33C7575A21C0E96D00B11706 /* ScrollMasonryController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollMasonryController.m; sourceTree = "<group>"; };
 		33C7E1E722375FD50004BC50 /* iOSerBuilding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSerBuilding.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		33C7E1E822375FD60004BC50 /* iOSerBuilding copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "iOSerBuilding copy-Info.plist"; path = "/Users/zhanghaichuan/Documents/iOSerBuilding/iOSerBuilding copy-Info.plist"; sourceTree = "<absolute>"; };
 		33E343D622169AEB0022A5C9 /* ViewTransitionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewTransitionController.h; sourceTree = "<group>"; };
 		33E343D722169AEB0022A5C9 /* ViewTransitionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewTransitionController.m; sourceTree = "<group>"; };
 		33E343D922169CE20022A5C9 /* XWPresentOneTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XWPresentOneTransition.h; sourceTree = "<group>"; };
@@ -382,8 +380,6 @@
 				33C7571F21C0BA1A00B11706 /* Products */,
 				17EAAE4D42382EF8BAF7993E /* Pods */,
 				1406175019A37AF76F67F7C2 /* Frameworks */,
-				33C7E1E822375FD60004BC50 /* iOSerBuilding copy-Info.plist */,
-				3348CCA62239EC3E0020F41C /* Debug copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -645,7 +641,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-iOSerBuilding/Pods-iOSerBuilding-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-iOSerBuilding/Pods-iOSerBuilding-resources.sh",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -656,7 +652,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSerBuilding/Pods-iOSerBuilding-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOSerBuilding/Pods-iOSerBuilding-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -926,7 +922,7 @@
 					"COCOAPODS=1",
 					"DEBUG=1",
 				);
-				INFOPLIST_FILE = "iOSerBuilding copy-Info.plist";
+				INFOPLIST_FILE = iOSerBuilding/Other/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -949,7 +945,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iOSerBuilding/Other/PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "COCOAPODS=1";
-				INFOPLIST_FILE = "iOSerBuilding copy-Info.plist";
+				INFOPLIST_FILE = iOSerBuilding/Other/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -34,17 +34,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-Debug.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-Pre.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-Release.xcscheme</key>
+		<key>Pods-iOSerBuilding.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
