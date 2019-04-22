@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "33C7571D21C0BA1A00B11706"
-               BuildableName = "Release.app"
-               BlueprintName = "Release"
+               BlueprintIdentifier = "33C7E1B122375FD50004BC50"
+               BuildableName = "iOSerBuilding.app"
+               BlueprintName = "iOSerBuilding"
                ReferencedContainer = "container:iOSerBuilding.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,33 +28,13 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "33C7573521C0BA1B00B11706"
-               BuildableName = "iOSerBuildingTests.xctest"
-               BlueprintName = "iOSerBuildingTests"
-               ReferencedContainer = "container:iOSerBuilding.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "33C7574021C0BA1B00B11706"
-               BuildableName = "iOSerBuildingUITests.xctest"
-               BlueprintName = "iOSerBuildingUITests"
-               ReferencedContainer = "container:iOSerBuilding.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "33C7571D21C0BA1A00B11706"
-            BuildableName = "Release.app"
-            BlueprintName = "Release"
+            BlueprintIdentifier = "33C7E1B122375FD50004BC50"
+            BuildableName = "iOSerBuilding.app"
+            BlueprintName = "iOSerBuilding"
             ReferencedContainer = "container:iOSerBuilding.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -75,9 +55,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "33C7571D21C0BA1A00B11706"
-            BuildableName = "Release.app"
-            BlueprintName = "Release"
+            BlueprintIdentifier = "33C7E1B122375FD50004BC50"
+            BuildableName = "iOSerBuilding.app"
+            BlueprintName = "iOSerBuilding"
             ReferencedContainer = "container:iOSerBuilding.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -94,9 +74,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "33C7571D21C0BA1A00B11706"
-            BuildableName = "Release.app"
-            BlueprintName = "Release"
+            BlueprintIdentifier = "33C7E1B122375FD50004BC50"
+            BuildableName = "iOSerBuilding.app"
+            BlueprintName = "iOSerBuilding"
             ReferencedContainer = "container:iOSerBuilding.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

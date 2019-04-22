@@ -4,25 +4,25 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>iOSerBuilding Debug.xcscheme_^#shared#^_</key>
+		<key>iOSerBuilding.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>8</integer>
-		</dict>
-		<key>iOSerBuilding Pre.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>9</integer>
-		</dict>
-		<key>iOSerBuilding Release.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>7</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>3348CC6F2239EC3E0020F41C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>33C7573521C0BA1B00B11706</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>33C7574021C0BA1B00B11706</key>
 		<dict>
 			<key>primary</key>
 			<true/>
