@@ -11,10 +11,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_ENUM(NSUInteger, GradientType) {
-    GradientTypeTopToBottom = 0,//从上到下
-    GradientTypeLeftToRight = 1,//从左到右
-    GradientTypeUpleftToLowright = 2,//左上到右下
-    GradientTypeUprightToLowleft = 3,//右上到左下
+    GradientTypeTopToBottom,            //从上到下
+    GradientTypeLeftToRight,            //从左到右
+    GradientTypeUpleftToLowright,       //左上到右下
+    GradientTypeUprightToLowleft        //右上到左下
     
 };
 

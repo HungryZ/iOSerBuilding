@@ -63,10 +63,6 @@
 
 #define RectSetOrigin(f, x, y)              CGRectMake(x, y, RectWidth(f), RectHeight(f))
 
-#define RGB(r, g, b)                        [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1.0]
-
-#define RGBA(r, g, b, a)                    [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
-
 #define StringFormat(string, args...)       [NSString stringWithFormat:string, args]
 
 #define WS(weakSelf)                        __weak __typeof(&*self) weakSelf = self

@@ -16,6 +16,7 @@
     button.titleLabel.font = [UIFont systemFontOfSize:fontSize];
     [button setTitle:title forState:UIControlStateNormal];
     [button setTitleColor:titleColor forState:UIControlStateNormal];
+    
     if (cornerRadius) {
         button.layer.cornerRadius = cornerRadius;
     }
@@ -38,18 +39,7 @@
 
 + (instancetype)buttonWithThemeTitle:(NSString *)title target:(id)target action:(SEL)action {
     
-    UIButton * button = [self buttonWithType:UIButtonTypeCustom];
-    button.titleLabel.font = [UIFont systemFontOfSize:16.f];
-    [button setTitle:title forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    button.layer.cornerRadius = 5.f;
-    //    button.backgroundColor = ThemeColor;
-    
-    if (action) {
-        [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
-    }
-    
-    return button;
+    return [self buttonWithTitle:title titleColor:[UIColor whiteColor] fontSize:16.f cornerRadius:5.f backgrondColor:ThemeColor target:target action:action];
 }
 
 @end

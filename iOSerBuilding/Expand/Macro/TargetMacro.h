@@ -9,6 +9,6 @@
 #define TargetMacro_h
 
 // 0测试 1正式 2预发
-#define APPSTATUS   2
+#define APPSTATUS   0
 
 #endif /* TargetMacro_h */
