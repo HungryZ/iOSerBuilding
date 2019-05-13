@@ -14,6 +14,10 @@
 		335B3BAD2242115B00DED730 /* UIImage+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 335B3BA62242115A00DED730 /* UIImage+Chameleon.m */; };
 		335B3BB02242115B00DED730 /* UIButton+Initializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 335B3BA72242115B00DED730 /* UIButton+Initializer.m */; };
 		335B3BB32242115B00DED730 /* UILabel+Initializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 335B3BAA2242115B00DED730 /* UILabel+Initializer.m */; };
+		33874EA82282CC270063007C /* CWCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33874EA22282CC270063007C /* CWCarousel.m */; };
+		33874EA92282CC270063007C /* CWFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 33874EA42282CC270063007C /* CWFlowLayout.m */; };
+		33C12C5522826C74002DEEB3 /* BannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C12C5422826C74002DEEB3 /* BannerViewController.m */; };
+		33C12C5822826C82002DEEB3 /* BannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C12C5722826C82002DEEB3 /* BannerView.m */; };
 		33C7573B21C0BA1B00B11706 /* iOSerBuildingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7573A21C0BA1B00B11706 /* iOSerBuildingTests.m */; };
 		33C7574621C0BA1B00B11706 /* iOSerBuildingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7574521C0BA1B00B11706 /* iOSerBuildingUITests.m */; };
 		33C7E1B422375FD50004BC50 /* ScrollMasonryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7575A21C0E96D00B11706 /* ScrollMasonryController.m */; };
@@ -126,6 +130,16 @@
 		335B3BAA2242115B00DED730 /* UILabel+Initializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Initializer.m"; sourceTree = "<group>"; };
 		33711B2F21C7783C00D69E0C /* CoreDataTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataTestViewController.h; sourceTree = "<group>"; };
 		33711B3021C7783C00D69E0C /* CoreDataTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataTestViewController.m; sourceTree = "<group>"; };
+		33874EA22282CC270063007C /* CWCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWCarousel.m; sourceTree = "<group>"; };
+		33874EA32282CC270063007C /* CWCarouselHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWCarouselHeader.h; sourceTree = "<group>"; };
+		33874EA42282CC270063007C /* CWFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWFlowLayout.m; sourceTree = "<group>"; };
+		33874EA52282CC270063007C /* CWCarouselProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWCarouselProtocol.h; sourceTree = "<group>"; };
+		33874EA62282CC270063007C /* CWCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWCarousel.h; sourceTree = "<group>"; };
+		33874EA72282CC270063007C /* CWFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWFlowLayout.h; sourceTree = "<group>"; };
+		33C12C5322826C74002DEEB3 /* BannerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerViewController.h; sourceTree = "<group>"; };
+		33C12C5422826C74002DEEB3 /* BannerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerViewController.m; sourceTree = "<group>"; };
+		33C12C5622826C82002DEEB3 /* BannerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerView.h; sourceTree = "<group>"; };
+		33C12C5722826C82002DEEB3 /* BannerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerView.m; sourceTree = "<group>"; };
 		33C7572121C0BA1A00B11706 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		33C7572221C0BA1A00B11706 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		33C7572821C0BA1A00B11706 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -372,14 +386,39 @@
 		335B3BA42242114D00DED730 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				335B3BA82242115B00DED730 /* UILabel+Initializer.h */,
+				335B3BAA2242115B00DED730 /* UILabel+Initializer.m */,
 				335B3BA52242115A00DED730 /* UIButton+Initializer.h */,
 				335B3BA72242115B00DED730 /* UIButton+Initializer.m */,
 				335B3BA92242115B00DED730 /* UIImage+Chameleon.h */,
 				335B3BA62242115A00DED730 /* UIImage+Chameleon.m */,
-				335B3BA82242115B00DED730 /* UILabel+Initializer.h */,
-				335B3BAA2242115B00DED730 /* UILabel+Initializer.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		33874EA12282CC270063007C /* OC */ = {
+			isa = PBXGroup;
+			children = (
+				33874EA62282CC270063007C /* CWCarousel.h */,
+				33874EA22282CC270063007C /* CWCarousel.m */,
+				33874EA32282CC270063007C /* CWCarouselHeader.h */,
+				33874EA52282CC270063007C /* CWCarouselProtocol.h */,
+				33874EA72282CC270063007C /* CWFlowLayout.h */,
+				33874EA42282CC270063007C /* CWFlowLayout.m */,
+			);
+			path = OC;
+			sourceTree = "<group>";
+		};
+		33C12C5222826C4F002DEEB3 /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				33874EA12282CC270063007C /* OC */,
+				33C12C5322826C74002DEEB3 /* BannerViewController.h */,
+				33C12C5422826C74002DEEB3 /* BannerViewController.m */,
+				33C12C5622826C82002DEEB3 /* BannerView.h */,
+				33C12C5722826C82002DEEB3 /* BannerView.m */,
+			);
+			path = Banner;
 			sourceTree = "<group>";
 		};
 		33C7571521C0BA1A00B11706 = {
@@ -453,6 +492,7 @@
 			isa = PBXGroup;
 			children = (
 				3306B37822488803001945C4 /* Home */,
+				33C12C5222826C4F002DEEB3 /* Banner */,
 				333F592D21D75EC90081132C /* MySQL */,
 				3341736521C3B3E1008B0C90 /* Core Data */,
 				335529722212AF2A0027C0A1 /* Bezier */,
@@ -713,13 +753,17 @@
 				33C7E1B522375FD50004BC50 /* ViewTransitionController.m in Sources */,
 				33C7E1B622375FD50004BC50 /* StudentModel.xcdatamodeld in Sources */,
 				33C7E1B722375FD50004BC50 /* PresentViewController.m in Sources */,
+				33874EA82282CC270063007C /* CWCarousel.m in Sources */,
 				33C7E1B822375FD50004BC50 /* CoreDataTestViewController.m in Sources */,
+				33C12C5822826C82002DEEB3 /* BannerView.m in Sources */,
+				33874EA92282CC270063007C /* CWFlowLayout.m in Sources */,
 				335B3BB32242115B00DED730 /* UILabel+Initializer.m in Sources */,
 				3348CCB1223A27E70020F41C /* NSString+Check.m in Sources */,
 				33C7E1B922375FD50004BC50 /* main.m in Sources */,
 				33C7E1BA22375FD50004BC50 /* AnimationViewController.m in Sources */,
 				33C7E1BB22375FD50004BC50 /* XWPresentOneTransition.m in Sources */,
 				33C7E1BC22375FD50004BC50 /* AppDelegate.m in Sources */,
+				33C12C5522826C74002DEEB3 /* BannerViewController.m in Sources */,
 				33C7E1BD22375FD50004BC50 /* BezierViewController.m in Sources */,
 				335B3BB02242115B00DED730 /* UIButton+Initializer.m in Sources */,
 				33C7E1BE22375FD50004BC50 /* MySQLTestViewController.m in Sources */,

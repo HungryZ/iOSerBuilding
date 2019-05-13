@@ -15,6 +15,7 @@
 #import "RegexViewController.h"
 #import "PageViewController.h"
 #import "APPConfigController.h"
+#import "BannerViewController.h"
 
 @interface HomeViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -70,7 +71,7 @@
     [self.navigationController pushViewController:pushedVC animated:YES];
 }
 
-#pragma mark ----------------Init
+#pragma mark - Init
 
 - (UITableView *)mainTableView {
     if (!_mainTableView) {
@@ -114,6 +115,10 @@
                        @{
                            @"title" : @"应用初始化配置",
                            @"controller" : [APPConfigController class],
+                           },
+                       @{
+                           @"title" : @"轮播图",
+                           @"controller" : [BannerViewController class],
                            },
                        ];
     }

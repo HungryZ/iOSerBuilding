@@ -28,7 +28,7 @@
     window.rootViewController = [BaseTabBarManager sharedManager].tabBarController;
     
     self.window = window;
-    [self.window makeKeyWindow];
+    [self.window makeKeyAndVisible];
     
     [self initTD];
     
