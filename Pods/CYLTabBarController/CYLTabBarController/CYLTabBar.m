@@ -2,7 +2,7 @@
 //  CYLTabBar.m
 //  CYLTabBarController
 //
-//  v1.16.0 Created by 微博@iOS程序犭袁 ( http://weibo.com/luohanchenyilong/ ) on 10/20/15.
+//  v1.21.x Created by 微博@iOS程序犭袁 ( http://weibo.com/luohanchenyilong/ ) on 10/20/15.
 //  Copyright © 2018 https://github.com/ChenYilong . All rights reserved.
 //
 
@@ -11,6 +11,8 @@
 #import "CYLTabBarController.h"
 #import "CYLConstants.h"
 #import <objc/runtime.h>
+#import "UIControl+CYLTabBarControllerExtention.h"
+#import "CYLTabBar+CYLTabBarControllerExtention.h"
 
 static void *const CYLTabBarContext = (void*)&CYLTabBarContext;
 
@@ -19,7 +21,7 @@ static void *const CYLTabBarContext = (void*)&CYLTabBarContext;
  *  @param targetClass 要重写的 class
  *  @param targetSelector 要重写的 class 里的实例方法，注意如果该方法不存在于 targetClass 里，则什么都不做
  *  @param implementationBlock 该 block 必须返回一个 block，返回的 block 将被当成 targetSelector 的新实现，所以要在内部自己处理对 super 的调用，以及对当前调用方法的 self 的 class 的保护判断（因为如果 targetClass 的 targetSelector 是继承自父类的，targetClass 内部并没有重写这个方法，则我们这个函数最终重写的其实是父类的 targetSelector，所以会产生预期之外的 class 的影响，例如 targetClass 传进来  UIButton.class，则最终可能会影响到 UIView.class），implementationBlock 的参数里第一个为你要修改的 class，也即等同于 targetClass，第二个参数为你要修改的 selector，也即等同于 targetSelector，第三个参数是 targetSelector 原本的实现，由于 IMP 可以直接当成 C 函数调用，所以可利用它来实现“调用 super”的效果，但由于 targetSelector 的参数个数、参数类型、返回值类型，都会影响 IMP 的调用写法，所以这个调用只能由业务自己写。
- *  解决方案来源声明。该解决方案及所使用的代码，来自于 QMUI iOS(https://github.com/QMUI/QMUI_iOS)。 
+ *  解决方案来源声明。该解决方案及所使用的代码，来自于 QMUI iOS(https://github.com/QMUI/QMUI_iOS)。
  */
 CG_INLINE BOOL
 OverrideImplementation(Class targetClass, SEL targetSelector, id (^implementationBlock)(Class originClass, SEL originCMD, IMP originIMP)) {
@@ -37,7 +39,7 @@ OverrideImplementation(Class targetClass, SEL targetSelector, id (^implementatio
 /** 发布按钮 */
 @property (nonatomic, strong) UIButton<CYLPlusButtonSubclassing> *plusButton;
 @property (nonatomic, assign) CGFloat tabBarItemWidth;
-@property (nonatomic, copy) NSArray *tabBarButtonArray;
+@property (nonatomic, copy) NSArray<UIControl *> *tabBarButtonArray;
 @property (nonatomic, assign, getter=hasAddPlusButton) BOOL addPlusButton;
 
 @end
@@ -52,11 +54,12 @@ static CGFloat const CYLIPhoneXTabbarButtonHeight = 48;
 static CGFloat const CYLIPhoneXTabbarButtonSafeAreaHeight = 35;
 
 + (void)load {
-    /* 这个问题是 iOS 12.1 的问题，只要 UITabBar 是磨砂的，并且 push viewController 时 hidesBottomBarWhenPushed = YES 则手势返回的时候就会触发。(来源于QMUIKit的处理方式)*/
+    /* 这个问题是iOS12.1出现的问题, iOS 12.1.1已修复，只要 UITabBar 是磨砂的，并且 push viewController 时 hidesBottomBarWhenPushed = YES 则手势返回的时候就会触发。(来源于QMUIKit的处理方式)*/
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        if (@available(iOS 12.1, *)) {
-            OverrideImplementation(NSClassFromString(@"UITabBarButton"), @selector(setFrame:), ^id(__unsafe_unretained Class originClass, SEL originCMD, IMP originIMP) {
+        if (CYL_SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"12.1") && CYL_SYSTEM_VERSION_LESS_THAN(@"12.1.1"))  {
+            NSString *tabbarButtonString = [NSString stringWithFormat:@"U%@abB%@utton", @"IT", @"arB"];
+            OverrideImplementation(NSClassFromString(tabbarButtonString), @selector(setFrame:), ^id(__unsafe_unretained Class originClass, SEL originCMD, IMP originIMP) {
                 return ^(UIView *selfObject, CGRect firstArgv) {
                     if ([selfObject isKindOfClass:originClass]) {
                         
@@ -104,7 +107,6 @@ static CGFloat const CYLIPhoneXTabbarButtonSafeAreaHeight = 35;
     }
     _plusButton = plusButton;
     if (!self.hasAddPlusButton) {
-
         NSString *tabBarContext = self.tabBarContext;
         BOOL isFirstAdded = (_plusButton.superview == nil);
         
@@ -158,7 +160,7 @@ static CGFloat const CYLIPhoneXTabbarButtonSafeAreaHeight = 35;
     if (tabBarContext && tabBarContext.length > 0) {
         return tabBarContext;
     }
-   tabBarContext = NSStringFromClass([CYLTabBarController class]);
+    tabBarContext = NSStringFromClass([CYLTabBarController class]);
     return tabBarContext;
 }
 
@@ -172,14 +174,12 @@ static CGFloat const CYLIPhoneXTabbarButtonSafeAreaHeight = 35;
     if (_plusButton  &&  addedToTabBar && isSameContext) {
         return _plusButton;
     }
-
     return nil;
 }
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    NSArray *sortedSubviews = [self sortedSubviews];
-    self.tabBarButtonArray = [self tabBarButtonFromTabBarSubviews:sortedSubviews];
+    self.tabBarButtonArray = [self cyl_originalTabBarButtons];
     if (self.tabBarButtonArray.count == 0) {
         return;
     }
@@ -190,54 +190,73 @@ static CGFloat const CYLIPhoneXTabbarButtonSafeAreaHeight = 35;
     if (!CYLExternPlusButton) {
         return;
     }
+    
     BOOL addedToTabBar = [_plusButton.superview isEqual:self];
     if (!addedToTabBar) {
         CYLTabBarItemWidth = (tabBarWidth) / CYLTabbarItemsCount;
-        [self.tabBarButtonArray enumerateObjectsUsingBlock:^(UIView * _Nonnull childView, NSUInteger buttonIndex, BOOL * _Nonnull stop) {
+        [self.tabBarButtonArray enumerateObjectsUsingBlock:^(UIControl * _Nonnull childView, NSUInteger buttonIndex, BOOL * _Nonnull stop) {
             //仅修改childView的x和宽度,yh值不变
             CGFloat childViewX = buttonIndex * CYLTabBarItemWidth;
-            [self changeXForChildView:childView childViewX:childViewX tabBarItemWidth:CYLTabBarItemWidth];
+            [self changeXForChildView:childView
+                           childViewX:childViewX
+                      tabBarItemWidth:CYLTabBarItemWidth
+                                index:buttonIndex
+             ];
         }];
-        
-    } else {
-        CYLTabBarItemWidth = (tabBarWidth - CYLPlusButtonWidth) / CYLTabbarItemsCount;
-        CGFloat multiplierOfTabBarHeight = [self multiplierOfTabBarHeight:tabBarHeight];
-        CGFloat constantOfPlusButtonCenterYOffset = [self constantOfPlusButtonCenterYOffsetForTabBarHeight:tabBarHeight];
-        _plusButton.center = CGPointMake(tabBarWidth * 0.5, tabBarHeight * multiplierOfTabBarHeight + constantOfPlusButtonCenterYOffset);
-        NSUInteger plusButtonIndex = [self plusButtonIndex];
-        [self.tabBarButtonArray enumerateObjectsUsingBlock:^(UIView * _Nonnull childView, NSUInteger buttonIndex, BOOL * _Nonnull stop) {
-            //调整UITabBarItem的位置
-            CGFloat childViewX;
-            if ([self hasPlusChildViewController]) {
-                if (buttonIndex <= plusButtonIndex) {
-                    childViewX = buttonIndex * CYLTabBarItemWidth;
-                } else {
-                    childViewX = (buttonIndex - 1) * CYLTabBarItemWidth + CYLPlusButtonWidth;
-                }
-            } else {
-                if (buttonIndex >= plusButtonIndex) {
-                    childViewX = buttonIndex * CYLTabBarItemWidth + CYLPlusButtonWidth;
-                } else {
-                    childViewX = buttonIndex * CYLTabBarItemWidth;
-                }
-            }
-            //仅修改childView的x和宽度,yh值不变
-            [self changeXForChildView:childView childViewX:childViewX tabBarItemWidth:CYLTabBarItemWidth];
-        }];
-        //bring the plus button to top
-        [self bringSubviewToFront:_plusButton];
+        return;
     }
+    CYLTabBarItemWidth = (tabBarWidth - CYLPlusButtonWidth) / CYLTabbarItemsCount;
+    CGFloat multiplierOfTabBarHeight = [self multiplierOfTabBarHeight:tabBarHeight];
+    CGFloat constantOfPlusButtonCenterYOffset = [self constantOfPlusButtonCenterYOffsetForTabBarHeight:tabBarHeight];
+    _plusButton.center = CGPointMake(tabBarWidth * 0.5, tabBarHeight * multiplierOfTabBarHeight + constantOfPlusButtonCenterYOffset);
+    NSUInteger plusButtonIndex = [self plusButtonIndex];
+    [self.tabBarButtonArray enumerateObjectsUsingBlock:^(UIControl * _Nonnull childView, NSUInteger buttonIndex, BOOL * _Nonnull stop) {
+        //调整UITabBarItem的位置
+        CGFloat childViewX;
+        CGFloat visiableTabIndex = buttonIndex;
+        CGFloat tabBarItemWidth = CYLTabBarItemWidth;
 
-    self.tabBarItemWidth = CYLTabBarItemWidth;
+        if ([self cyl_hasPlusChildViewController]) {
+            if (buttonIndex <= plusButtonIndex) {
+                childViewX = buttonIndex * CYLTabBarItemWidth;
+            } else {
+                childViewX = (buttonIndex - 1) * CYLTabBarItemWidth + CYLPlusButtonWidth;
+            }
+            if (buttonIndex == plusButtonIndex) {
+                tabBarItemWidth = CYLPlusButtonWidth;
+            }
+        } else {
+            if (buttonIndex >= plusButtonIndex) {
+                childViewX = buttonIndex * CYLTabBarItemWidth + CYLPlusButtonWidth;
+                visiableTabIndex = buttonIndex  + 1;
+            } else {
+                childViewX = buttonIndex * CYLTabBarItemWidth;
+            }
+        }
+       
+        [childView cyl_setTabBarChildViewControllerIndex:buttonIndex];
+        [self changeXForChildView:childView
+                       childViewX:childViewX
+                  tabBarItemWidth:tabBarItemWidth
+                            index:visiableTabIndex
+         ];
+        //仅修改childView的x和宽度,yh值不变
+    }];
+    //bring the plus button to top
+    [self bringSubviewToFront:_plusButton];
 }
 
-- (void)changeXForChildView:(UIView *)childView childViewX:(CGFloat)childViewX tabBarItemWidth:(CGFloat)tabBarItemWidth {
+- (void)changeXForChildView:(UIControl *)childView
+                 childViewX:(CGFloat)childViewX
+            tabBarItemWidth:(CGFloat)tabBarItemWidth
+                      index:(NSUInteger)index {
     //仅修改childView的x和宽度,yh值不变
     childView.frame = CGRectMake(childViewX,
                                  CGRectGetMinY(childView.frame),
                                  tabBarItemWidth,
                                  CGRectGetHeight(childView.frame)
                                  );
+    [childView cyl_setTabBarItemVisibleIndex:index];
 }
 
 #pragma mark -
@@ -260,7 +279,6 @@ static CGFloat const CYLIPhoneXTabbarButtonSafeAreaHeight = 35;
         }
     }
 }
-
 
 - (void)dealloc {
     // KVO反注册
@@ -322,85 +340,39 @@ static CGFloat const CYLIPhoneXTabbarButtonSafeAreaHeight = 35;
     NSUInteger plusButtonIndex;
     if ([[self.plusButton class] respondsToSelector:@selector(indexOfPlusButtonInTabBar)]) {
         plusButtonIndex = [[self.plusButton class] indexOfPlusButtonInTabBar];
-        CGFloat childViewX = plusButtonIndex * CYLTabBarItemWidth;
-        CGFloat tabBarItemWidth = CGRectGetWidth(self.plusButton.frame);
-        [self changeXForChildView:self.plusButton childViewX:childViewX tabBarItemWidth:tabBarItemWidth];
     } else {
         if (CYLTabbarItemsCount % 2 != 0) {
             [NSException raise:NSStringFromClass([CYLTabBarController class]) format:@"If the count of CYLTabbarControllers is odd,you must realizse `+indexOfPlusButtonInTabBar` in your custom plusButton class.【Chinese】如果CYLTabbarControllers的个数是奇数，你必须在你自定义的plusButton中实现`+indexOfPlusButtonInTabBar`，来指定plusButton的位置"];
         }
         plusButtonIndex = CYLTabbarItemsCount * 0.5;
     }
+    CGFloat childViewX = plusButtonIndex * CYLTabBarItemWidth;
+    CGFloat tabBarItemWidth = CGRectGetWidth(self.plusButton.frame);
+    [self changeXForChildView:self.plusButton
+                   childViewX:childViewX
+              tabBarItemWidth:tabBarItemWidth
+                        index:plusButtonIndex
+     ];
     CYLPlusButtonIndex = plusButtonIndex;
     return plusButtonIndex;
 }
 
-/*!
- *  Deal with some trickiness by Apple, You do not need to understand this method, somehow, it works.
- *  NOTE: If the `self.title of ViewController` and `the correct title of tabBarItemsAttributes` are different, Apple will delete the correct tabBarItem from subViews, and then trigger `-layoutSubviews`, therefore subViews will be in disorder. So we need to rearrange them.
- */
-- (NSArray *)sortedSubviews {
-    if (self.subviews.count == 0) {
-        return self.subviews;
-    }
-    NSMutableArray *tabBarButtonArray = [NSMutableArray arrayWithCapacity:self.subviews.count];
-    [self.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        if ([obj cyl_isTabButton]) {
-            [tabBarButtonArray addObject:obj];
-        }
-    }];
-    
-    NSArray *sortedSubviews = [[tabBarButtonArray copy] sortedArrayUsingComparator:^NSComparisonResult(UIView * formerView, UIView * latterView) {
-        CGFloat formerViewX = formerView.frame.origin.x;
-        CGFloat latterViewX = latterView.frame.origin.x;
-        return  (formerViewX > latterViewX) ? NSOrderedDescending : NSOrderedAscending;
-    }];
-    return sortedSubviews;
-}
-
-- (NSArray *)tabBarButtonFromTabBarSubviews:(NSArray *)tabBarSubviews {
-    if (tabBarSubviews.count == 0) {
-        return tabBarSubviews;
-    }
-    NSMutableArray *tabBarButtonMutableArray = [NSMutableArray arrayWithCapacity:tabBarSubviews.count];
-    [tabBarSubviews enumerateObjectsUsingBlock:^(UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        if ([obj cyl_isTabButton]) {
-            [tabBarButtonMutableArray addObject:obj];
-        }
-    }];
-    if ([self hasPlusChildViewController]) {
-        @try {
-            UIControl *control = tabBarButtonMutableArray[CYLPlusButtonIndex];
-            control.userInteractionEnabled = NO;
-            control.hidden = YES;
-        } @catch (NSException *exception) {}
-    }
-    return [tabBarButtonMutableArray copy];
-}
-
-- (BOOL)hasPlusChildViewController {
-    NSString *context = CYLPlusChildViewController.cyl_context;
-    BOOL isSameContext = [context isEqualToString:self.context] && (context && self.context);
-    BOOL isAdded = [[self cyl_tabBarController].viewControllers containsObject:CYLPlusChildViewController];
-    if (CYLPlusChildViewController && isSameContext && isAdded) {
-        return YES;
-    }
-    return NO;
-}
-
 - (void)setupTabImageViewDefaultOffset:(UIView *)tabBarButton {
+    if (self.tabImageViewDefaultOffset > 0) {
+        return;
+    }
     __block BOOL shouldCustomizeImageView = YES;
-    __block CGFloat tabImageViewHeight = 0.f;
     __block CGFloat tabImageViewDefaultOffset = 0.f;
-    CGFloat tabBarHeight = self.frame.size.height;
+    CGFloat tabButtonCenterY = tabBarButton.center.y;
     [tabBarButton.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if ([obj cyl_isTabLabel]) {
             shouldCustomizeImageView = NO;
         }
-        tabImageViewHeight = obj.frame.size.height;
+        CGFloat tabImageViewCenterY = obj.center.y;
+        
         BOOL isTabImageView = [obj cyl_isTabImageView];
         if (isTabImageView) {
-            tabImageViewDefaultOffset = (tabBarHeight - tabImageViewHeight) * 0.5 * 0.5;
+            tabImageViewDefaultOffset = (tabButtonCenterY - tabImageViewCenterY) * 0.5;
         }
         if (isTabImageView && tabImageViewDefaultOffset == 0.f) {
             shouldCustomizeImageView = NO;
@@ -417,7 +389,7 @@ static CGFloat const CYLIPhoneXTabbarButtonSafeAreaHeight = 35;
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
     //1. 边界情况：不能响应点击事件
     
-    BOOL canNotResponseEvent = self.hidden || (self.alpha <= 0.01f) || (self.userInteractionEnabled == NO) || (!self.superview) || self.frame.size.width == 0 || self.frame.size.height == 0;
+    BOOL canNotResponseEvent = self.cyl_canNotResponseEvent;
     if (canNotResponseEvent) {
         return nil;
     }
@@ -438,7 +410,7 @@ static CGFloat const CYLIPhoneXTabbarButtonSafeAreaHeight = 35;
     }
     NSArray *tabBarButtons = self.tabBarButtonArray;
     if (self.tabBarButtonArray.count == 0) {
-        tabBarButtons = [self tabBarButtonFromTabBarSubviews:self.subviews];
+        tabBarButtons = [self cyl_visibleControls];
     }
     for (NSUInteger index = 0; index < tabBarButtons.count; index++) {
         UIView *selectedTabBarButton = tabBarButtons[index];

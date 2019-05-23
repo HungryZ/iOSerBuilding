@@ -11,6 +11,7 @@ targetsArray.each do |t|
         pod 'MJExtension'
         pod 'CYLTabBarController'
         pod 'OHMySQL'
+        pod 'HungryTools'
     end
     
 end
