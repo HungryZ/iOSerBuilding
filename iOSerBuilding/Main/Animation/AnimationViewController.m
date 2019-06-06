@@ -10,7 +10,7 @@
 
 #import "AnimationViewController.h"
 
-@interface AnimationViewController ()
+@interface AnimationViewController () <CAAnimationDelegate>
 
 @property (nonatomic, strong) UIImageView * loadingImgView;
 
@@ -74,13 +74,14 @@
     anim.keyPath = @"position.x";
     anim.toValue = @100;
     anim.duration = 3;
-    anim.repeatCount = MAXFLOAT;
+//    anim.repeatCount = MAXFLOAT;
     //动画提交时,会自动删除动画
     anim.removedOnCompletion = NO;
     //设置动画最后保持状态
     anim.fillMode = kCAFillModeForwards;
+    anim.delegate = self;
     //添加动画对象
-    [view4.layer addAnimation:anim forKey:nil];
+    [view4.layer addAnimation:anim forKey:@"1111"];
     
     
     // 抖动
@@ -183,7 +184,13 @@
     }
 }
 
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
+    
+}
+
 @end
+
+
 
 /*
  Core Animation(核心动画) 中KeyPath的取值
@@ -191,327 +198,4 @@
  链接：https://www.jianshu.com/p/71c880498d7a
  来源：简书
  简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。
- 
- 一、可动画属性
- 1. 几何属性 (Geometry Properties)
- 
- 
- 
- Field Key Path
- Remark
- En Description
- 
- 
- 
- 
- transform.rotation.x
- 按x轴旋转的弧度
- Set to an NSNumber object whose value is the rotation, in radians, in the x axis.
- 
- 
- transform.rotation.y
- 按y轴旋转的弧度
- Set to an NSNumber object whose value is the rotation, in radians, in the y axis.
- 
- 
- transform.rotation.z
- 按z轴旋转的弧度
- Set to an NSNumber object whose value is the rotation, in radians, in the z axis.
- 
- 
- transform.rotation
- 按z轴旋转的弧度, 和transform.rotation.z效果一样
- Set to an NSNumber object whose value is the rotation, in radians, in the z axis. This field is identical to setting the rotation.z field.
- 
- 
- transform.scale.x
- 在x轴按比例放大缩小
- Set to an NSNumber object whose value is the scale factor for the x axis.
- 
- 
- transform.scale.y
- 在x轴按比例放大缩小
- Set to an NSNumber object whose value is the scale factor for the y axis.
- 
- 
- transform.scale.z
- 在z轴按比例放大缩小
- Set to an NSNumber object whose value is the scale factor for the z axis.
- 
- 
- transform.scale
- 按比例放大缩小
- Set to an NSNumber object whose value is the average of all three scale factors.
- 
- 
- transform.translation.x
- 沿x轴平移
- Set to an NSNumber object whose value is the translation factor along the x axis.
- 
- 
- transform.translation.y
- 沿y轴平移
- Set to an NSNumber object whose value is the translation factor along the y axis.
- 
- 
- transform.translation.z
- 沿z轴平移
- Set to an NSNumber object whose value is the translation factor along the z axis.
- 
- 
- transform.translation
- x,y 坐标均发生改变
- Set to an NSValue object containing an NSSize or CGSize data type. That data type indicates the amount to translate in the x and y axis.
- 
- 
- transform
- CATransform3D 4*4矩阵
- 
- 
- 
- bounds
- layer大小
- 
- 
- 
- position
- layer位置
- 
- 
- 
- frame
- 不支持 frme 属性
- computed from the bounds and position and is NOT animatable
- 
- 
- anchorPoint
- 锚点位置
- 
- 
- 
- cornerRadius
- 圆角大小
- 
- 
- 
- zPosition
- z轴位置
- 
- 
- 
- 
- 
- 2.背景属性 (Background Properties)
- 
- 
- 
- Field Key Path
- Remark
- En Description
- 
- 
- 
- 
- backgroundColor
- 背景颜色
- 
- 
- 
- 
- 
- 3.Layer内容 (Layer Content)
- 
- 
- 
- Field Key Path
- Remark
- En Description
- 
- 
- 
- 
- contents
- Layer内容，呈现在背景颜色之上
- 
- 
- 
- contentsRect
- 
- The rectangle, in the unit coordinate space, that defines the portion of the layer’s contents that should be used.
- 
- 
- masksToBounds
- 
- setting the layer’s masksToBounds property to YES does cause the layer to clip to its corner radius
- 
- 
- 
- 4.子Layer内容 (Sublayers Content)
- 
- 
- 
- Field Key Path
- Remark
- En Description
- 
- 
- 
- 
- sublayers
- 子Layer数组
- 
- 
- sublayerTransform
- 子Layer的Transform
- Specifies the transform to apply to sublayers when rendering.
- 
- 
- 
- 5.边界属性 (Border Attributes)
- 
- 
- 
- Field Key Path
- Remark
- En Description
- 
- 
- 
- 
- borderColor
- 
- 
- 
- 
- borderWidth
- 
- 
- 
- 
- 
- 
- 6.阴影属性 (Shadow Properties)
- 
- 
- 
- Field Key Path
- Remark
- En Description
- 
- 
- 
- 
- shadowColor
- 阴影颜色
- 
- 
- 
- shadowOffset
- 阴影偏移距离
- 
- 
- 
- shadowOpacity
- 阴影透明度
- 
- 
- 
- shadowRadius
- 阴影圆角
- 
- 
- 
- shadowPath
- 阴影路径
- 
- 
- 
- 
- 
- 7.透明度 (Opacity Property)
- 
- 
- 
- Field Key Path
- Remark
- En Description
- 
- 
- 
- 
- opacity
- 透明度
- 
- 
- 
- hiden
- 
- 
- 
- 
- 
- 
- 8.遮罩 (Mask Properties)
- 
- 
- 
- Field Key Path
- Remark
- En Description
- 
- 
- 
- 
- mask
- 
- 
- 
- 
- 
- 
- 9.ShapeLayer属性 (ShapeLayer)
- 
- 
- 
- Field Key Path
- Remark
- En Description
- 
- 
- 
- 
- fillColor
- 
- 
- 
- 
- strokeColor
- 
- 
- 
- 
- strokeStart
- 从无到有
- 
- 
- 
- strokeEnd
- 从有到无
- 
- 
- 
- lineWidth
- 路径的线宽
- 
- 
- 
- miterLimit
- 相交长度的最大值
- 
- 
- 
- lineDashPhase
- 虚线样式
- 
-
  */

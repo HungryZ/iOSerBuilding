@@ -32,6 +32,14 @@
         make.width.mas_equalTo(scrollView);
     }];
     
+    UIView * animView = [[UIView alloc] initWithFrame:CGRectMake(0, 500, 100, 100)];
+    animView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:animView];
+    [UIView animateWithDuration:10 animations:^{
+        animView.frame = CGRectMake(375, 500, 100, 100);
+        animView.alpha = 0;
+    }];
+    
     UIView * view1 = [UIView new];
     view1.backgroundColor = [UIColor whiteColor];
     [baseView addSubview:view1];

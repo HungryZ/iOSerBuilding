@@ -17,7 +17,6 @@
 		33874EA82282CC270063007C /* CWCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33874EA22282CC270063007C /* CWCarousel.m */; };
 		33874EA92282CC270063007C /* CWFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 33874EA42282CC270063007C /* CWFlowLayout.m */; };
 		33C12C5522826C74002DEEB3 /* BannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C12C5422826C74002DEEB3 /* BannerViewController.m */; };
-		33C12C5822826C82002DEEB3 /* BannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C12C5722826C82002DEEB3 /* BannerView.m */; };
 		33C7573B21C0BA1B00B11706 /* iOSerBuildingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7573A21C0BA1B00B11706 /* iOSerBuildingTests.m */; };
 		33C7574621C0BA1B00B11706 /* iOSerBuildingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7574521C0BA1B00B11706 /* iOSerBuildingUITests.m */; };
 		33C7E1B422375FD50004BC50 /* ScrollMasonryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7575A21C0E96D00B11706 /* ScrollMasonryController.m */; };
@@ -138,8 +137,6 @@
 		33874EA72282CC270063007C /* CWFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWFlowLayout.h; sourceTree = "<group>"; };
 		33C12C5322826C74002DEEB3 /* BannerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerViewController.h; sourceTree = "<group>"; };
 		33C12C5422826C74002DEEB3 /* BannerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerViewController.m; sourceTree = "<group>"; };
-		33C12C5622826C82002DEEB3 /* BannerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerView.h; sourceTree = "<group>"; };
-		33C12C5722826C82002DEEB3 /* BannerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerView.m; sourceTree = "<group>"; };
 		33C7572121C0BA1A00B11706 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		33C7572221C0BA1A00B11706 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		33C7572821C0BA1A00B11706 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -415,8 +412,6 @@
 				33874EA12282CC270063007C /* OC */,
 				33C12C5322826C74002DEEB3 /* BannerViewController.h */,
 				33C12C5422826C74002DEEB3 /* BannerViewController.m */,
-				33C12C5622826C82002DEEB3 /* BannerView.h */,
-				33C12C5722826C82002DEEB3 /* BannerView.m */,
 			);
 			path = Banner;
 			sourceTree = "<group>";
@@ -755,7 +750,6 @@
 				33C7E1B722375FD50004BC50 /* PresentViewController.m in Sources */,
 				33874EA82282CC270063007C /* CWCarousel.m in Sources */,
 				33C7E1B822375FD50004BC50 /* CoreDataTestViewController.m in Sources */,
-				33C12C5822826C82002DEEB3 /* BannerView.m in Sources */,
 				33874EA92282CC270063007C /* CWFlowLayout.m in Sources */,
 				335B3BB32242115B00DED730 /* UILabel+Initializer.m in Sources */,
 				3348CCB1223A27E70020F41C /* NSString+Check.m in Sources */,
