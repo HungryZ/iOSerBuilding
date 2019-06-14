@@ -16,6 +16,8 @@
 #import "PageViewController.h"
 #import "APPConfigController.h"
 #import "BannerViewController.h"
+#import "MemoryLeakCheckController.h"
+#import "GCDViewController.h"
 
 @interface HomeViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -119,6 +121,14 @@
                        @{
                            @"title" : @"轮播图",
                            @"controller" : [BannerViewController class],
+                           },
+                       @{
+                           @"title" : @"内存泄漏检测",
+                           @"controller" : [MemoryLeakCheckController class],
+                           },
+                       @{
+                           @"title" : @"GCD",
+                           @"controller" : [GCDViewController class],
                            },
                        ];
     }

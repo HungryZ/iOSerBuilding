@@ -12,6 +12,8 @@ targetsArray.each do |t|
         pod 'CYLTabBarController'
         pod 'OHMySQL'
         pod 'HungryTools'
+        pod 'MLeaksFinder'
+
     end
     
 end
