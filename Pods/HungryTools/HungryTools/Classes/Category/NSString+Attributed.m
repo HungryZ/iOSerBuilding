@@ -3,7 +3,6 @@
 //  clq
 //
 //  Created by 张海川 on 2019/5/14.
-//  Copyright © 2019 封建. All rights reserved.
 //
 
 #import "NSString+Attributed.h"

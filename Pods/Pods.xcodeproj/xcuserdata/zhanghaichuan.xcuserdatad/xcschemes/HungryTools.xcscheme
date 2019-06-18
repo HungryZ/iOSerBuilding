@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7269B68B3696BE95D621191F31DAAE87"
+               BlueprintIdentifier = "9A61DDD183357BD42AC4972D6759DDB8"
                BuildableName = "libHungryTools.a"
                BlueprintName = "HungryTools"
                ReferencedContainer = "container:Pods.xcodeproj">

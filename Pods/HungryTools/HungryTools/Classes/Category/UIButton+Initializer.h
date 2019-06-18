@@ -3,7 +3,6 @@
 //  JibeiPro
 //
 //  Created by 张海川 on 2019/1/14.
-//  Copyright © 2019 LinZi. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

@@ -13,6 +13,7 @@ targetsArray.each do |t|
         pod 'OHMySQL'
         pod 'HungryTools'
         pod 'MLeaksFinder'
+        pod 'IQKeyboardManager'
 
     end
     

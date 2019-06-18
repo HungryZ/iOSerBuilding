@@ -14,23 +14,24 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - CYLTabBarController (1.24.1):
-    - CYLTabBarController/Core (= 1.24.1)
-  - CYLTabBarController/Core (1.24.1)
+  - CYLTabBarController (1.27.4):
+    - CYLTabBarController/Core (= 1.27.4)
+  - CYLTabBarController/Core (1.27.4)
   - FBRetainCycleDetector (0.1.4)
-  - HungryTools (1.2.0):
-    - HungryTools/Category (= 1.2.0)
-    - HungryTools/Macro (= 1.2.0)
-    - HungryTools/ZHCTextField (= 1.2.0)
+  - HungryTools (1.2.8):
+    - HungryTools/Category (= 1.2.8)
+    - HungryTools/Macro (= 1.2.8)
+    - HungryTools/ZHCTextField (= 1.2.8)
     - Masonry (~> 1.1.0)
-  - HungryTools/Category (1.2.0):
+  - HungryTools/Category (1.2.8):
     - Masonry (~> 1.1.0)
-  - HungryTools/Macro (1.2.0):
+  - HungryTools/Macro (1.2.8):
     - Masonry (~> 1.1.0)
-  - HungryTools/ZHCTextField (1.2.0):
+  - HungryTools/ZHCTextField (1.2.8):
     - HungryTools/Category
     - HungryTools/Macro
     - Masonry (~> 1.1.0)
+  - IQKeyboardManager (6.4.0)
   - Masonry (1.1.0)
   - MJExtension (3.0.17)
   - MJRefresh (3.2.0)
@@ -42,6 +43,7 @@ DEPENDENCIES:
   - AFNetworking
   - CYLTabBarController
   - HungryTools
+  - IQKeyboardManager
   - Masonry
   - MJExtension
   - MJRefresh
@@ -54,6 +56,7 @@ SPEC REPOS:
     - CYLTabBarController
     - FBRetainCycleDetector
     - HungryTools
+    - IQKeyboardManager
     - Masonry
     - MJExtension
     - MJRefresh
@@ -62,15 +65,16 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  CYLTabBarController: 46fa053a2fb165095e04792431ad91a759bb7f9f
+  CYLTabBarController: 527d217404020f1941ff94fd2c154ab994f66876
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
-  HungryTools: 87ba40c9555d3f2647fba13a65eb6c3cb0d0afba
+  HungryTools: a7c2b6599d882a9c5b9f4c024547f11695d4a093
+  IQKeyboardManager: fcef267266379c003181fc3592f6bdb8bf4db839
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJExtension: 74ec83124a68891619fb7ba9c5c811bbf1691076
   MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   OHMySQL: 8bc54d2b8b9e1acfa0e652b18856a9cdbb24c431
 
-PODFILE CHECKSUM: 9b2cdaeb47e0b7f6c585a38553d23a55e4cb0ca1
+PODFILE CHECKSUM: 15f7a26dc671bd90c1e825e9b583f0fc7665436e
 
 COCOAPODS: 1.6.1

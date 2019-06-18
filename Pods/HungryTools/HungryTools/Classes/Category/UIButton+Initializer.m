@@ -3,11 +3,14 @@
 //  JibeiPro
 //
 //  Created by 张海川 on 2019/1/14.
-//  Copyright © 2019 LinZi. All rights reserved.
 //
 
 #ifndef ThemeColor
 #define ThemeColor [UIColor colorWithRed:255/255.f green:80/255.f blue:74/255.f alpha:1]
+#endif
+
+#ifndef DisableColor
+#define DisableColor [UIColor colorWithRed:255/255.f green:173/255.f blue:173/255.f alpha:1]
 #endif
 
 #import "UIButton+Initializer.h"
@@ -20,6 +23,7 @@
     button.titleLabel.font = [UIFont systemFontOfSize:fontSize];
     [button setTitle:title forState:UIControlStateNormal];
     [button setTitleColor:titleColor forState:UIControlStateNormal];
+    [button setAdjustsImageWhenHighlighted:NO];
     
     if (cornerRadius) {
         button.layer.cornerRadius = cornerRadius;
@@ -43,7 +47,13 @@
 
 + (instancetype)buttonWithThemeTitle:(NSString *)title target:(id)target action:(SEL)action {
     
-    return [self buttonWithTitle:title titleColor:[UIColor whiteColor] fontSize:16.f cornerRadius:4.f backgrondColor:ThemeColor target:target action:action];
+    UIButton * button = [self buttonWithTitle:title titleColor:[UIColor whiteColor] fontSize:16.f cornerRadius:4.f backgrondColor:nil target:target action:action];
+    
+    [button setBackgroundImage:[self imageWithColor:DisableColor] forState:UIControlStateNormal];
+    [button setBackgroundImage:[self imageWithColor:ThemeColor] forState:UIControlStateSelected];
+    button.clipsToBounds = YES;
+    
+    return button;
 }
 
 + (instancetype)buttonWithTitle:(NSString *)title titleColor:(UIColor *)titleColor fontSize:(float)fontSize target:(id)target action:(SEL)action {
@@ -60,6 +70,19 @@
     }
     
     return button;
+}
+
++ (UIImage *)imageWithColor:(UIColor *)color {
+    
+    CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, color.CGColor);
+    CGContextFillRect(context, rect);
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
 }
 
 @end
