@@ -18,6 +18,7 @@
 #import "BannerViewController.h"
 #import "MemoryLeakCheckController.h"
 #import "GCDViewController.h"
+#import "ScreenshotViewController.h"
 
 @interface HomeViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -103,12 +104,16 @@
                            @"controller" : [TransitionViewController class],
                            },
                        @{
+                           @"title" : @"截屏",
+                           @"controller" : [ScreenshotViewController class],
+                           },
+                       @{
                            @"title" : @"Scroll Masonry",
                            @"controller" : [ScrollMasonryController class],
                            },
                        @{
                            @"title" : @"正则表达式",
-                           @"controller" : [RegexViewController class],
+                           @"controller" : [RegexViewController new],
                            },
                        @{
                            @"title" : @"滑页浏览",

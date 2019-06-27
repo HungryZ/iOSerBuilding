@@ -9,10 +9,11 @@
 
 #import "TransitionViewController.h"
 #import "ViewTransitionController.h"
+#import "NaviTransitionController.h"
 
 @interface TransitionViewController () <UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, strong) NSArray<NSDictionary *> * dataArray;
+@property (nonatomic, strong) NSArray<NSArray *> * dataArray;
 
 @property (nonatomic, strong) UITableView * mainTableView;
 
@@ -31,8 +32,20 @@
     }];
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return self.dataArray.count;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.dataArray[section].count;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    if (section == 0) {
+        return @"自带效果";
+    } else {
+        return @"自定义效果";
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -41,21 +54,22 @@
     
     cell.accessoryType = 1;
     cell.selectionStyle = 0;
-    cell.textLabel.text = self.dataArray[indexPath.row][@"title"];
+    cell.textLabel.text = self.dataArray[indexPath.section][indexPath.row][@"title"];
     
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UIViewController * pushedVC = [self.dataArray[indexPath.row][@"controller"] new];
+    UIViewController * pushedVC = [self.dataArray[indexPath.section][indexPath.row][@"controller"] new];
     pushedVC.view.backgroundColor = [UIColor whiteColor];
     pushedVC.hidesBottomBarWhenPushed = YES;
-    pushedVC.title = self.dataArray[indexPath.row][@"title"];
+    pushedVC.title = self.dataArray[indexPath.section][indexPath.row][@"title"];
+    self.navigationController.delegate = pushedVC;
     [self.navigationController pushViewController:pushedVC animated:YES];
 }
 
-#pragma mark ----------------Init
+#pragma mark - Init
 
 - (UITableView *)mainTableView {
     if (!_mainTableView) {
@@ -70,12 +84,20 @@
 
 - (NSArray *)dataArray {
     if (!_dataArray) {
-        _dataArray = @[
-                       @{
-                           @"title" : @"View转场",
-                           @"controller" : [ViewTransitionController class],
-                           },
-                       ];
+        NSArray * group1 = @[
+                             @{
+                                 @"title" : @"View转场",
+                                 @"controller" : [ViewTransitionController class]
+                                 },
+                             ];
+        NSArray * group2 = @[
+                             @{
+                                 @"title" : @"Navi转场",
+                                 @"controller" : [NaviTransitionController class]
+                                 },
+                             ];
+        
+        _dataArray = @[group1, group2];
     }
     return _dataArray;
 }

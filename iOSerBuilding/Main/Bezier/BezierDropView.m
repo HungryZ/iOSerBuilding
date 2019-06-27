@@ -29,7 +29,7 @@
     [path fill];
 }
 
-#pragma mark --因为这一层view在tableview的上面，所以要把触摸事件给tableview
+#pragma mark - 因为这一层view在tableview的上面，所以要把触摸事件给tableview
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
     if (![self pointInside:point withEvent:event]) {
         return nil;

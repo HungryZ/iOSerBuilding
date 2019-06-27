@@ -26,44 +26,44 @@ typedef void(^RetainBlock)(void);
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-//    _block = ^{
-//        [self printMessage];
-//    };
-//    _block();
+    _block = ^{
+        [self printMessage];
+    };
+    _block();
     
-    UITextField * field0 = [UITextField new];
-    field0.delegate = field0;
-    field0.backgroundColor = UIColor.orangeColor;
-    [self.view addSubview:field0];
-    [field0 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.center.mas_equalTo(0);
-        make.size.mas_equalTo(CGSizeMake(300, 44));
-    }];
+//    UITextField * field0 = [UITextField new];
+//    field0.delegate = field0;
+//    field0.backgroundColor = UIColor.orangeColor;
+//    [self.view addSubview:field0];
+//    [field0 mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.center.mas_equalTo(0);
+//        make.size.mas_equalTo(CGSizeMake(300, 44));
+//    }];
     
-    ZHCTextField * field = [ZHCTextField new];
-    field.fieldType = ZHCFieldTypeNumber;
-    field.leftTextColor = UIColor.lightGrayColor;
-    field.leftTextFontSize = 12.f;
-    field.leftText = @"¥";
-    field.maxLength = 2;
-    field.layer.cornerRadius = 4;
-    field.clipsToBounds = YES;
-    field.showBottomLine = NO;
-
-    UILabel * rightView = [UILabel labelWithFontSize:12 textColor:UIColor.whiteColor text:@"万元"];
-    rightView.frame = CGRectMake(0, 0, 42, 25);
-    rightView.backgroundColor = ThemeColor;
-    rightView.textAlignment = NSTextAlignmentCenter;
-    field.rightView = rightView;
-    field.rightViewMode = UITextFieldViewModeAlways;
-    //    field.delegate = field;
-    field.backgroundColor = UIColor.purpleColor;
-    [self.view addSubview:field];
-    [field mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.mas_equalTo(0);
-        make.centerY.mas_equalTo(field0.mas_bottom).offset(10);
-        make.size.mas_equalTo(CGSizeMake(300, 44));
-    }];
+//    ZHCTextField * field = [ZHCTextField new];
+//    field.backgroundColor = UIColor.purpleColor;
+//
+//    field.fieldType = ZHCFieldTypeNumber;
+//    field.leftTextColor = UIColor.lightGrayColor;
+//    field.leftTextFontSize = 12.f;
+//    field.leftText = @"¥";
+//    field.maxLength = 2;
+//    field.layer.cornerRadius = 4;
+//    field.clipsToBounds = YES;
+//    field.showBottomLine = NO;
+//
+//    UILabel * rightView = [UILabel labelWithFontSize:12 textColor:UIColor.whiteColor text:@"万元"];
+//    rightView.frame = CGRectMake(0, 0, 42, 25);
+//    rightView.backgroundColor = ThemeColor;
+//    rightView.textAlignment = NSTextAlignmentCenter;
+//    field.rightView = rightView;
+//    field.rightViewMode = UITextFieldViewModeAlways;
+//    [self.view addSubview:field];
+//    [field mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.centerX.mas_equalTo(0);
+//        make.centerY.mas_equalTo(0);
+//        make.size.mas_equalTo(CGSizeMake(300, 44));
+//    }];
 }
 
 - (void)printMessage {

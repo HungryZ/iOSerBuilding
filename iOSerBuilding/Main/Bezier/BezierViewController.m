@@ -59,7 +59,7 @@
     [_dropView setNeedsDisplay];
 }
 
-#pragma mark ----------------Init
+#pragma mark - Init
 
 - (UITableView *)mainTableView {
     if (!_mainTableView) {

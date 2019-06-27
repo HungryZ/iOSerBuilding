@@ -24,6 +24,11 @@
 
 @implementation ZHCTextField
 
+- (void)dealloc
+{
+    NSLog(@"ZHCTextField dealloc");
+}
+
 - (instancetype)init {
     self = [super init];
     if (self) {
