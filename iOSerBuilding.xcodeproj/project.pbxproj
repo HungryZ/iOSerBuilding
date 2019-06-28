@@ -16,6 +16,7 @@
 		335B3BB02242115B00DED730 /* UIButton+Initializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 335B3BA72242115B00DED730 /* UIButton+Initializer.m */; };
 		335B3BB32242115B00DED730 /* UILabel+Initializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 335B3BAA2242115B00DED730 /* UILabel+Initializer.m */; };
 		336B000A22B237D90061D6C4 /* MemoryLeakCheckController.m in Sources */ = {isa = PBXBuildFile; fileRef = 336B000922B237D90061D6C4 /* MemoryLeakCheckController.m */; };
+		337BD38922C5E4DB00EAD627 /* InteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 337BD38822C5E4DB00EAD627 /* InteractiveTransition.m */; };
 		33874EA82282CC270063007C /* CWCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33874EA22282CC270063007C /* CWCarousel.m */; };
 		33874EA92282CC270063007C /* CWFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 33874EA42282CC270063007C /* CWFlowLayout.m */; };
 		33A7353922C4944E0020A5ED /* NaviTransitionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A7353822C4944E0020A5ED /* NaviTransitionController.m */; };
@@ -138,6 +139,8 @@
 		336B000922B237D90061D6C4 /* MemoryLeakCheckController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoryLeakCheckController.m; sourceTree = "<group>"; };
 		33711B2F21C7783C00D69E0C /* CoreDataTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataTestViewController.h; sourceTree = "<group>"; };
 		33711B3021C7783C00D69E0C /* CoreDataTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataTestViewController.m; sourceTree = "<group>"; };
+		337BD38722C5E4DB00EAD627 /* InteractiveTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InteractiveTransition.h; sourceTree = "<group>"; };
+		337BD38822C5E4DB00EAD627 /* InteractiveTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InteractiveTransition.m; sourceTree = "<group>"; };
 		33874EA22282CC270063007C /* CWCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWCarousel.m; sourceTree = "<group>"; };
 		33874EA32282CC270063007C /* CWCarouselHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWCarouselHeader.h; sourceTree = "<group>"; };
 		33874EA42282CC270063007C /* CWFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWFlowLayout.m; sourceTree = "<group>"; };
@@ -395,6 +398,8 @@
 				33E343DD2216A4C80022A5C9 /* PresentViewController.m */,
 				33A7353722C4944E0020A5ED /* NaviTransitionController.h */,
 				33A7353822C4944E0020A5ED /* NaviTransitionController.m */,
+				337BD38722C5E4DB00EAD627 /* InteractiveTransition.h */,
+				337BD38822C5E4DB00EAD627 /* InteractiveTransition.m */,
 			);
 			path = CATransition;
 			sourceTree = "<group>";
@@ -849,6 +854,7 @@
 				33C7E1BE22375FD50004BC50 /* MySQLTestViewController.m in Sources */,
 				33C7E1BF22375FD50004BC50 /* TransitionViewController.m in Sources */,
 				33C7E1C022375FD50004BC50 /* BezierView.m in Sources */,
+				337BD38922C5E4DB00EAD627 /* InteractiveTransition.m in Sources */,
 				33C7E1C122375FD50004BC50 /* BaseTabBarManager.m in Sources */,
 				33C7E1C222375FD50004BC50 /* BezierDropView.m in Sources */,
 				33C7E1C322375FD50004BC50 /* HomeViewController.m in Sources */,
@@ -1056,6 +1062,7 @@
 					"DEBUG=1",
 				);
 				INFOPLIST_FILE = iOSerBuilding/Other/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1083,6 +1090,7 @@
 				GCC_PREFIX_HEADER = iOSerBuilding/Other/PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "COCOAPODS=1";
 				INFOPLIST_FILE = iOSerBuilding/Other/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

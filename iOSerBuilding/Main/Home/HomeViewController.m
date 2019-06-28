@@ -113,7 +113,7 @@
                            },
                        @{
                            @"title" : @"正则表达式",
-                           @"controller" : [RegexViewController new],
+                           @"controller" : [RegexViewController class],
                            },
                        @{
                            @"title" : @"滑页浏览",

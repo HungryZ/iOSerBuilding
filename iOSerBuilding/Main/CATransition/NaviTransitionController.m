@@ -6,10 +6,13 @@
 //
 
 #import "NaviTransitionController.h"
+#import "InteractiveTransition.h"
 
 @interface NaviTransitionController () <UIViewControllerAnimatedTransitioning>
 
-@property (nonatomic, assign) UINavigationControllerOperation operation;
+@property (nonatomic, assign) UINavigationControllerOperation   operation;
+
+@property (nonatomic, strong) InteractiveTransition *           transition;
 
 @end
 
@@ -23,7 +26,12 @@
     [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.center.mas_equalTo(0);
     }];
+    
+    _transition = [InteractiveTransition new];
+    _transition.controller = self;
 }
+
+#pragma mark - NavigationController
 
 - (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
                                   animationControllerForOperation:(UINavigationControllerOperation)operation
@@ -31,6 +39,15 @@
                                                  toViewController:(UIViewController *)toVC {
     self.operation = operation;
     return self;
+}
+
+- (id<UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController {
+    
+    if (_operation == UINavigationControllerOperationPop && _transition.isInteractive) {
+        return _transition;
+    }
+    
+    return nil;
 }
 
 #pragma mark - UIViewControllerAnimatedTransitioning
@@ -123,5 +140,6 @@
                          }];
     }
 }
+
 
 @end
