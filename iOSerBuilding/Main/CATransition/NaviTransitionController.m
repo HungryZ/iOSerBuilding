@@ -22,9 +22,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     UIImageView * imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"0.JPG"]];
+    imageView.contentMode = UIViewContentModeScaleAspectFit;
     [self.view addSubview:imageView];
     [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.center.mas_equalTo(0);
+        make.edges.mas_equalTo(0);
     }];
     
     _transition = [InteractiveTransition new];
@@ -80,7 +81,7 @@
         [containerView addSubview:leftView];
         [containerView addSubview:rightView];
         
-        fromView.hidden = YES;
+//        fromView.hidden = YES;
         
         [UIView animateWithDuration:[self transitionDuration:transitionContext]
                          animations:^{
@@ -88,9 +89,9 @@
                              rightView.frame = CGRectMake(fromView.frame.size.width, 0, fromView.frame.size.width/2, fromView.frame.size.height);
                          }
                          completion:^(BOOL finished) {
-                             fromView.hidden = NO;
-                             [leftView removeFromSuperview];
-                             [rightView removeFromSuperview];
+//                             fromView.hidden = NO;
+//                             [leftView removeFromSuperview];
+//                             [rightView removeFromSuperview];
                              [transitionContext completeTransition:YES];
                          }];
     } else {

@@ -24,6 +24,8 @@
 		33A7355322C4BF480020A5ED /* OTScreenshotHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A7354D22C4BF480020A5ED /* OTScreenshotHelper.m */; };
 		33A7355422C4BF480020A5ED /* UIView+ComOpenThreadOTScreenshotHelperStatusBarReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A7355122C4BF480020A5ED /* UIView+ComOpenThreadOTScreenshotHelperStatusBarReference.m */; };
 		33A7355522C4BF480020A5ED /* ComOpenThreadOTScreenshotHelperSwizzleHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A7355222C4BF480020A5ED /* ComOpenThreadOTScreenshotHelperSwizzleHelper.m */; };
+		33B6250822C9AD5000A5F2FA /* InteractiveTransition2.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B6250722C9AD5000A5F2FA /* InteractiveTransition2.m */; };
+		33B6250B22C9AD7300A5F2FA /* NaviTransitionController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B6250A22C9AD7300A5F2FA /* NaviTransitionController2.m */; };
 		33C12C5522826C74002DEEB3 /* BannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C12C5422826C74002DEEB3 /* BannerViewController.m */; };
 		33C7573B21C0BA1B00B11706 /* iOSerBuildingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7573A21C0BA1B00B11706 /* iOSerBuildingTests.m */; };
 		33C7574621C0BA1B00B11706 /* iOSerBuildingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7574521C0BA1B00B11706 /* iOSerBuildingUITests.m */; };
@@ -157,6 +159,10 @@
 		33A7355022C4BF480020A5ED /* UIView+ComOpenThreadOTScreenshotHelperStatusBarReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ComOpenThreadOTScreenshotHelperStatusBarReference.h"; sourceTree = "<group>"; };
 		33A7355122C4BF480020A5ED /* UIView+ComOpenThreadOTScreenshotHelperStatusBarReference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ComOpenThreadOTScreenshotHelperStatusBarReference.m"; sourceTree = "<group>"; };
 		33A7355222C4BF480020A5ED /* ComOpenThreadOTScreenshotHelperSwizzleHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComOpenThreadOTScreenshotHelperSwizzleHelper.m; sourceTree = "<group>"; };
+		33B6250622C9AD5000A5F2FA /* InteractiveTransition2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InteractiveTransition2.h; sourceTree = "<group>"; };
+		33B6250722C9AD5000A5F2FA /* InteractiveTransition2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InteractiveTransition2.m; sourceTree = "<group>"; };
+		33B6250922C9AD7300A5F2FA /* NaviTransitionController2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NaviTransitionController2.h; sourceTree = "<group>"; };
+		33B6250A22C9AD7300A5F2FA /* NaviTransitionController2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NaviTransitionController2.m; sourceTree = "<group>"; };
 		33C12C5322826C74002DEEB3 /* BannerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerViewController.h; sourceTree = "<group>"; };
 		33C12C5422826C74002DEEB3 /* BannerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerViewController.m; sourceTree = "<group>"; };
 		33C7572121C0BA1A00B11706 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -400,6 +406,10 @@
 				33A7353822C4944E0020A5ED /* NaviTransitionController.m */,
 				337BD38722C5E4DB00EAD627 /* InteractiveTransition.h */,
 				337BD38822C5E4DB00EAD627 /* InteractiveTransition.m */,
+				33B6250922C9AD7300A5F2FA /* NaviTransitionController2.h */,
+				33B6250A22C9AD7300A5F2FA /* NaviTransitionController2.m */,
+				33B6250622C9AD5000A5F2FA /* InteractiveTransition2.h */,
+				33B6250722C9AD5000A5F2FA /* InteractiveTransition2.m */,
 			);
 			path = CATransition;
 			sourceTree = "<group>";
@@ -850,6 +860,7 @@
 				336B000A22B237D90061D6C4 /* MemoryLeakCheckController.m in Sources */,
 				33C12C5522826C74002DEEB3 /* BannerViewController.m in Sources */,
 				33C7E1BD22375FD50004BC50 /* BezierViewController.m in Sources */,
+				33B6250B22C9AD7300A5F2FA /* NaviTransitionController2.m in Sources */,
 				335B3BB02242115B00DED730 /* UIButton+Initializer.m in Sources */,
 				33C7E1BE22375FD50004BC50 /* MySQLTestViewController.m in Sources */,
 				33C7E1BF22375FD50004BC50 /* TransitionViewController.m in Sources */,
@@ -857,6 +868,7 @@
 				337BD38922C5E4DB00EAD627 /* InteractiveTransition.m in Sources */,
 				33C7E1C122375FD50004BC50 /* BaseTabBarManager.m in Sources */,
 				33C7E1C222375FD50004BC50 /* BezierDropView.m in Sources */,
+				33B6250822C9AD5000A5F2FA /* InteractiveTransition2.m in Sources */,
 				33C7E1C322375FD50004BC50 /* HomeViewController.m in Sources */,
 				335B3BA322420D2200DED730 /* PageViewController.m in Sources */,
 			);
@@ -1062,7 +1074,7 @@
 					"DEBUG=1",
 				);
 				INFOPLIST_FILE = iOSerBuilding/Other/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1090,7 +1102,7 @@
 				GCC_PREFIX_HEADER = iOSerBuilding/Other/PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "COCOAPODS=1";
 				INFOPLIST_FILE = iOSerBuilding/Other/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

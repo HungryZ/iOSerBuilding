@@ -10,6 +10,7 @@
 #import "TransitionViewController.h"
 #import "ViewTransitionController.h"
 #import "NaviTransitionController.h"
+#import "NaviTransitionController2.h"
 
 @interface TransitionViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -94,6 +95,10 @@
                              @{
                                  @"title" : @"Navi转场",
                                  @"controller" : [NaviTransitionController class]
+                                 },
+                             @{
+                                 @"title" : @"Navi转场2",
+                                 @"controller" : [NaviTransitionController2 class]
                                  },
                              ];
         
