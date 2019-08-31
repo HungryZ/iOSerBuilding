@@ -1,6 +1,6 @@
 //
 //  ZHCTextField.m
-//  FCHCL
+//  HungryTools
 //
 //  Created by 张海川 on 2019/4/25.
 //
@@ -14,31 +14,38 @@
 #import "Masonry.h"
 #import "UILabel+Initializer.h"
 #import "UIButton+Initializer.h"
+#import "UILabel+Size.h"
 
 @interface ZHCTextField() <UITextFieldDelegate>
 
 @property (nonatomic, strong) UIView *      bottomLineView;
 @property (nonatomic, strong) UIButton *    secureButton;
 
+@property (nonatomic, assign) BOOL          isContainLeftOrRightView;
+
 @end
 
 @implementation ZHCTextField
 
-- (void)dealloc
-{
-    NSLog(@"ZHCTextField dealloc");
-}
-
-- (instancetype)init {
-    self = [super init];
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
     if (self) {
-        self.clearButtonMode = UITextFieldViewModeWhileEditing;
-        [self addBottomLine];
-        self.delegate = self;
-        self.font = [UIFont systemFontOfSize:14];
+        [self initConfig];
     }
     return self;
 }
+
+- (void)initConfig {
+    self.clearButtonMode = UITextFieldViewModeWhileEditing;
+    self.delegate = self;
+    self.font = [UIFont systemFontOfSize:14];
+    
+    _isContainLeftOrRightView = NO;
+    _bottomLineHeight = 0.5;
+    
+    [self addBottomLine];
+}
+
 // 无效
 //- (CGRect)clearButtonRectForBounds:(CGRect)bounds {
 //    //        bounds.origin.x -= ViewWidth(self.rightView);
@@ -86,7 +93,8 @@
             break;
         }
         case ZHCFieldTypePassword: {
-            return [string checkWithRegexString:@"[A-Za-z0-9_]"];
+            // 半角字符 包括字母，数字，标点符号
+            return [string checkWithRegexString:@"[\\x00-\\xff]+"];
             break;
         }
         case ZHCFieldTypeMoney: {
@@ -110,18 +118,30 @@
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
-    self.bottomLineView.backgroundColor = ThemeColor;
+    [UIView animateWithDuration:0.25 animations:^{
+        if (self.bottomLineActiveColor) {
+            self.bottomLineView.backgroundColor = self.bottomLineActiveColor;
+        } else {
+            self.bottomLineView.backgroundColor = ThemeColor;
+        }
+    }];
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
-    self.bottomLineView.backgroundColor = [UIColor lightGrayColor];
+    [UIView animateWithDuration:0.25 animations:^{
+        if (self.bottomLinePassiveColor) {
+            self.bottomLineView.backgroundColor = self.bottomLinePassiveColor;
+        } else {
+            self.bottomLineView.backgroundColor = [UIColor lightGrayColor];
+        }
+    }];
 }
 
 #pragma mark - Action
 
 - (void)secureBtnClicked {
     self.secureTextEntry ^= 1;
-    self.secureButton.selected = self.isSecureTextEntry;
+    self.secureButton.selected = !self.isSecureTextEntry;
 }
 
 #pragma mark - Private Method
@@ -131,14 +151,17 @@
     [self addSubview:self.bottomLineView];
     [self.bottomLineView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.bottom.right.mas_equalTo(0);
-        make.height.mas_equalTo(0.5);
+        make.height.mas_equalTo(self.bottomLineHeight);
     }];
 }
 
 - (void)updateBottomLineConstraints {
-    [self.bottomLineView mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(10);
-        make.right.mas_equalTo(-10);
+    
+    _isContainLeftOrRightView = YES;
+    
+    [self.bottomLineView mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.bottom.right.mas_equalTo(UIEdgeInsetsMake(0, 10, 0, 10));
+        make.height.mas_equalTo(self.bottomLineHeight);
     }];
 }
 
@@ -197,9 +220,18 @@
     }
 }
 
+- (void)setLeftView:(UIView *)leftView {
+    [super setLeftView:leftView];
+    [self updateBottomLineConstraints];
+}
+
+- (void)setRightView:(UIView *)rightView {
+    [super setRightView:rightView];
+    [self updateBottomLineConstraints];
+}
+
 - (void)setLeftText:(NSString *)leftText {
     
-    UIView * leftView = [UIView new];
     UILabel * textLabel = [UILabel labelWithFontSize:14.f text:leftText];
     if (_leftTextColor) {
         textLabel.textColor = _leftTextColor;
@@ -207,15 +239,14 @@
     if (_leftTextFontSize > 0) {
         textLabel.font = [UIFont systemFontOfSize:_leftTextFontSize];
     }
+    
+    UIView * leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, textLabel.textWidth + 21, self.bounds.size.height)];
+    
     [leftView addSubview:textLabel];
     [textLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.mas_equalTo(0);
         make.left.mas_equalTo(10);
         make.right.mas_equalTo(-10);
-    }];
-    // 给leftView一个宽度
-    [leftView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.mas_equalTo(textLabel).offset(20);
     }];
     
     self.leftView = leftView;
@@ -226,17 +257,35 @@
 
 - (void)setLeftImageName:(NSString *)leftImageString {
     
-    UIView * leftView = [UIView new];
-    UIImageView * subView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:leftImageString]];
+    UIImage * image = [UIImage imageNamed:leftImageString];
+    UIImageView * subView = [[UIImageView alloc] initWithImage:image];
+    
+    UIView * leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, image.size.width + 20, self.bounds.size.height)];
+    
     [leftView addSubview:subView];
     [subView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.mas_equalTo(0);
         make.left.mas_equalTo(10);
         make.right.mas_equalTo(-10);
     }];
-    // 给leftView一个宽度
-    [leftView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.mas_equalTo(subView).offset(20);
+    
+    self.leftView = leftView;
+    self.leftViewMode = UITextFieldViewModeAlways;
+    
+    [self updateBottomLineConstraints];
+}
+
+- (void)setLeftImage:(UIImage *)leftImage {
+    
+    UIImageView * subView = [[UIImageView alloc] initWithImage:leftImage];
+    
+    UIView * leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, leftImage.size.width + 20, self.bounds.size.height)];
+    
+    [leftView addSubview:subView];
+    [subView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.mas_equalTo(0);
+        make.left.mas_equalTo(10);
+        make.right.mas_equalTo(-10);
     }];
     
     self.leftView = leftView;
@@ -263,7 +312,65 @@
     }
 }
 
+- (void)setBottomLinePassiveColor:(UIColor *)bottomLinePassiveColor {
+    _bottomLinePassiveColor = bottomLinePassiveColor;
+    self.bottomLineView.backgroundColor = _bottomLinePassiveColor;
+}
+
+- (void)setBottomLineHeight:(float)bottomLineHeight {
+    
+    _bottomLineHeight = bottomLineHeight;
+    
+    [self.bottomLineView mas_remakeConstraints:^(MASConstraintMaker *make) {
+        if (self.isContainLeftOrRightView) {
+            make.left.bottom.right.mas_equalTo(UIEdgeInsetsMake(0, 10, 0, 10));
+        } else {
+            make.left.bottom.right.mas_equalTo(0);
+        }
+        make.height.mas_equalTo(bottomLineHeight);
+    }];
+}
+
+- (void)setClearButtonImage:(UIImage *)clearButtonImage {
+    _clearButtonImage = clearButtonImage;
+    
+    UIButton *button =  [self valueForKey:@"_clearButton"];
+    [button setImage:clearButtonImage forState:UIControlStateNormal];
+}
+
+- (void)setPlaceHolderColor:(UIColor *)placeHolderColor {
+    _placeHolderColor = placeHolderColor;
+    [self setValue:placeHolderColor forKeyPath:@"_placeholderLabel.textColor"];
+}
+
+- (void)setPlaceHolderFont:(UIFont *)placeHolderFont {
+    _placeHolderFont = placeHolderFont;
+    [self setValue:placeHolderFont forKeyPath:@"_placeholderLabel.font"];
+}
+
+- (void)setPlaceholder:(NSString *)placeholder {
+    [super setPlaceholder:placeholder];
+    
+    if (_placeHolderColor) {
+        [self setValue:_placeHolderColor forKeyPath:@"_placeholderLabel.textColor"];
+    }
+    if (_placeHolderFont) {
+        [self setValue:_placeHolderFont forKeyPath:@"_placeholderLabel.font"];
+    }
+}
+
 #pragma mark - Getter
+
+- (NSString *)phoneNumberString {
+    
+    NSString * string;
+    
+    if (self.fieldType == ZHCFieldTypePhoneNumber) {
+        string = [self.text stringByReplacingOccurrencesOfString:@" " withString:@""];
+    }
+    
+    return string;
+}
 
 - (UIView *)bottomLineView {
     if (!_bottomLineView) {
@@ -277,8 +384,8 @@
     if (!_secureButton) {
         _secureButton = [UIButton buttonWithImageName:@"Resource.bundle/eye_close" target:self action:@selector(secureBtnClicked)];
         [_secureButton setImage:[UIImage imageNamed:@"Resource.bundle/eye_open"] forState:UIControlStateSelected];
-        _secureButton.frame = CGRectMake(0, 0, 23, 20);
-        _secureButton.selected = YES;
+        _secureButton.frame = CGRectMake(0, 0, 44, 30);
+        //        _secureButton.selected = YES;
     }
     return _secureButton;
 }

@@ -1,6 +1,6 @@
 //
 //  UIView+Initializer.m
-//  StrategyPlus
+//  HungryTools
 //
 //  Created by 张海川 on 2019/5/22.
 //  Copyright © 2019 张海川. All rights reserved.

@@ -1,6 +1,6 @@
 //
 //  UITableViewCell+SeparatorLine.h
-//  StrategyPlus
+//  HungryTools
 //
 //  Created by 张海川 on 2019/5/29.
 //  Copyright © 2019 张海川. All rights reserved.

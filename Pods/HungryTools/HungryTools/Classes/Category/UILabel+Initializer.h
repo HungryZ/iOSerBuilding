@@ -1,6 +1,6 @@
 //
 //  UILabel+Initializer.h
-//  JibeiPro
+//  HungryTools
 //
 //  Created by 张海川 on 2019/1/14.
 //

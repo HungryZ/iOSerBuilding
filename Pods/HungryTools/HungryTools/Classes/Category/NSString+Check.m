@@ -1,6 +1,6 @@
 //
 //  NSString+Check.m
-//  iOSerBuilding
+//  HungryTools
 //
 //  Created by 张海川 on 2019/3/14.
 //
@@ -26,6 +26,10 @@
     // 看不懂 [-+.]
     // \w 匹配字母、数字、下划线。等价于 [A-Za-z0-9_]
     return [self checkWithRegexString:@"^\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$"];
+}
+
+- (BOOL)isPassword {
+    return [self checkWithRegexString:@"^(?=.*\\d)(?=.*[A-Za-z]).{6,16}$"];
 }
 
 @end

@@ -19,6 +19,7 @@
 #import "MemoryLeakCheckController.h"
 #import "GCDViewController.h"
 #import "ScreenshotViewController.h"
+#import "LaunchAnimationController.h"
 
 @interface HomeViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -134,6 +135,10 @@
                        @{
                            @"title" : @"GCD",
                            @"controller" : [GCDViewController class],
+                           },
+                       @{
+                           @"title" : @"开屏动画",
+                           @"controller" : [LaunchAnimationController class],
                            },
                        ];
     }

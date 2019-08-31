@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		017159652318B6A300596160 /* ticktock.mov in Resources */ = {isa = PBXBuildFile; fileRef = 017159642318B6A300596160 /* ticktock.mov */; };
+		01D87DDB2317A30600E62E78 /* LaunchAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D87DDA2317A30600E62E78 /* LaunchAnimationController.m */; };
+		01D87DDE2317A35900E62E78 /* Life_LaunchAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D87DDD2317A35900E62E78 /* Life_LaunchAnimationView.m */; };
+		01D87DE12317A43200E62E78 /* Life_LaunchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D87DE02317A43200E62E78 /* Life_LaunchModel.m */; };
 		3306B37D2248887D001945C4 /* APPConfigController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3306B37A2248887D001945C4 /* APPConfigController.m */; };
 		333D133822B33D72008D1EBB /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D133722B33D72008D1EBB /* GCDViewController.m */; };
 		3348CCAC223A027F0020F41C /* RegexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3348CCA9223A027F0020F41C /* RegexViewController.m */; };
@@ -77,6 +81,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		017159642318B6A300596160 /* ticktock.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = ticktock.mov; sourceTree = "<group>"; };
+		01D87DD92317A30600E62E78 /* LaunchAnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LaunchAnimationController.h; sourceTree = "<group>"; };
+		01D87DDA2317A30600E62E78 /* LaunchAnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LaunchAnimationController.m; sourceTree = "<group>"; };
+		01D87DDC2317A35900E62E78 /* Life_LaunchAnimationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Life_LaunchAnimationView.h; sourceTree = "<group>"; };
+		01D87DDD2317A35900E62E78 /* Life_LaunchAnimationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Life_LaunchAnimationView.m; sourceTree = "<group>"; };
+		01D87DDF2317A43200E62E78 /* Life_LaunchModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Life_LaunchModel.h; sourceTree = "<group>"; };
+		01D87DE02317A43200E62E78 /* Life_LaunchModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Life_LaunchModel.m; sourceTree = "<group>"; };
 		330467EA226D601900AF925B /* TargetMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TargetMacro.h; sourceTree = "<group>"; };
 		3306B3792248887D001945C4 /* APPConfigController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APPConfigController.h; sourceTree = "<group>"; };
 		3306B37A2248887D001945C4 /* APPConfigController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APPConfigController.m; sourceTree = "<group>"; };
@@ -224,6 +235,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01D87DD82317A2D900E62E78 /* LaunchAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				01D87DD92317A30600E62E78 /* LaunchAnimationController.h */,
+				01D87DDA2317A30600E62E78 /* LaunchAnimationController.m */,
+				01D87DDC2317A35900E62E78 /* Life_LaunchAnimationView.h */,
+				01D87DDD2317A35900E62E78 /* Life_LaunchAnimationView.m */,
+				01D87DDF2317A43200E62E78 /* Life_LaunchModel.h */,
+				01D87DE02317A43200E62E78 /* Life_LaunchModel.m */,
+				017159642318B6A300596160 /* ticktock.mov */,
+			);
+			path = LaunchAnimation;
+			sourceTree = "<group>";
+		};
 		1406175019A37AF76F67F7C2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -589,6 +614,7 @@
 				3306B37722488803001945C4 /* APPConfig */,
 				336B000722B237A40061D6C4 /* MemoryLeak */,
 				333D133522B33D5F008D1EBB /* GCD */,
+				01D87DD82317A2D900E62E78 /* LaunchAnimation */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -747,6 +773,7 @@
 				33C7E1D422375FD50004BC50 /* loading19.png in Resources */,
 				33C7E1D522375FD50004BC50 /* 1.JPG in Resources */,
 				33C7E1D722375FD50004BC50 /* 2.JPG in Resources */,
+				017159652318B6A300596160 /* ticktock.mov in Resources */,
 				33C7E1D822375FD50004BC50 /* loading5.png in Resources */,
 				33C7E1D922375FD50004BC50 /* loading22.png in Resources */,
 				33C7E1DA22375FD50004BC50 /* loading21.png in Resources */,
@@ -792,20 +819,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-iOSerBuilding/Pods-iOSerBuilding-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/HungryTools/Resource.bundle",
-				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
-				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-iOSerBuilding/Pods-iOSerBuilding-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Resource.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-iOSerBuilding/Pods-iOSerBuilding-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -843,6 +861,7 @@
 				33C7E1B522375FD50004BC50 /* ViewTransitionController.m in Sources */,
 				33C7E1B622375FD50004BC50 /* StudentModel.xcdatamodeld in Sources */,
 				33C7E1B722375FD50004BC50 /* PresentViewController.m in Sources */,
+				01D87DE12317A43200E62E78 /* Life_LaunchModel.m in Sources */,
 				33A7355522C4BF480020A5ED /* ComOpenThreadOTScreenshotHelperSwizzleHelper.m in Sources */,
 				33874EA82282CC270063007C /* CWCarousel.m in Sources */,
 				33C7E1B822375FD50004BC50 /* CoreDataTestViewController.m in Sources */,
@@ -857,9 +876,11 @@
 				33C7E1BA22375FD50004BC50 /* AnimationViewController.m in Sources */,
 				33C7E1BB22375FD50004BC50 /* XWPresentOneTransition.m in Sources */,
 				33C7E1BC22375FD50004BC50 /* AppDelegate.m in Sources */,
+				01D87DDB2317A30600E62E78 /* LaunchAnimationController.m in Sources */,
 				336B000A22B237D90061D6C4 /* MemoryLeakCheckController.m in Sources */,
 				33C12C5522826C74002DEEB3 /* BannerViewController.m in Sources */,
 				33C7E1BD22375FD50004BC50 /* BezierViewController.m in Sources */,
+				01D87DDE2317A35900E62E78 /* Life_LaunchAnimationView.m in Sources */,
 				33B6250B22C9AD7300A5F2FA /* NaviTransitionController2.m in Sources */,
 				335B3BB02242115B00DED730 /* UIButton+Initializer.m in Sources */,
 				33C7E1BE22375FD50004BC50 /* MySQLTestViewController.m in Sources */,

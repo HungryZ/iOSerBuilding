@@ -14,26 +14,26 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - CYLTabBarController (1.27.4):
-    - CYLTabBarController/Core (= 1.27.4)
-  - CYLTabBarController/Core (1.27.4)
+  - CYLTabBarController (1.28.3):
+    - CYLTabBarController/Core (= 1.28.3)
+  - CYLTabBarController/Core (1.28.3)
   - FBRetainCycleDetector (0.1.4)
-  - HungryTools (1.2.8):
-    - HungryTools/Category (= 1.2.8)
-    - HungryTools/Macro (= 1.2.8)
-    - HungryTools/ZHCTextField (= 1.2.8)
-    - Masonry (~> 1.1.0)
-  - HungryTools/Category (1.2.8):
-    - Masonry (~> 1.1.0)
-  - HungryTools/Macro (1.2.8):
-    - Masonry (~> 1.1.0)
-  - HungryTools/ZHCTextField (1.2.8):
+  - HungryTools (1.3.4):
+    - HungryTools/Category (= 1.3.4)
+    - HungryTools/Macro (= 1.3.4)
+    - HungryTools/ZHCTextField (= 1.3.4)
+    - Masonry
+  - HungryTools/Category (1.3.4):
+    - Masonry
+  - HungryTools/Macro (1.3.4):
+    - Masonry
+  - HungryTools/ZHCTextField (1.3.4):
     - HungryTools/Category
     - HungryTools/Macro
-    - Masonry (~> 1.1.0)
+    - Masonry
   - IQKeyboardManager (6.4.0)
   - Masonry (1.1.0)
-  - MJExtension (3.0.17)
+  - MJExtension (3.1.0)
   - MJRefresh (3.2.0)
   - MLeaksFinder (1.0.0):
     - FBRetainCycleDetector
@@ -65,16 +65,16 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  CYLTabBarController: 527d217404020f1941ff94fd2c154ab994f66876
+  CYLTabBarController: cd14c6260a38337600737873a57b3114c7065a8e
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
-  HungryTools: a7c2b6599d882a9c5b9f4c024547f11695d4a093
+  HungryTools: 2fe19ef63f98639a82253456fd58b2de307e3357
   IQKeyboardManager: fcef267266379c003181fc3592f6bdb8bf4db839
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  MJExtension: 74ec83124a68891619fb7ba9c5c811bbf1691076
+  MJExtension: 6b69b3bef2864fd550ce1a184eda219e321209d2
   MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   OHMySQL: 8bc54d2b8b9e1acfa0e652b18856a9cdbb24c431
 
 PODFILE CHECKSUM: 15f7a26dc671bd90c1e825e9b583f0fc7665436e
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.7.5

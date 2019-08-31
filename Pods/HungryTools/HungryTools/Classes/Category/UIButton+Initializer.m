@@ -1,16 +1,16 @@
 //
 //  UIButton+Initializer.m
-//  JibeiPro
+//  HungryTools
 //
 //  Created by 张海川 on 2019/1/14.
 //
 
 #ifndef ThemeColor
-#define ThemeColor [UIColor colorWithRed:255/255.f green:80/255.f blue:74/255.f alpha:1]
+    #define ThemeColor [UIColor colorWithRed:255/255.f green:80/255.f blue:74/255.f alpha:1]
 #endif
 
 #ifndef DisableColor
-#define DisableColor [UIColor colorWithRed:255/255.f green:173/255.f blue:173/255.f alpha:1]
+    #define DisableColor [UIColor colorWithRed:255/255.f green:173/255.f blue:173/255.f alpha:1]
 #endif
 
 #import "UIButton+Initializer.h"

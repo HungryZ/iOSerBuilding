@@ -1,13 +1,13 @@
 //
 //  UITableViewCell+SeparatorLine.m
-//  StrategyPlus
+//  HungryTools
 //
 //  Created by 张海川 on 2019/5/29.
 //  Copyright © 2019 张海川. All rights reserved.
 //
 
 #ifndef SeparatorLineColor
-#define SeparatorLineColor  [UIColor colorWithRed:230/255.f green:230/255.f blue:230/255.f alpha:1.f]
+    #define SeparatorLineColor  [UIColor colorWithRed:230/255.f green:230/255.f blue:230/255.f alpha:1.f]
 #endif
 
 #import "UITableViewCell+SeparatorLine.h"
@@ -22,7 +22,7 @@
 
 - (void)setShowSeparatorLine:(BOOL)showSeparatorLine {
     
-    objc_setAssociatedObject(self, "showSeparatorLine", @(showSeparatorLine), OBJC_ASSOCIATION_ASSIGN );
+    objc_setAssociatedObject(self, "showSeparatorLine", @(showSeparatorLine), OBJC_ASSOCIATION_ASSIGN);
     
     if (showSeparatorLine) {
         if (![self viewWithTag:10086]) {

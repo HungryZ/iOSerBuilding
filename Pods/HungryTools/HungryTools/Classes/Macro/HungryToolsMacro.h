@@ -1,13 +1,13 @@
 //
-//  UtilsMacro.h
-//  StoneCopy
+//  HungryToolsMacro.h
+//  HungryTools
 //
 //  Created by 张海川 on 2018/9/6.
 //  Copyright © 2018年 张海川. All rights reserved.
 //
 
-#ifndef UtilsMacro_h
-#define UtilsMacro_h
+#ifndef HungryToolsMacro_h
+#define HungryToolsMacro_h
 
 
 #define ApplicationDelegate                 ((AppDelegate *)[[UIApplication sharedApplication] delegate])
@@ -21,6 +21,10 @@
 #define NaviBarHeight                       (StatusBarHeight + 44.0)
 // 底部TabBar高度
 #define TabBarHeight                        (StatusBarHeight > 21.0 ? 83.0 : 49.0)
+// 刘海屏与非刘海屏StatusBar高度差
+#define StatusBarDifHeight                  (StatusBarHeight - 20)
+// 刘海屏与非刘海屏TabBar高度差
+#define TabBarDifHeight                     (TabBarHeight - 49)
 
 #define ScreenWidth                         [[UIScreen mainScreen] bounds].size.width
 
@@ -49,7 +53,7 @@
 
 #define ImageView(name)                     [[UIImageView alloc] initWithImage:[UIImage imageNamed:name]]
 
-#define TableGrouped                        [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped]
+#define GroupedTable                        [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped]
 
 
-#endif /* UtilsMacro_h */
+#endif /* HungryToolsMacro_h */
