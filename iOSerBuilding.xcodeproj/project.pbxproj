@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		017159652318B6A300596160 /* ticktock.mov in Resources */ = {isa = PBXBuildFile; fileRef = 017159642318B6A300596160 /* ticktock.mov */; };
+		01BE955B2332217300B6D7FE /* LevelUpAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BE955A2332217300B6D7FE /* LevelUpAnimationView.m */; };
+		01BE955E2332221800B6D7FE /* LevelUpController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BE955D2332221800B6D7FE /* LevelUpController.m */; };
 		01D87DDB2317A30600E62E78 /* LaunchAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D87DDA2317A30600E62E78 /* LaunchAnimationController.m */; };
 		01D87DDE2317A35900E62E78 /* Life_LaunchAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D87DDD2317A35900E62E78 /* Life_LaunchAnimationView.m */; };
 		01D87DE12317A43200E62E78 /* Life_LaunchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D87DE02317A43200E62E78 /* Life_LaunchModel.m */; };
@@ -82,6 +84,10 @@
 
 /* Begin PBXFileReference section */
 		017159642318B6A300596160 /* ticktock.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = ticktock.mov; sourceTree = "<group>"; };
+		01BE95592332217300B6D7FE /* LevelUpAnimationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LevelUpAnimationView.h; sourceTree = "<group>"; };
+		01BE955A2332217300B6D7FE /* LevelUpAnimationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LevelUpAnimationView.m; sourceTree = "<group>"; };
+		01BE955C2332221800B6D7FE /* LevelUpController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LevelUpController.h; sourceTree = "<group>"; };
+		01BE955D2332221800B6D7FE /* LevelUpController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LevelUpController.m; sourceTree = "<group>"; };
 		01D87DD92317A30600E62E78 /* LaunchAnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LaunchAnimationController.h; sourceTree = "<group>"; };
 		01D87DDA2317A30600E62E78 /* LaunchAnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LaunchAnimationController.m; sourceTree = "<group>"; };
 		01D87DDC2317A35900E62E78 /* Life_LaunchAnimationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Life_LaunchAnimationView.h; sourceTree = "<group>"; };
@@ -235,6 +241,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01BE95582332214C00B6D7FE /* LevelUpAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				01BE955C2332221800B6D7FE /* LevelUpController.h */,
+				01BE955D2332221800B6D7FE /* LevelUpController.m */,
+				01BE95592332217300B6D7FE /* LevelUpAnimationView.h */,
+				01BE955A2332217300B6D7FE /* LevelUpAnimationView.m */,
+			);
+			path = LevelUpAnimation;
+			sourceTree = "<group>";
+		};
 		01D87DD82317A2D900E62E78 /* LaunchAnimation */ = {
 			isa = PBXGroup;
 			children = (
@@ -615,6 +632,7 @@
 				336B000722B237A40061D6C4 /* MemoryLeak */,
 				333D133522B33D5F008D1EBB /* GCD */,
 				01D87DD82317A2D900E62E78 /* LaunchAnimation */,
+				01BE95582332214C00B6D7FE /* LevelUpAnimation */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -870,6 +888,7 @@
 				33A7355322C4BF480020A5ED /* OTScreenshotHelper.m in Sources */,
 				335B3BB32242115B00DED730 /* UILabel+Initializer.m in Sources */,
 				33A7353D22C4B6510020A5ED /* ScreenshotViewController.m in Sources */,
+				01BE955B2332217300B6D7FE /* LevelUpAnimationView.m in Sources */,
 				333D133822B33D72008D1EBB /* GCDViewController.m in Sources */,
 				3348CCB1223A27E70020F41C /* NSString+Check.m in Sources */,
 				33C7E1B922375FD50004BC50 /* main.m in Sources */,
@@ -877,6 +896,7 @@
 				33C7E1BB22375FD50004BC50 /* XWPresentOneTransition.m in Sources */,
 				33C7E1BC22375FD50004BC50 /* AppDelegate.m in Sources */,
 				01D87DDB2317A30600E62E78 /* LaunchAnimationController.m in Sources */,
+				01BE955E2332221800B6D7FE /* LevelUpController.m in Sources */,
 				336B000A22B237D90061D6C4 /* MemoryLeakCheckController.m in Sources */,
 				33C12C5522826C74002DEEB3 /* BannerViewController.m in Sources */,
 				33C7E1BD22375FD50004BC50 /* BezierViewController.m in Sources */,

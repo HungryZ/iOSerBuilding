@@ -20,6 +20,7 @@
 #import "GCDViewController.h"
 #import "ScreenshotViewController.h"
 #import "LaunchAnimationController.h"
+#import "LevelUpController.h"
 
 @interface HomeViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -36,11 +37,11 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
 #if APPSTATUS == 0
-    self.title = @"测试";
+    self.navigationItem.title = @"测试";
 #elif APPSTATUS == 1
-    self.title = @"正式";
+    self.navigationItem.title = @"正式";
 #elif APPSTATUS == 2
-    self.title = @"预发";
+    self.navigationItem.title = @"预发";
 #endif
     
     [self.view addSubview:self.mainTableView];
@@ -139,6 +140,10 @@
                        @{
                            @"title" : @"开屏动画",
                            @"controller" : [LaunchAnimationController class],
+                           },
+                       @{
+                           @"title" : @"升级动画",
+                           @"controller" : [LevelUpController class],
                            },
                        ];
     }
