@@ -24,10 +24,10 @@
         [[UITableView appearance] setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentNever];
     }
     
-    UIWindow * window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    window.rootViewController = [BaseTabBarManager sharedManager].tabBarController;
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = UIColor.whiteColor;
+    self.window.rootViewController = [BaseTabBarManager sharedManager].tabBarController;
     
-    self.window = window;
     [self.window makeKeyAndVisible];
     
     [self initTD];

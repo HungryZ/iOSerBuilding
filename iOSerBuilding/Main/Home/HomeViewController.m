@@ -21,6 +21,7 @@
 #import "ScreenshotViewController.h"
 #import "LaunchAnimationController.h"
 #import "LevelUpController.h"
+#import "RelativeLabelViewController.h"
 
 @interface HomeViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -144,7 +145,11 @@
                        @{
                            @"title" : @"升级动画",
                            @"controller" : [LevelUpController class],
-                           },
+                       },
+                       @{
+                           @"title" : @"Label相对布局",
+                           @"controller" : [RelativeLabelViewController class],
+                       },
                        ];
     }
     return _dataArray;
