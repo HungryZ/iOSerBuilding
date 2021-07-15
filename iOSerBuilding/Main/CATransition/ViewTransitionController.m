@@ -24,7 +24,7 @@
     self.imageV.contentMode = UIViewContentModeScaleAspectFill;
     [self.view addSubview:self.imageV];
     [self.imageV mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(UIEdgeInsetsMake(NaviBarHeight, 0, 0, 0));
+        make.edges.mas_equalTo(UIEdgeInsetsMake(kNaviHeight, 0, 0, 0));
     }];
     //添加手势
     UISwipeGestureRecognizer *leftSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];

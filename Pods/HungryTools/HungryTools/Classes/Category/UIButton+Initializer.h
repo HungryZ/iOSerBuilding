@@ -11,23 +11,23 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIButton (Initializer)
 
-+ (instancetype)buttonWithTitle:(NSString *)title
-                     titleColor:(UIColor *)titleColor
++ (instancetype)buttonWithThemeTitle:(NSString *)title target:(nullable id)target action:(nullable SEL)action;
+
++ (instancetype)buttonWithTitle:(nullable NSString *)title
+                     titleColor:(nullable UIColor *)titleColor
                        fontSize:(float)fontSize
                    cornerRadius:(float)cornerRadius
-                 backgrondColor:(nullable UIColor *)backgrondColor
+                backgroundColor:(nullable UIColor *)backgroundColor
                          target:(nullable id)target
                          action:(nullable SEL)action;
 
-+ (instancetype)buttonWithThemeTitle:(NSString *)title target:(nullable id)target action:(nullable SEL)action;
-
-+ (instancetype)buttonWithTitle:(NSString *)title
-                     titleColor:(UIColor *)titleColor
++ (instancetype)buttonWithTitle:(nullable NSString *)title
+                     titleColor:(nullable UIColor *)titleColor
                        fontSize:(float)fontSize
                    cornerRadius:(float)cornerRadius;
 
-+ (instancetype)buttonWithTitle:(NSString *)title
-                     titleColor:(UIColor *)titleColor
++ (instancetype)buttonWithTitle:(nullable NSString *)title
+                     titleColor:(nullable UIColor *)titleColor
                        fontSize:(float)fontSize
                          target:(nullable id)target
                          action:(nullable SEL)action;
@@ -35,6 +35,10 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)buttonWithImageName:(NSString *)imageName
                              target:(nullable id)target
                              action:(nullable SEL)action;
+
+
+/// 只做了对Normal和Selected的支持
+- (void)setFont:(UIFont *)font forState:(UIControlState)state;
 
 
 @end

@@ -25,7 +25,7 @@
     [row0 addSubview:label1];
     [row0 addSubview:label2];
     [row0 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(NaviBarHeight + 64 * 1);
+        make.top.mas_equalTo(kNaviHeight + 64 * 1);
         make.left.right.mas_equalTo(0);
         make.height.mas_equalTo(64);
     }];
@@ -46,7 +46,7 @@
     [row1 addSubview:label3];
     [row1 addSubview:label4];
     [row1 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(NaviBarHeight + 64 * 2);
+        make.top.mas_equalTo(kNaviHeight + 64 * 2);
         make.left.right.mas_equalTo(0);
         make.height.mas_equalTo(64);
     }];
@@ -68,7 +68,7 @@
     [row2 addSubview:label5];
     [row2 addSubview:label6];
     [row2 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(NaviBarHeight + 64 * 3);
+        make.top.mas_equalTo(kNaviHeight + 64 * 3);
         make.left.right.mas_equalTo(0);
         make.height.mas_equalTo(64);
     }];
@@ -90,7 +90,7 @@
     [row3 addSubview:label7];
     [row3 addSubview:label8];
     [row3 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(NaviBarHeight + 64 * 4);
+        make.top.mas_equalTo(kNaviHeight + 64 * 4);
         make.left.right.mas_equalTo(0);
         make.height.mas_equalTo(64);
     }];
@@ -105,14 +105,15 @@
     
     // ==========================================================================
     
+    NSString *string;
     UIView *row4 = [UIView new];
-    UILabel *label9 = [UILabel labelWithFontSize:24 textColor:UIColor.blackColor text:@"RelativeLabelViewController"];
+    UILabel *label9 = [UILabel labelWithFontSize:24 textColor:UIColor.blackColor text:string ?: @"RelativeLabelViewController"];
     UILabel *label10 = [UILabel labelWithFontSize:24 textColor:UIColor.orangeColor text:@"RelativeLabelViewController"];
     [self.view addSubview:row4];
     [row4 addSubview:label9];
     [row4 addSubview:label10];
     [row4 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(NaviBarHeight + 64 * 5);
+        make.top.mas_equalTo(kNaviHeight + 64 * 5);
         make.left.right.mas_equalTo(0);
         make.height.mas_equalTo(64);
     }];

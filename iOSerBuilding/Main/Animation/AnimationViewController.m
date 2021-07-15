@@ -26,7 +26,7 @@
     /****************************************************
      UIView 动画
      ****************************************************/
-    UIView * view1 = [[UIView alloc] initWithFrame:CGRectMake(50, NaviBarHeight + 50, 100, 61.8)];
+    UIView * view1 = [[UIView alloc] initWithFrame:CGRectMake(50, kNaviHeight + 50, 100, 61.8)];
     view1.backgroundColor = [UIColor purpleColor];
     [self.view addSubview:view1];
     
@@ -37,7 +37,7 @@
         view1.transform = CGAffineTransformMakeRotation(M_PI);
     }];
     
-    UIView * view2 = [[UIView alloc] initWithFrame:CGRectMake(170, NaviBarHeight + 50, 100, 61.8)];
+    UIView * view2 = [[UIView alloc] initWithFrame:CGRectMake(170, kNaviHeight + 50, 100, 61.8)];
     view2.backgroundColor = [UIColor purpleColor];
     [self.view addSubview:view2];
     
@@ -46,7 +46,7 @@
         view2.transform = CGAffineTransformMakeRotation(M_PI);
     }];
     
-    UIView * view3 = [[UIView alloc] initWithFrame:CGRectMake(290, NaviBarHeight + 50, 100, 61.8)];
+    UIView * view3 = [[UIView alloc] initWithFrame:CGRectMake(290, kNaviHeight + 50, 100, 61.8)];
     view3.backgroundColor = [UIColor purpleColor];
     [self.view addSubview:view3];
     
@@ -113,7 +113,7 @@
     UIBezierPath * path = [UIBezierPath bezierPath];
     [path moveToPoint:CGPointMake(100, 450)];
     CGPoint endPoint = CGPointMake(305, 450);
-    [path addQuadCurveToPoint:endPoint controlPoint:CGPointMake(ScreenWidth / 2, 300)];
+    [path addQuadCurveToPoint:endPoint controlPoint:CGPointMake(kScreenWidth / 2, 300)];
     [path closePath];
     
     CAKeyframeAnimation* keyFrameAni = [CAKeyframeAnimation animationWithKeyPath:@"position"];

@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>JS交互</title>
+</head>
+
+<script>
+    function click() {
+        // window.webkit.messageHandlers.scan.postMessage()
+        document.write(5 + 6);
+    }
+</script>
+
+<body>
+    <button onclick="window.webkit.messageHandlers.scan.postMessage()" style="width: 120px; height: 120px;">postMessage</button>
+
+</body>
+
+</html>

@@ -12,25 +12,27 @@
 
 #define ApplicationDelegate                 ((AppDelegate *)[[UIApplication sharedApplication] delegate])
 
-#define KeyWindow                           [UIApplication sharedApplication].keyWindow
+#define keyWindow                           [UIApplication sharedApplication].keyWindow
+
+#define deleWindow                          [UIApplication sharedApplication].delegate.window
 
 #define UserDefaults                        [NSUserDefaults standardUserDefaults]
 // 状态栏高度
-#define StatusBarHeight                     [[UIApplication sharedApplication] statusBarFrame].size.height
+#define kStatusHeight                       [[UIApplication sharedApplication] statusBarFrame].size.height
 // 导航栏高度
-#define NaviBarHeight                       (StatusBarHeight + 44.0)
-// 底部TabBar高度
-#define TabBarHeight                        (StatusBarHeight > 21.0 ? 83.0 : 49.0)
-// 刘海屏与非刘海屏StatusBar高度差
-#define StatusBarDifHeight                  (StatusBarHeight - 20)
-// 刘海屏与非刘海屏TabBar高度差
-#define TabBarDifHeight                     (TabBarHeight - 49)
+#define kNaviHeight                         (kStatusHeight + 44.0)
+// TabBar高度
+#define kTabHeight                          (kStatusHeight > 21.0 ? 83.0 : 49.0)
+// 当前机型与非刘海屏StatusBar高度差
+#define kStatusDifHeight                    (kStatusHeight - 20)
+// 当前机型与非刘海屏TabBar高度差
+#define kBottomHeight                       (kTabHeight - 49)
 
-#define ScreenWidth                         [[UIScreen mainScreen] bounds].size.width
+#define kScreenWidth                        [[UIScreen mainScreen] bounds].size.width
 
-#define ScreenHeight                        [[UIScreen mainScreen] bounds].size.height
+#define kScreenHeight                       [[UIScreen mainScreen] bounds].size.height
 // 普通屏幕宽度375
-#define AdaptedWidth(x)                     (ScreenWidth / 375 * (x))
+#define AdaptedWidth(x)                     (kScreenWidth / 375 * (x))
 
 
 #define StringFormat(string, args...)       [NSString stringWithFormat:string, args]

@@ -6,7 +6,7 @@
 //
 
 #ifndef ThemeColor
-    #define ThemeColor [UIColor colorWithRed:255/255.f green:80/255.f blue:74/255.f alpha:1]
+    #define ThemeColor [UIColor colorWithRed:103/255.f green:94/255.f blue:247/255.f alpha:1]
 #endif
 
 #ifndef DisableColor
@@ -14,51 +14,36 @@
 #endif
 
 #import "UIButton+Initializer.h"
+#import "UIImage+Color.h"
+#import <objc/runtime.h>
 
 @implementation UIButton (Initializer)
 
-+ (instancetype)buttonWithTitle:(NSString *)title titleColor:(UIColor *)titleColor fontSize:(float)fontSize cornerRadius:(float)cornerRadius backgrondColor:(UIColor *)backgrondColor target:(id)target action:(SEL)action {
++ (void)load {
+    Method originalMethod = class_getInstanceMethod(self, @selector(setSelected:));
+    Method swizzledMethod = class_getInstanceMethod(self, @selector(ex_setSelected:));
+    method_exchangeImplementations(originalMethod, swizzledMethod);
+}
+
++ (instancetype)buttonWithThemeTitle:(NSString *)title target:(id)target action:(SEL)action {
     
-    UIButton * button = [self buttonWithType:UIButtonTypeCustom];
-    button.titleLabel.font = [UIFont systemFontOfSize:fontSize];
-    [button setTitle:title forState:UIControlStateNormal];
-    [button setTitleColor:titleColor forState:UIControlStateNormal];
-    [button setAdjustsImageWhenHighlighted:NO];
+    UIButton * button = [self buttonWithTitle:title titleColor:[UIColor whiteColor] fontSize:16.f cornerRadius:4.f backgroundColor:nil target:target action:action];
     
-    if (cornerRadius) {
-        button.layer.cornerRadius = cornerRadius;
-    }
-    
-    if (backgrondColor) {
-        button.backgroundColor = backgrondColor;
-    }
-    
-    if (target && action) {
-        [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
-    }
+    [button setBackgroundImage:[UIImage imageWithColor:DisableColor] forState:UIControlStateNormal];
+    [button setBackgroundImage:[UIImage imageWithColor:ThemeColor] forState:UIControlStateSelected];
+    button.clipsToBounds = YES;
     
     return button;
 }
 
 + (instancetype)buttonWithTitle:(NSString *)title titleColor:(UIColor *)titleColor fontSize:(float)fontSize cornerRadius:(float)cornerRadius {
     
-    return [self buttonWithTitle:title titleColor:titleColor fontSize:fontSize cornerRadius:cornerRadius backgrondColor:nil target:nil action:nil];
-}
-
-+ (instancetype)buttonWithThemeTitle:(NSString *)title target:(id)target action:(SEL)action {
-    
-    UIButton * button = [self buttonWithTitle:title titleColor:[UIColor whiteColor] fontSize:16.f cornerRadius:4.f backgrondColor:nil target:target action:action];
-    
-    [button setBackgroundImage:[self imageWithColor:DisableColor] forState:UIControlStateNormal];
-    [button setBackgroundImage:[self imageWithColor:ThemeColor] forState:UIControlStateSelected];
-    button.clipsToBounds = YES;
-    
-    return button;
+    return [self buttonWithTitle:title titleColor:titleColor fontSize:fontSize cornerRadius:cornerRadius backgroundColor:nil target:nil action:nil];
 }
 
 + (instancetype)buttonWithTitle:(NSString *)title titleColor:(UIColor *)titleColor fontSize:(float)fontSize target:(id)target action:(SEL)action {
     
-    return [self buttonWithTitle:title titleColor:titleColor fontSize:fontSize cornerRadius:0 backgrondColor:nil target:target action:action];
+    return [self buttonWithTitle:title titleColor:titleColor fontSize:fontSize cornerRadius:0 backgroundColor:nil target:target action:action];
 }
 
 + (instancetype)buttonWithImageName:(NSString *)imageName target:(id)target action:(SEL)action {
@@ -72,17 +57,51 @@
     return button;
 }
 
-+ (UIImage *)imageWithColor:(UIColor *)color {
++ (instancetype)buttonWithTitle:(NSString *)title titleColor:(UIColor *)titleColor fontSize:(float)fontSize cornerRadius:(float)cornerRadius backgroundColor:(UIColor *)backgroundColor target:(id)target action:(SEL)action {
     
-    CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
-    UIGraphicsBeginImageContext(rect.size);
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetFillColorWithColor(context, color.CGColor);
-    CGContextFillRect(context, rect);
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
+    UIButton * button = [self buttonWithType:UIButtonTypeCustom];
+    button.titleLabel.font = [UIFont systemFontOfSize:fontSize];
+    [button setTitle:title forState:UIControlStateNormal];
+    [button setTitleColor:titleColor forState:UIControlStateNormal];
+    [button setAdjustsImageWhenHighlighted:NO];
+    [button setAdjustsImageWhenDisabled:NO];
     
-    return image;
+    if (cornerRadius) {
+        button.layer.cornerRadius = cornerRadius;
+    }
+    
+    if (backgroundColor) {
+        button.backgroundColor = backgroundColor;
+    }
+    
+    if (target && action) {
+        [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    }
+    
+    return button;
+}
+
+- (void)ex_setSelected:(BOOL)selected {
+    [self ex_setSelected:selected];
+    
+    UIFont *font = objc_getAssociatedObject(self, selected ? "selectedFont" : "normalFont");
+    if (font) {
+        self.titleLabel.font = font;
+    }
+}
+
+- (void)setFont:(UIFont *)font forState:(UIControlState)state {
+    if (state == UIControlStateNormal) {
+        objc_setAssociatedObject(self, "normalFont", font, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        if (!self.isSelected) {
+            self.titleLabel.font = font;
+        }
+    } else if (state == UIControlStateSelected) {
+        objc_setAssociatedObject(self, "selectedFont", font, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        if (self.isSelected) {
+            self.titleLabel.font = font;
+        }
+    }
 }
 
 @end

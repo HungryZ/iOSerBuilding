@@ -9,10 +9,17 @@
 
 @implementation UILabel (Initializer)
 
-+ (instancetype)labelWithFontSize:(float)size textColor:(UIColor *)color text:(NSString *)text {
++ (instancetype)labelWithFont:(id)font textColor:(UIColor *)color text:(NSString *)text {
+    
+    UIFont *realFont;
+    if ([font isKindOfClass:UIFont.class]) {
+        realFont = font;
+    } else if ([font isKindOfClass:NSNumber.class]) {
+        realFont = [UIFont systemFontOfSize:[font floatValue]];
+    }
     
     UILabel * label = [self new];
-    label.font = [UIFont systemFontOfSize:size];
+    label.font = realFont;
     
     if (color) {
         label.textColor = color;
@@ -25,19 +32,27 @@
     return label;
 }
 
-+ (instancetype)labelWithFontSize:(float)size textColor:(UIColor *)color {
++ (instancetype)labelWithFont:(id)font textColor:(UIColor *)color {
     
-    return [self labelWithFontSize:size textColor:color text:nil];
+    return [self labelWithFont:font textColor:color text:nil];
 }
 
-+ (instancetype)labelWithFontSize:(float)size text:(NSString *)text {
++ (instancetype)labelWithFont:(id)font text:(NSString *)text {
     
-    return [self labelWithFontSize:size textColor:[UIColor blackColor] text:text];
+    return [self labelWithFont:font textColor:[UIColor blackColor] text:text];
 }
 
-+ (instancetype)labelWithFontSize:(float)size {
++ (instancetype)labelWithFont:(id)font {
     
-    return [self labelWithFontSize:size textColor:nil text:nil];
+    return [self labelWithFont:font textColor:nil text:nil];
+}
+
++ (instancetype)labelWithMonospacedFontSize:(CGFloat)size {
+    
+    UILabel * label = [self new];
+    label.font = [UIFont fontWithName:@"Helvetica Neue" size:size];
+    
+    return label;
 }
 
 @end

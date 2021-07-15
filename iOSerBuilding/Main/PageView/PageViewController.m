@@ -36,7 +36,7 @@
     
     [self.view addSubview:self.titleLabel];
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(NaviBarHeight);
+        make.top.mas_equalTo(kNaviHeight);
         make.centerX.mas_equalTo(0);
     }];
     

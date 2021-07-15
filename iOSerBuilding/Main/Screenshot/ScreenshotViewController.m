@@ -24,7 +24,7 @@
     [self.view addSubview:_smallScreenView];
     [_smallScreenView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.center.mas_equalTo(0);
-        make.size.mas_equalTo(CGSizeMake(ScreenWidth / 2, ScreenHeight / 2));
+        make.size.mas_equalTo(CGSizeMake(kScreenWidth / 2, kScreenHeight / 2));
     }];
     
     UIButton * button = [UIButton buttonWithThemeTitle:@"截屏" target:self action:@selector(buttonClicked)];

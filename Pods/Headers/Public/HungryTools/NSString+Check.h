@@ -1,1 +1,0 @@
-../../../HungryTools/HungryTools/Classes/Category/NSString+Check.h

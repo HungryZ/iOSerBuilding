@@ -12,7 +12,6 @@
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
 #import "HungryToolsMacro.h"
-#import "KeyMacros.h"
 #import "TargetMacro.h"
 #import "ColorMacro.h"
 
@@ -21,6 +20,10 @@
 #import "UILabel+Initializer.h"
 #import "UIButton+Initializer.h"
 #import "UIImage+Chameleon.h"
+
+// 日志系统
+#import <CocoaLumberjack/CocoaLumberjack.h>
+static const DDLogLevel ddLogLevel = DDLogLevelAll;
 
 
 #endif /* PrefixHeader_pch */

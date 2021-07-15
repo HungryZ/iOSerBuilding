@@ -26,7 +26,7 @@
     
     [self.view addSubview:self.mainTableView];
     [self.mainTableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(UIEdgeInsetsMake(NaviBarHeight, 0, 0, 0));
+        make.edges.mas_equalTo(UIEdgeInsetsMake(kNaviHeight, 0, 0, 0));
     }];
     
     _dropView = [BezierDropView new];
@@ -67,7 +67,7 @@
         _mainTableView = [UITableView new];
         _mainTableView.delegate = self;
         _mainTableView.dataSource = self;
-        _mainTableView.rowHeight = ScreenHeight - NaviBarHeight;
+        _mainTableView.rowHeight = kScreenHeight - kNaviHeight;
         _mainTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     }
     return _mainTableView;

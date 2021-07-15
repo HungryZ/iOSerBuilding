@@ -19,7 +19,7 @@
 //关键的手势过渡的过程
 - (void)handleGesture:(UIPanGestureRecognizer *)panGesture{
     
-    CGPoint  translation = [panGesture translationInView:panGesture.view];
+    CGPoint translation = [panGesture translationInView:panGesture.view];
     CGFloat percentComplete = 0.0;
     
     if (translation.x < 0) {

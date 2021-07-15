@@ -1,20 +1,24 @@
-platform :ios, '8.0'
-#use_frameworks!个别需要用到它，比如reactiveCocoa 或Swift
+platform :ios, '11.0'
+use_frameworks!
+source 'https://github.com/CocoaPods/Specs.git'
 
 # ruby grammar
 targetsArray = ['iOSerBuilding']
 targetsArray.each do |t|
     target t do
         pod 'AFNetworking'
+        pod 'YTKNetwork'
         pod 'Masonry'
         pod 'MJRefresh'
         pod 'MJExtension'
         pod 'CYLTabBarController'
-        pod 'OHMySQL'
         pod 'HungryTools'
-        pod 'MLeaksFinder'
+        pod 'HungryTools/Macro'
+#        pod 'MLeaksFinder'
         pod 'IQKeyboardManager'
-
+        pod 'ZHCPickerHelper'
+        pod 'TZImagePickerController'
+        pod 'CocoaLumberjack'
     end
     
 end

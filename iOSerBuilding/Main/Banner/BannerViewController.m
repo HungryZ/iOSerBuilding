@@ -27,19 +27,19 @@
                                            delegate:self
                                          datasource:self
                                          flowLayout:layout];
-    _bannerView.isAuto = YES;
+    _bannerView.isAuto = NO;
     _bannerView.translatesAutoresizingMaskIntoConstraints = NO;
     _bannerView.autoTimInterval = 2;
     _bannerView.endless = YES;
     _bannerView.backgroundColor = [UIColor whiteColor];
     [_bannerView registerViewClass:[UICollectionViewCell class] identifier:@"cellId"];
-    [_bannerView freshCarousel];
     [self.view addSubview:_bannerView];
     [_bannerView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(NaviBarHeight);
+        make.top.mas_equalTo(kNaviHeight);
         make.left.right.mas_equalTo(0);
         make.height.mas_equalTo(150);
     }];
+    [_bannerView freshCarousel];
 }
 
 //- (void)viewWillAppear:(BOOL)animated {

@@ -12,7 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UITableViewCell (SeparatorLine)
 
-@property (nonatomic, assign) BOOL showSeparatorLine;
+@property (nonatomic, assign) UIEdgeInsets  zhc_separatorLineInset;
+
+@property (nonatomic, assign) CGFloat       zhc_separatorLineHeight;
+
+/// 是否显示顶部分割线
+/// 需要在 zhc_separatorLineInset，zhc_separatorLineHeight 赋值之后再赋值
+@property (nonatomic, assign) BOOL          zhc_showTopSeparatorLine;
 
 @end
 

@@ -1,1 +1,0 @@
-../../../HungryTools/HungryTools/Classes/Category/UIImage+Chameleon.h

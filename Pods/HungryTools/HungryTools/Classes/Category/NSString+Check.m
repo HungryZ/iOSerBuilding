@@ -32,4 +32,15 @@
     return [self checkWithRegexString:@"^(?=.*\\d)(?=.*[A-Za-z]).{6,16}$"];
 }
 
+- (NSString *)phoneFormat {
+    if (![self isPhoneNumber]) {
+        return @"";
+    }
+    NSString *str1 = [self substringToIndex:3];
+    NSString *str2 = [self substringWithRange:NSMakeRange(3, 4)];
+    NSString *str3 = [self substringFromIndex:7];
+    
+    return [NSString stringWithFormat:@"%@ %@ %@", str1, str2, str3];
+}
+
 @end

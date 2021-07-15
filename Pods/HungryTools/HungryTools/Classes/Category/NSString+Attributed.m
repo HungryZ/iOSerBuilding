@@ -14,7 +14,7 @@
 }
 
 - (NSRange)stringToRange:(NSString *)rangeString {
-    rangeString = [rangeString substringFromIndex:0];
+    rangeString = [rangeString substringFromIndex:1];
     rangeString = [rangeString substringToIndex:rangeString.length - 1];
     NSArray * array = [rangeString componentsSeparatedByString:@","];
     int location = [array[0] intValue];

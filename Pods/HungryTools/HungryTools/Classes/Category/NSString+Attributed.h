@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  dictionary 示例：
  @{
-    @"color"            : UIColor,
+    @"color"            : UIColor.redColor,
     @"colorRange"       : @"(2,3)",
     @"fontSize"         : @(14),
     @"fontSizeRange"    : @"(2,3)",

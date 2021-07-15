@@ -21,7 +21,7 @@
     scrollView.backgroundColor = [UIColor orangeColor];
     [self.view addSubview:scrollView];
     [scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(UIEdgeInsetsMake(NaviBarHeight, 0, TabBarHeight - 49, 0));
+        make.edges.mas_equalTo(UIEdgeInsetsMake(kNaviHeight, 0, kTabHeight - 49, 0));
     }];
     
     UIView * baseView = [UIView new];
@@ -30,14 +30,6 @@
     [baseView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(0);
         make.width.mas_equalTo(scrollView);
-    }];
-    
-    UIView * animView = [[UIView alloc] initWithFrame:CGRectMake(0, 500, 100, 100)];
-    animView.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:animView];
-    [UIView animateWithDuration:10 animations:^{
-        animView.frame = CGRectMake(375, 500, 100, 100);
-        animView.alpha = 0;
     }];
     
     UIView * view1 = [UIView new];
@@ -75,7 +67,7 @@
     // 添加scrollView添加到父视图，并设置其约束
     [self.view addSubview:horizontalScrollView];
     [horizontalScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.left.mas_equalTo(NaviBarHeight);
+        make.top.left.mas_equalTo(kNaviHeight);
         make.right.mas_equalTo(-10);
         make.height.mas_equalTo(100);
     }];

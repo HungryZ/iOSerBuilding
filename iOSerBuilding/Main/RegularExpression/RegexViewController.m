@@ -27,7 +27,7 @@
     // Do any additional setup after loading the view.
     [self.view addSubview:self.phoneField];
     [self.phoneField mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(NaviBarHeight + 10);
+        make.top.mas_equalTo(kNaviHeight + 10);
         make.left.mas_equalTo(10);
         make.right.mas_equalTo(-10);
         make.height.mas_equalTo(44);
