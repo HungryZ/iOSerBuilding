@@ -72,6 +72,7 @@
 		7C9BEFFDC8069CEBBECBD9A2 /* Pods_iOSerBuilding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E869C9C7E1B396437807F5 /* Pods_iOSerBuilding.framework */; };
 		93058E822416312400B9D2F5 /* RelativeLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93058E812416312400B9D2F5 /* RelativeLabelViewController.m */; };
 		937705E62536D68600F832BD /* LogFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 937705E52536D68600F832BD /* LogFileManager.m */; };
+		93801E7626A96504008B219E /* RunLoopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93801E7526A96504008B219E /* RunLoopViewController.m */; };
 		9390503A24C8250100E0085A /* Student+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 9390503724C8250100E0085A /* Student+CoreDataProperties.m */; };
 		9390503B24C8250100E0085A /* Student+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 9390503924C8250100E0085A /* Student+CoreDataClass.m */; };
 		9390503F24C826F500E0085A /* MarginButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9390503E24C826F500E0085A /* MarginButtonViewController.m */; };
@@ -193,6 +194,8 @@
 		93058E812416312400B9D2F5 /* RelativeLabelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RelativeLabelViewController.m; sourceTree = "<group>"; };
 		937705E42536D68600F832BD /* LogFileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogFileManager.h; sourceTree = "<group>"; };
 		937705E52536D68600F832BD /* LogFileManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogFileManager.m; sourceTree = "<group>"; };
+		93801E7426A96504008B219E /* RunLoopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopViewController.h; sourceTree = "<group>"; };
+		93801E7526A96504008B219E /* RunLoopViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunLoopViewController.m; sourceTree = "<group>"; };
 		9390503624C8250100E0085A /* Student+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Student+CoreDataProperties.h"; path = "/Users/hungry/XcodeProject/iOSerBuilding/iOSerBuilding/Main/Core Data/Student+CoreDataProperties.h"; sourceTree = "<absolute>"; };
 		9390503724C8250100E0085A /* Student+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "Student+CoreDataProperties.m"; path = "/Users/hungry/XcodeProject/iOSerBuilding/iOSerBuilding/Main/Core Data/Student+CoreDataProperties.m"; sourceTree = "<absolute>"; };
 		9390503824C8250100E0085A /* Student+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Student+CoreDataClass.h"; path = "/Users/hungry/XcodeProject/iOSerBuilding/iOSerBuilding/Main/Core Data/Student+CoreDataClass.h"; sourceTree = "<absolute>"; };
@@ -584,6 +587,7 @@
 				93B4F2C8250B7400003A6C4B /* AFNetworkingTest */,
 				93B03818251348AE007609CA /* JSInteraction */,
 				937705E32536D5DE00F832BD /* ConfigCocoaLumberjack */,
+				93801E7326A964C7008B219E /* RunLoop */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -620,6 +624,15 @@
 				937705E52536D68600F832BD /* LogFileManager.m */,
 			);
 			path = ConfigCocoaLumberjack;
+			sourceTree = "<group>";
+		};
+		93801E7326A964C7008B219E /* RunLoop */ = {
+			isa = PBXGroup;
+			children = (
+				93801E7426A96504008B219E /* RunLoopViewController.h */,
+				93801E7526A96504008B219E /* RunLoopViewController.m */,
+			);
+			path = RunLoop;
 			sourceTree = "<group>";
 		};
 		9390503C24C826A500E0085A /* MarginButton */ = {
@@ -892,6 +905,7 @@
 				3348CCB1223A27E70020F41C /* NSString+Check.m in Sources */,
 				33C7E1B922375FD50004BC50 /* main.m in Sources */,
 				93B4F2CB250B7443003A6C4B /* AFTestViewController.m in Sources */,
+				93801E7626A96504008B219E /* RunLoopViewController.m in Sources */,
 				33C7E1BA22375FD50004BC50 /* AnimationViewController.m in Sources */,
 				33C7E1BB22375FD50004BC50 /* XWPresentOneTransition.m in Sources */,
 				33C7E1BC22375FD50004BC50 /* AppDelegate.m in Sources */,

@@ -23,7 +23,7 @@
 #import "MarginButtonViewController.h"
 #import "AFTestViewController.h"
 #import "JSInteractionViewController.h"
-#import "iOSerBuilding-Swift.h"
+#import "RunLoopViewController.h"
 
 @interface HomeViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -41,23 +41,23 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
-//#if APPSTATUS == 0
-//    self.navigationItem.title = @"测试";
-//#elif APPSTATUS == 1
-//    self.navigationItem.title = @"正式";
-//#elif APPSTATUS == 2
-//    self.navigationItem.title = @"预发";
-//#endif
-//
-//    [self.view addSubview:self.mainTableView];
-//    [self.mainTableView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.edges.mas_equalTo(UIEdgeInsetsMake(kNaviHeight, 0, kTabHeight, 0));
-//    }];
-//
-//    NSString *str = @"str";
-//    self.testString = str;
-//    str = @"string";
-//    NSLog(@"%@", self.testString);
+#if APPSTATUS == 0
+    self.navigationItem.title = @"测试";
+#elif APPSTATUS == 1
+    self.navigationItem.title = @"正式";
+#elif APPSTATUS == 2
+    self.navigationItem.title = @"预发";
+#endif
+
+    [self.view addSubview:self.mainTableView];
+    [self.mainTableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(UIEdgeInsetsMake(kNaviHeight, 0, kTabHeight, 0));
+    }];
+
+    NSString *str = @"str";
+    self.testString = str;
+    str = @"string";
+    NSLog(@"%@", self.testString);
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -163,6 +163,10 @@
             @{
                 @"title" : @"JS交互",
                 @"controller" : [JSInteractionViewController class],
+            },
+            @{
+                @"title" : @"Run Loop",
+                @"controller" : [RunLoopViewController class],
             },
         ];
     }
