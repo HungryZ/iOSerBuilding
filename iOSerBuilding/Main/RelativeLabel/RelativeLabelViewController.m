@@ -19,8 +19,8 @@
     // 直接把所有Label放在同一个View下时，只有第一行是第二个Label被压缩，下面的行都是第一个Label被压缩，
     // 暂时不知道原因，所以套了一个View
     UIView *row0 = [UIView new];
-    UILabel *label1 = [UILabel labelWithFontSize:24 textColor:UIColor.blackColor text:@"RelativeLabelViewController"];
-    UILabel *label2 = [UILabel labelWithFontSize:24 textColor:UIColor.orangeColor text:@"RelativeLabelViewController"];
+    UILabel *label1 = [UILabel labelWithFont:@24 textColor:UIColor.blackColor text:@"RelativeLabelViewController"];
+    UILabel *label2 = [UILabel labelWithFont:@24 textColor:UIColor.orangeColor text:@"RelativeLabelViewController"];
     [self.view addSubview:row0];
     [row0 addSubview:label1];
     [row0 addSubview:label2];
@@ -40,8 +40,8 @@
     // ==========================================================================
     
     UIView *row1 = [UIView new];
-    UILabel *label3 = [UILabel labelWithFontSize:24 textColor:UIColor.blackColor text:@"RelativeLabelViewController"];
-    UILabel *label4 = [UILabel labelWithFontSize:24 textColor:UIColor.orangeColor text:@"RelativeLabelViewController"];
+    UILabel *label3 = [UILabel labelWithFont:@24 textColor:UIColor.blackColor text:@"RelativeLabelViewController"];
+    UILabel *label4 = [UILabel labelWithFont:@24 textColor:UIColor.orangeColor text:@"RelativeLabelViewController"];
     [self.view addSubview:row1];
     [row1 addSubview:label3];
     [row1 addSubview:label4];
@@ -62,8 +62,8 @@
     // ==========================================================================
     
     UIView *row2 = [UIView new];
-    UILabel *label5 = [UILabel labelWithFontSize:24 textColor:UIColor.blackColor text:@"RelativeLabelViewController"];
-    UILabel *label6 = [UILabel labelWithFontSize:24 textColor:UIColor.orangeColor text:@"RelativeLabelViewController"];
+    UILabel *label5 = [UILabel labelWithFont:@24 textColor:UIColor.blackColor text:@"RelativeLabelViewController"];
+    UILabel *label6 = [UILabel labelWithFont:@24 textColor:UIColor.orangeColor text:@"RelativeLabelViewController"];
     [self.view addSubview:row2];
     [row2 addSubview:label5];
     [row2 addSubview:label6];
@@ -84,8 +84,8 @@
     // ==========================================================================
     
     UIView *row3 = [UIView new];
-    UILabel *label7 = [UILabel labelWithFontSize:24 textColor:UIColor.blackColor text:@"RelativeLabelViewController"];
-    UILabel *label8 = [UILabel labelWithFontSize:24 textColor:UIColor.orangeColor text:@"RelativeLabelViewController"];
+    UILabel *label7 = [UILabel labelWithFont:@24 textColor:UIColor.blackColor text:@"RelativeLabelViewController"];
+    UILabel *label8 = [UILabel labelWithFont:@24 textColor:UIColor.orangeColor text:@"RelativeLabelViewController"];
     [self.view addSubview:row3];
     [row3 addSubview:label7];
     [row3 addSubview:label8];
@@ -107,8 +107,8 @@
     
     NSString *string;
     UIView *row4 = [UIView new];
-    UILabel *label9 = [UILabel labelWithFontSize:24 textColor:UIColor.blackColor text:string ?: @"RelativeLabelViewController"];
-    UILabel *label10 = [UILabel labelWithFontSize:24 textColor:UIColor.orangeColor text:@"RelativeLabelViewController"];
+    UILabel *label9 = [UILabel labelWithFont:@24 textColor:UIColor.blackColor text:string ?: @"RelativeLabelViewController"];
+    UILabel *label10 = [UILabel labelWithFont:@24 textColor:UIColor.orangeColor text:@"RelativeLabelViewController"];
     [self.view addSubview:row4];
     [row4 addSubview:label9];
     [row4 addSubview:label10];

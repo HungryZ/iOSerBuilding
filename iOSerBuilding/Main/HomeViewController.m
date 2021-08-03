@@ -15,7 +15,6 @@
 #import "ScrollMasonryController.h"
 #import "RegexViewController.h"
 #import "PageViewController.h"
-#import "BannerViewController.h"
 #import "MemoryLeakCheckController.h"
 #import "GCDViewController.h"
 #import "ScreenshotViewController.h"
@@ -24,6 +23,7 @@
 #import "AFTestViewController.h"
 #import "JSInteractionViewController.h"
 #import "RunLoopViewController.h"
+#import "CollectionViewListController.h"
 
 @interface HomeViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -51,13 +51,19 @@
 
     [self.view addSubview:self.mainTableView];
     [self.mainTableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(UIEdgeInsetsMake(kNaviHeight, 0, kTabHeight, 0));
+        make.edges.mas_equalTo(UIEdgeInsetsMake(0, 0, kTabHeight, 0));
     }];
 
-    NSString *str = @"str";
-    self.testString = str;
-    str = @"string";
-    NSLog(@"%@", self.testString);
+//    NSString *str = @"str";
+//    self.testString = str;
+//    str = @"string";
+//    NSLog(@"%@", self.testString);
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    self.navigationController.navigationBar.translucent = NO;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -133,10 +139,6 @@
                 @"controller" : [PageViewController class],
             },
             @{
-                @"title" : @"轮播图",
-                @"controller" : [BannerViewController class],
-            },
-            @{
                 @"title" : @"内存泄漏检测",
                 @"controller" : [MemoryLeakCheckController class],
             },
@@ -167,6 +169,10 @@
             @{
                 @"title" : @"Run Loop",
                 @"controller" : [RunLoopViewController class],
+            },
+            @{
+                @"title" : @"CollectionView",
+                @"controller" : [CollectionViewListController class],
             },
         ];
     }

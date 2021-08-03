@@ -17,7 +17,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self semaphoreDemo];
+//    [self semaphoreDemo];
+    [self serialDemo];
 }
 
 - (void)groupDemo {
@@ -37,21 +38,36 @@
     });
 }
 
-// 此处模拟一个车位数量为5的停车场
-- (void)semaphoreDemo {
-    // 并发队列 （可以同时进入多个车辆）
-    dispatch_queue_t concurrentQueue = dispatch_queue_create("iOSerBuilding", DISPATCH_QUEUE_CONCURRENT);
-    // 创建信号量，初始值为5 (5个车位）
-    dispatch_semaphore_t semaphore = dispatch_semaphore_create(5);
-    while (YES) {
-        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
-        NSLog(@"进来了一辆车");
-        dispatch_async(concurrentQueue, ^{
-            sleep(arc4random() % 3 + 3);
-            dispatch_semaphore_signal(semaphore);
-            NSLog(@"离开了一辆车");
-        });
-    }
+// 此处模拟一个停车场
+//- (void)semaphoreDemo {
+//    // 并发队列
+//    dispatch_queue_t concurrentQueue = dispatch_queue_create("iOSerBuilding", DISPATCH_QUEUE_CONCURRENT);
+//    // 创建信号量，初始值为5 (5个车位）
+//    dispatch_semaphore_t semaphore = dispatch_semaphore_create(5);
+//    while (YES) {
+//        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+//        NSLog(@"进来了一辆车");
+//        dispatch_async(concurrentQueue, ^{
+//            sleep(arc4random() % 3 + 3);
+//            dispatch_semaphore_signal(semaphore);
+//            NSLog(@"离开了一辆车");
+//        });
+//    }
+//}
+
+- (void)serialDemo {
+    // 串行队列
+    dispatch_queue_t concurrentQueue = dispatch_queue_create("serialDemo", DISPATCH_QUEUE_SERIAL);
+    dispatch_async(concurrentQueue, ^{
+        for (int i = 0; i < 3; i++) {
+            dispatch_async(concurrentQueue, ^{
+                sleep(3 - i);
+                NSLog(@"循环 %d 结束", i);
+            });
+        }
+        sleep(5);
+        NSLog(@"线程结束");
+    });
 }
 
 @end

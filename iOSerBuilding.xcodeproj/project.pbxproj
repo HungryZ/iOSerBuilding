@@ -11,13 +11,8 @@
 		3348CCAC223A027F0020F41C /* RegexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3348CCA9223A027F0020F41C /* RegexViewController.m */; };
 		3348CCB1223A27E70020F41C /* NSString+Check.m in Sources */ = {isa = PBXBuildFile; fileRef = 3348CCAE223A27E70020F41C /* NSString+Check.m */; };
 		335B3BA322420D2200DED730 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 335B3BA022420D2200DED730 /* PageViewController.m */; };
-		335B3BAD2242115B00DED730 /* UIImage+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 335B3BA62242115A00DED730 /* UIImage+Chameleon.m */; };
-		335B3BB02242115B00DED730 /* UIButton+Initializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 335B3BA72242115B00DED730 /* UIButton+Initializer.m */; };
-		335B3BB32242115B00DED730 /* UILabel+Initializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 335B3BAA2242115B00DED730 /* UILabel+Initializer.m */; };
 		336B000A22B237D90061D6C4 /* MemoryLeakCheckController.m in Sources */ = {isa = PBXBuildFile; fileRef = 336B000922B237D90061D6C4 /* MemoryLeakCheckController.m */; };
 		337BD38922C5E4DB00EAD627 /* InteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 337BD38822C5E4DB00EAD627 /* InteractiveTransition.m */; };
-		33874EA82282CC270063007C /* CWCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33874EA22282CC270063007C /* CWCarousel.m */; };
-		33874EA92282CC270063007C /* CWFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 33874EA42282CC270063007C /* CWFlowLayout.m */; };
 		33A7353922C4944E0020A5ED /* NaviTransitionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A7353822C4944E0020A5ED /* NaviTransitionController.m */; };
 		33A7353D22C4B6510020A5ED /* ScreenshotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A7353C22C4B6510020A5ED /* ScreenshotViewController.m */; };
 		33A7355322C4BF480020A5ED /* OTScreenshotHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A7354D22C4BF480020A5ED /* OTScreenshotHelper.m */; };
@@ -25,7 +20,6 @@
 		33A7355522C4BF480020A5ED /* ComOpenThreadOTScreenshotHelperSwizzleHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A7355222C4BF480020A5ED /* ComOpenThreadOTScreenshotHelperSwizzleHelper.m */; };
 		33B6250822C9AD5000A5F2FA /* InteractiveTransition2.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B6250722C9AD5000A5F2FA /* InteractiveTransition2.m */; };
 		33B6250B22C9AD7300A5F2FA /* NaviTransitionController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B6250A22C9AD7300A5F2FA /* NaviTransitionController2.m */; };
-		33C12C5522826C74002DEEB3 /* BannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C12C5422826C74002DEEB3 /* BannerViewController.m */; };
 		33C7573B21C0BA1B00B11706 /* iOSerBuildingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7573A21C0BA1B00B11706 /* iOSerBuildingTests.m */; };
 		33C7574621C0BA1B00B11706 /* iOSerBuildingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7574521C0BA1B00B11706 /* iOSerBuildingUITests.m */; };
 		33C7E1B422375FD50004BC50 /* ScrollMasonryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7575A21C0E96D00B11706 /* ScrollMasonryController.m */; };
@@ -73,6 +67,11 @@
 		93058E822416312400B9D2F5 /* RelativeLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93058E812416312400B9D2F5 /* RelativeLabelViewController.m */; };
 		937705E62536D68600F832BD /* LogFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 937705E52536D68600F832BD /* LogFileManager.m */; };
 		93801E7626A96504008B219E /* RunLoopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93801E7526A96504008B219E /* RunLoopViewController.m */; };
+		93801E7B26B004C3008B219E /* BannerCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93801E7A26B004C3008B219E /* BannerCollectionViewController.m */; };
+		93801E8226B1591C008B219E /* MyFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 93801E8126B1591C008B219E /* MyFlowLayout.m */; };
+		93801E8526B29D8F008B219E /* FlowCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93801E8426B29D8F008B219E /* FlowCollectionViewController.m */; };
+		93801E8926B2AD5E008B219E /* CollectionViewListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93801E8826B2AD5E008B219E /* CollectionViewListController.m */; };
+		93801E9026B3ECEC008B219E /* BannerLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 93801E8F26B3ECEC008B219E /* BannerLayout.m */; };
 		9390503A24C8250100E0085A /* Student+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 9390503724C8250100E0085A /* Student+CoreDataProperties.m */; };
 		9390503B24C8250100E0085A /* Student+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 9390503924C8250100E0085A /* Student+CoreDataClass.m */; };
 		9390503F24C826F500E0085A /* MarginButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9390503E24C826F500E0085A /* MarginButtonViewController.m */; };
@@ -132,24 +131,12 @@
 		335AC3D22215709100D5470A /* 1.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.JPG; sourceTree = "<group>"; };
 		335B3B9F22420D2200DED730 /* PageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
 		335B3BA022420D2200DED730 /* PageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
-		335B3BA52242115A00DED730 /* UIButton+Initializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Initializer.h"; sourceTree = "<group>"; };
-		335B3BA62242115A00DED730 /* UIImage+Chameleon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Chameleon.m"; sourceTree = "<group>"; };
-		335B3BA72242115B00DED730 /* UIButton+Initializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Initializer.m"; sourceTree = "<group>"; };
-		335B3BA82242115B00DED730 /* UILabel+Initializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Initializer.h"; sourceTree = "<group>"; };
-		335B3BA92242115B00DED730 /* UIImage+Chameleon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Chameleon.h"; sourceTree = "<group>"; };
-		335B3BAA2242115B00DED730 /* UILabel+Initializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Initializer.m"; sourceTree = "<group>"; };
 		336B000822B237D90061D6C4 /* MemoryLeakCheckController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoryLeakCheckController.h; sourceTree = "<group>"; };
 		336B000922B237D90061D6C4 /* MemoryLeakCheckController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoryLeakCheckController.m; sourceTree = "<group>"; };
 		33711B2F21C7783C00D69E0C /* CoreDataTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataTestViewController.h; sourceTree = "<group>"; };
 		33711B3021C7783C00D69E0C /* CoreDataTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataTestViewController.m; sourceTree = "<group>"; };
 		337BD38722C5E4DB00EAD627 /* InteractiveTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InteractiveTransition.h; sourceTree = "<group>"; };
 		337BD38822C5E4DB00EAD627 /* InteractiveTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InteractiveTransition.m; sourceTree = "<group>"; };
-		33874EA22282CC270063007C /* CWCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWCarousel.m; sourceTree = "<group>"; };
-		33874EA32282CC270063007C /* CWCarouselHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWCarouselHeader.h; sourceTree = "<group>"; };
-		33874EA42282CC270063007C /* CWFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWFlowLayout.m; sourceTree = "<group>"; };
-		33874EA52282CC270063007C /* CWCarouselProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWCarouselProtocol.h; sourceTree = "<group>"; };
-		33874EA62282CC270063007C /* CWCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWCarousel.h; sourceTree = "<group>"; };
-		33874EA72282CC270063007C /* CWFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWFlowLayout.h; sourceTree = "<group>"; };
 		33A7353722C4944E0020A5ED /* NaviTransitionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NaviTransitionController.h; sourceTree = "<group>"; };
 		33A7353822C4944E0020A5ED /* NaviTransitionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NaviTransitionController.m; sourceTree = "<group>"; };
 		33A7353B22C4B6510020A5ED /* ScreenshotViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScreenshotViewController.h; sourceTree = "<group>"; };
@@ -164,8 +151,6 @@
 		33B6250722C9AD5000A5F2FA /* InteractiveTransition2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InteractiveTransition2.m; sourceTree = "<group>"; };
 		33B6250922C9AD7300A5F2FA /* NaviTransitionController2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NaviTransitionController2.h; sourceTree = "<group>"; };
 		33B6250A22C9AD7300A5F2FA /* NaviTransitionController2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NaviTransitionController2.m; sourceTree = "<group>"; };
-		33C12C5322826C74002DEEB3 /* BannerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerViewController.h; sourceTree = "<group>"; };
-		33C12C5422826C74002DEEB3 /* BannerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerViewController.m; sourceTree = "<group>"; };
 		33C7572121C0BA1A00B11706 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		33C7572221C0BA1A00B11706 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		33C7572F21C0BA1B00B11706 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -196,6 +181,16 @@
 		937705E52536D68600F832BD /* LogFileManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogFileManager.m; sourceTree = "<group>"; };
 		93801E7426A96504008B219E /* RunLoopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopViewController.h; sourceTree = "<group>"; };
 		93801E7526A96504008B219E /* RunLoopViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunLoopViewController.m; sourceTree = "<group>"; };
+		93801E7926B004C3008B219E /* BannerCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerCollectionViewController.h; sourceTree = "<group>"; };
+		93801E7A26B004C3008B219E /* BannerCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerCollectionViewController.m; sourceTree = "<group>"; };
+		93801E8026B1591C008B219E /* MyFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyFlowLayout.h; sourceTree = "<group>"; };
+		93801E8126B1591C008B219E /* MyFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyFlowLayout.m; sourceTree = "<group>"; };
+		93801E8326B29D8F008B219E /* FlowCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlowCollectionViewController.h; sourceTree = "<group>"; };
+		93801E8426B29D8F008B219E /* FlowCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlowCollectionViewController.m; sourceTree = "<group>"; };
+		93801E8726B2AD5E008B219E /* CollectionViewListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewListController.h; sourceTree = "<group>"; };
+		93801E8826B2AD5E008B219E /* CollectionViewListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewListController.m; sourceTree = "<group>"; };
+		93801E8E26B3ECEC008B219E /* BannerLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerLayout.h; sourceTree = "<group>"; };
+		93801E8F26B3ECEC008B219E /* BannerLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerLayout.m; sourceTree = "<group>"; };
 		9390503624C8250100E0085A /* Student+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Student+CoreDataProperties.h"; path = "/Users/hungry/XcodeProject/iOSerBuilding/iOSerBuilding/Main/Core Data/Student+CoreDataProperties.h"; sourceTree = "<absolute>"; };
 		9390503724C8250100E0085A /* Student+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "Student+CoreDataProperties.m"; path = "/Users/hungry/XcodeProject/iOSerBuilding/iOSerBuilding/Main/Core Data/Student+CoreDataProperties.m"; sourceTree = "<absolute>"; };
 		9390503824C8250100E0085A /* Student+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Student+CoreDataClass.h"; path = "/Users/hungry/XcodeProject/iOSerBuilding/iOSerBuilding/Main/Core Data/Student+CoreDataClass.h"; sourceTree = "<absolute>"; };
@@ -418,12 +413,6 @@
 		335B3BA42242114D00DED730 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				335B3BA82242115B00DED730 /* UILabel+Initializer.h */,
-				335B3BAA2242115B00DED730 /* UILabel+Initializer.m */,
-				335B3BA52242115A00DED730 /* UIButton+Initializer.h */,
-				335B3BA72242115B00DED730 /* UIButton+Initializer.m */,
-				335B3BA92242115B00DED730 /* UIImage+Chameleon.h */,
-				335B3BA62242115A00DED730 /* UIImage+Chameleon.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -435,19 +424,6 @@
 				336B000922B237D90061D6C4 /* MemoryLeakCheckController.m */,
 			);
 			path = MemoryLeak;
-			sourceTree = "<group>";
-		};
-		33874EA12282CC270063007C /* OC */ = {
-			isa = PBXGroup;
-			children = (
-				33874EA62282CC270063007C /* CWCarousel.h */,
-				33874EA22282CC270063007C /* CWCarousel.m */,
-				33874EA32282CC270063007C /* CWCarouselHeader.h */,
-				33874EA52282CC270063007C /* CWCarouselProtocol.h */,
-				33874EA72282CC270063007C /* CWFlowLayout.h */,
-				33874EA42282CC270063007C /* CWFlowLayout.m */,
-			);
-			path = OC;
 			sourceTree = "<group>";
 		};
 		33A7353A22C4B6480020A5ED /* Screenshot */ = {
@@ -487,16 +463,6 @@
 				33A7355222C4BF480020A5ED /* ComOpenThreadOTScreenshotHelperSwizzleHelper.m */,
 			);
 			path = Private;
-			sourceTree = "<group>";
-		};
-		33C12C5222826C4F002DEEB3 /* Banner */ = {
-			isa = PBXGroup;
-			children = (
-				33874EA12282CC270063007C /* OC */,
-				33C12C5322826C74002DEEB3 /* BannerViewController.h */,
-				33C12C5422826C74002DEEB3 /* BannerViewController.m */,
-			);
-			path = Banner;
 			sourceTree = "<group>";
 		};
 		33C7571521C0BA1A00B11706 = {
@@ -570,7 +536,6 @@
 			children = (
 				3355296F2212AA7D0027C0A1 /* HomeViewController.h */,
 				335529702212AA7D0027C0A1 /* HomeViewController.m */,
-				33C12C5222826C4F002DEEB3 /* Banner */,
 				3341736521C3B3E1008B0C90 /* Core Data */,
 				335529722212AF2A0027C0A1 /* Bezier */,
 				335AC3BF221519AF00D5470A /* Animation */,
@@ -588,6 +553,7 @@
 				93B03818251348AE007609CA /* JSInteraction */,
 				937705E32536D5DE00F832BD /* ConfigCocoaLumberjack */,
 				93801E7326A964C7008B219E /* RunLoop */,
+				93801E7826B00489008B219E /* CollectionView */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -633,6 +599,23 @@
 				93801E7526A96504008B219E /* RunLoopViewController.m */,
 			);
 			path = RunLoop;
+			sourceTree = "<group>";
+		};
+		93801E7826B00489008B219E /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				93801E8726B2AD5E008B219E /* CollectionViewListController.h */,
+				93801E8826B2AD5E008B219E /* CollectionViewListController.m */,
+				93801E8E26B3ECEC008B219E /* BannerLayout.h */,
+				93801E8F26B3ECEC008B219E /* BannerLayout.m */,
+				93801E7926B004C3008B219E /* BannerCollectionViewController.h */,
+				93801E7A26B004C3008B219E /* BannerCollectionViewController.m */,
+				93801E8026B1591C008B219E /* MyFlowLayout.h */,
+				93801E8126B1591C008B219E /* MyFlowLayout.m */,
+				93801E8326B29D8F008B219E /* FlowCollectionViewController.h */,
+				93801E8426B29D8F008B219E /* FlowCollectionViewController.m */,
+			);
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 		9390503C24C826A500E0085A /* MarginButton */ = {
@@ -884,42 +867,41 @@
 			files = (
 				33C7E1B422375FD50004BC50 /* ScrollMasonryController.m in Sources */,
 				3348CCAC223A027F0020F41C /* RegexViewController.m in Sources */,
-				335B3BAD2242115B00DED730 /* UIImage+Chameleon.m in Sources */,
 				937705E62536D68600F832BD /* LogFileManager.m in Sources */,
 				33A7353922C4944E0020A5ED /* NaviTransitionController.m in Sources */,
 				33C7E1B522375FD50004BC50 /* ViewTransitionController.m in Sources */,
+				93801E8226B1591C008B219E /* MyFlowLayout.m in Sources */,
 				33C7E1B622375FD50004BC50 /* StudentModel.xcdatamodeld in Sources */,
 				33C7E1B722375FD50004BC50 /* PresentViewController.m in Sources */,
 				33A7355522C4BF480020A5ED /* ComOpenThreadOTScreenshotHelperSwizzleHelper.m in Sources */,
-				33874EA82282CC270063007C /* CWCarousel.m in Sources */,
 				9390503A24C8250100E0085A /* Student+CoreDataProperties.m in Sources */,
 				33C7E1B822375FD50004BC50 /* CoreDataTestViewController.m in Sources */,
 				93B038142513483B007609CA /* JSInteractionViewController.m in Sources */,
-				33874EA92282CC270063007C /* CWFlowLayout.m in Sources */,
+				93801E8926B2AD5E008B219E /* CollectionViewListController.m in Sources */,
 				33A7355422C4BF480020A5ED /* UIView+ComOpenThreadOTScreenshotHelperStatusBarReference.m in Sources */,
 				93BC54E824CE6DEE005A8B30 /* OffScreenRenderedController.swift in Sources */,
 				33A7355322C4BF480020A5ED /* OTScreenshotHelper.m in Sources */,
-				335B3BB32242115B00DED730 /* UILabel+Initializer.m in Sources */,
 				33A7353D22C4B6510020A5ED /* ScreenshotViewController.m in Sources */,
 				333D133822B33D72008D1EBB /* GCDViewController.m in Sources */,
+				93801E7B26B004C3008B219E /* BannerCollectionViewController.m in Sources */,
 				3348CCB1223A27E70020F41C /* NSString+Check.m in Sources */,
 				33C7E1B922375FD50004BC50 /* main.m in Sources */,
 				93B4F2CB250B7443003A6C4B /* AFTestViewController.m in Sources */,
 				93801E7626A96504008B219E /* RunLoopViewController.m in Sources */,
+				93801E9026B3ECEC008B219E /* BannerLayout.m in Sources */,
 				33C7E1BA22375FD50004BC50 /* AnimationViewController.m in Sources */,
 				33C7E1BB22375FD50004BC50 /* XWPresentOneTransition.m in Sources */,
 				33C7E1BC22375FD50004BC50 /* AppDelegate.m in Sources */,
 				336B000A22B237D90061D6C4 /* MemoryLeakCheckController.m in Sources */,
-				33C12C5522826C74002DEEB3 /* BannerViewController.m in Sources */,
 				33C7E1BD22375FD50004BC50 /* BezierViewController.m in Sources */,
 				93058E822416312400B9D2F5 /* RelativeLabelViewController.m in Sources */,
 				33B6250B22C9AD7300A5F2FA /* NaviTransitionController2.m in Sources */,
-				335B3BB02242115B00DED730 /* UIButton+Initializer.m in Sources */,
 				33C7E1BF22375FD50004BC50 /* TransitionViewController.m in Sources */,
 				33C7E1C022375FD50004BC50 /* BezierView.m in Sources */,
 				9390503B24C8250100E0085A /* Student+CoreDataClass.m in Sources */,
 				9390503F24C826F500E0085A /* MarginButtonViewController.m in Sources */,
 				337BD38922C5E4DB00EAD627 /* InteractiveTransition.m in Sources */,
+				93801E8526B29D8F008B219E /* FlowCollectionViewController.m in Sources */,
 				33C7E1C122375FD50004BC50 /* BaseTabBarManager.m in Sources */,
 				33C7E1C222375FD50004BC50 /* BezierDropView.m in Sources */,
 				33B6250822C9AD5000A5F2FA /* InteractiveTransition2.m in Sources */,
@@ -1160,7 +1142,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MH5HJ2B6RM;
 				FRAMEWORK_SEARCH_PATHS = (

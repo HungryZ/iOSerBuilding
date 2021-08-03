@@ -7,6 +7,7 @@
 
 #import "ZHCWebViewController.h"
 #import <WebKit/WKWebView.h>
+#import <WebKit/WKWebViewConfiguration.h>
 
 @interface ZHCWebViewController ()
 
@@ -47,6 +48,12 @@
     [self.view addSubview:self.webView];
     
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_urlString]]];
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    
+    self.webView.frame = self.view.bounds;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -104,7 +111,9 @@
 
 - (WKWebView *)webView {
     if (!_webView) {
-        _webView = [[WKWebView alloc] initWithFrame:self.view.bounds];
+        WKWebViewConfiguration *config = [WKWebViewConfiguration new];
+        config.applicationNameForUserAgent = [NSString stringWithFormat:@"%ld", random()];
+        _webView = [[WKWebView alloc] initWithFrame:CGRectZero configuration:config];
         _webView.backgroundColor = UIColor.whiteColor;
         if (_autoConfigTitle) {
             [_webView addObserver:self forKeyPath:@"title" options:NSKeyValueObservingOptionNew context:NULL];

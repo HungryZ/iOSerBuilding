@@ -39,8 +39,8 @@
         make.center.mas_equalTo(0);
     }];
     
-    UILabel *rightLabel = [UILabel labelWithFontSize:14 text:@"rightLabel"];
-    UILabel *bottomLabel = [UILabel labelWithFontSize:14 text:@"bottom"];
+    UILabel *rightLabel = [UILabel labelWithFont:@14 text:@"rightLabel"];
+    UILabel *bottomLabel = [UILabel labelWithFont:@14 text:@"bottom"];
     rightLabel.backgroundColor = UIColor.redColor;
     bottomLabel.backgroundColor = UIColor.redColor;
     [self.view addSubview:rightLabel];
