@@ -61,7 +61,7 @@
 #pragma mark - UICollectionViewDataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 1000;
+    return 9999;
 }
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -84,26 +84,29 @@
     return cell;
 }
 
+
+
 #pragma mark - UIScrollViewDelegate
 
 - (void)scrollViewWillEndDragging:(UICollectionView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {
     NSInteger maxIndex = [self collectionView:scrollView numberOfItemsInSection:0] - 1;
     NSInteger minIndex = 0;
-    if (velocity.x >= 0 && self.currentIndexPath.row == maxIndex) {
+    
+    if (velocity.x >= 0 && self.currentIndexPath.item == maxIndex) {
         return;
     }
-    if (velocity.x <= 0 && self.currentIndexPath.row == minIndex) {
+    if (velocity.x <= 0 && self.currentIndexPath.item == minIndex) {
         return;
     }
 
     if (velocity.x > 0) {           // 左滑,下一张
-        self.currentIndexPath = [NSIndexPath indexPathForRow:self.currentIndexPath.row + 1 inSection:self.currentIndexPath.section];
+        self.currentIndexPath = [NSIndexPath indexPathForItem:self.currentIndexPath.item + 1 inSection:0];
     } else if (velocity.x < 0) {    // 右滑,上一张
-        self.currentIndexPath = [NSIndexPath indexPathForRow:self.currentIndexPath.row - 1 inSection:self.currentIndexPath.section];
+        self.currentIndexPath = [NSIndexPath indexPathForItem:self.currentIndexPath.item - 1 inSection:0];
     } else if (velocity.x == 0) {   // 还有一种情况,当滑动后手指按住不放,然后松开,此时的速度其实是为0的
         // 当前scrollView.frame的中心点（以其子坐标系计算）
         CGFloat centerX = scrollView.frame.size.width / 2 + scrollView.contentOffset.x;
-        __block CGFloat minSpace = MAXFLOAT;
+        CGFloat minSpace = MAXFLOAT;
         for (UICollectionViewCell *cell in scrollView.visibleCells) {
             if (minSpace > ABS(cell.center.x - centerX)) {
                 minSpace = ABS(cell.center.x - centerX);
@@ -111,6 +114,11 @@
             }
         }
     }
+//    if (self.currentIndexPath.item > 499) {
+//        self.currentIndexPath = [NSIndexPath indexPathForItem:1 inSection:0];
+//        [scrollView scrollToItemAtIndexPath:self.currentIndexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
+////        return;
+//    }
     
     targetContentOffset->x = self.currentIndexPath.item * self.step - self.fixOffsetX;
 }
@@ -136,9 +144,10 @@
         _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
         _collectionView.dataSource = self;
         _collectionView.delegate = self;
+//        _collectionView.prefetchDataSource = self;
         _collectionView.backgroundColor = UIColor.whiteColor;
         _collectionView.decelerationRate = UIScrollViewDecelerationRateFast;
-        _collectionView.showsHorizontalScrollIndicator = NO;
+//        _collectionView.showsHorizontalScrollIndicator = NO;
         
         [_collectionView registerClass:UICollectionViewCell.class forCellWithReuseIdentifier:@"UICollectionViewCell"];
     }

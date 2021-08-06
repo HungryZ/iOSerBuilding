@@ -19,11 +19,10 @@ class OffScreenRenderedController: UIViewController {
          我们只设置contents或者UIImageView的image，并加上圆角+裁剪，是不会产生离屏渲染的。但如果加上了背景色、边框或其他有图像内容的图层，还是会产生离屏渲染。
          */
 
-        // Do any additional setup after loading the view.
-//        let view1 = UIView(frame: CGRect(x: 0, y: 0, width: 200.0, height: 200.0))
-//        // 设置背景色
+//        let view1 = UIView(frame: CGRect(x: 10, y: 0, width: 200.0, height: 200.0))
+////        // 设置背景色
 ////        view1.backgroundColor = UIColor.red
-//        // 设置边框宽度和颜色
+////        // 设置边框宽度和颜色
 ////        view1.layer.borderWidth = 2.0
 ////        view1.layer.borderColor = UIColor.black.cgColor
 //        //设置图片
@@ -51,9 +50,17 @@ class OffScreenRenderedController: UIViewController {
         button.imageView?.layer.cornerRadius = 100.0
         // 设置裁剪
         button.imageView?.clipsToBounds = true
-        
+
         button.center = view.center
         view.addSubview(button)
+        
+//        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 200.0, height: 200.0))
+//        imageView.image = UIImage(named: "minions")
+//        imageView.layer.cornerRadius = 100;
+//        imageView.clipsToBounds = true;
+//
+//        imageView.center = view.center
+//        view.addSubview(imageView)
     }
 
 }
