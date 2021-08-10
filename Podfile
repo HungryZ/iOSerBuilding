@@ -19,6 +19,8 @@ targetsArray.each do |t|
         pod 'ZHCPickerHelper'
         pod 'TZImagePickerController'
         pod 'CocoaLumberjack'
+        
+        pod 'Kingfisher'
     end
     
 end

@@ -10,7 +10,6 @@
 		333D133822B33D72008D1EBB /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D133722B33D72008D1EBB /* GCDViewController.m */; };
 		3348CCAC223A027F0020F41C /* RegexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3348CCA9223A027F0020F41C /* RegexViewController.m */; };
 		3348CCB1223A27E70020F41C /* NSString+Check.m in Sources */ = {isa = PBXBuildFile; fileRef = 3348CCAE223A27E70020F41C /* NSString+Check.m */; };
-		335B3BA322420D2200DED730 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 335B3BA022420D2200DED730 /* PageViewController.m */; };
 		336B000A22B237D90061D6C4 /* MemoryLeakCheckController.m in Sources */ = {isa = PBXBuildFile; fileRef = 336B000922B237D90061D6C4 /* MemoryLeakCheckController.m */; };
 		337BD38922C5E4DB00EAD627 /* InteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 337BD38822C5E4DB00EAD627 /* InteractiveTransition.m */; };
 		33A7353922C4944E0020A5ED /* NaviTransitionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A7353822C4944E0020A5ED /* NaviTransitionController.m */; };
@@ -72,6 +71,9 @@
 		93801E8526B29D8F008B219E /* FlowCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93801E8426B29D8F008B219E /* FlowCollectionViewController.m */; };
 		93801E8926B2AD5E008B219E /* CollectionViewListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93801E8826B2AD5E008B219E /* CollectionViewListController.m */; };
 		93801E9026B3ECEC008B219E /* BannerLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 93801E8F26B3ECEC008B219E /* BannerLayout.m */; };
+		93801E9326BD118C008B219E /* ImageImproveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93801E9226BD118B008B219E /* ImageImproveViewController.swift */; };
+		93801E9526BD1A94008B219E /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93801E9426BD1A94008B219E /* ImageTableViewCell.swift */; };
+		93801E9726BD32D0008B219E /* IMG_5851.HEIC in Resources */ = {isa = PBXBuildFile; fileRef = 93801E9626BD32D0008B219E /* IMG_5851.HEIC */; };
 		9390503A24C8250100E0085A /* Student+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 9390503724C8250100E0085A /* Student+CoreDataProperties.m */; };
 		9390503B24C8250100E0085A /* Student+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 9390503924C8250100E0085A /* Student+CoreDataClass.m */; };
 		9390503F24C826F500E0085A /* MarginButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9390503E24C826F500E0085A /* MarginButtonViewController.m */; };
@@ -129,8 +131,6 @@
 		335AC3CF2215709100D5470A /* 2.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.JPG; sourceTree = "<group>"; };
 		335AC3D12215709100D5470A /* 0.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.JPG; sourceTree = "<group>"; };
 		335AC3D22215709100D5470A /* 1.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.JPG; sourceTree = "<group>"; };
-		335B3B9F22420D2200DED730 /* PageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
-		335B3BA022420D2200DED730 /* PageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
 		336B000822B237D90061D6C4 /* MemoryLeakCheckController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoryLeakCheckController.h; sourceTree = "<group>"; };
 		336B000922B237D90061D6C4 /* MemoryLeakCheckController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoryLeakCheckController.m; sourceTree = "<group>"; };
 		33711B2F21C7783C00D69E0C /* CoreDataTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataTestViewController.h; sourceTree = "<group>"; };
@@ -191,6 +191,9 @@
 		93801E8826B2AD5E008B219E /* CollectionViewListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewListController.m; sourceTree = "<group>"; };
 		93801E8E26B3ECEC008B219E /* BannerLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerLayout.h; sourceTree = "<group>"; };
 		93801E8F26B3ECEC008B219E /* BannerLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerLayout.m; sourceTree = "<group>"; };
+		93801E9226BD118B008B219E /* ImageImproveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageImproveViewController.swift; sourceTree = "<group>"; };
+		93801E9426BD1A94008B219E /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		93801E9626BD32D0008B219E /* IMG_5851.HEIC */ = {isa = PBXFileReference; lastKnownFileType = file; path = IMG_5851.HEIC; sourceTree = "<group>"; };
 		9390503624C8250100E0085A /* Student+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Student+CoreDataProperties.h"; path = "/Users/hungry/XcodeProject/iOSerBuilding/iOSerBuilding/Main/Core Data/Student+CoreDataProperties.h"; sourceTree = "<absolute>"; };
 		9390503724C8250100E0085A /* Student+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "Student+CoreDataProperties.m"; path = "/Users/hungry/XcodeProject/iOSerBuilding/iOSerBuilding/Main/Core Data/Student+CoreDataProperties.m"; sourceTree = "<absolute>"; };
 		9390503824C8250100E0085A /* Student+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Student+CoreDataClass.h"; path = "/Users/hungry/XcodeProject/iOSerBuilding/iOSerBuilding/Main/Core Data/Student+CoreDataClass.h"; sourceTree = "<absolute>"; };
@@ -401,15 +404,6 @@
 			path = CATransition;
 			sourceTree = "<group>";
 		};
-		335B3B9E22420D0900DED730 /* PageView */ = {
-			isa = PBXGroup;
-			children = (
-				335B3B9F22420D2200DED730 /* PageViewController.h */,
-				335B3BA022420D2200DED730 /* PageViewController.m */,
-			);
-			path = PageView;
-			sourceTree = "<group>";
-		};
 		335B3BA42242114D00DED730 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -543,7 +537,6 @@
 				33A7353A22C4B6480020A5ED /* Screenshot */,
 				333F592C21D75EAF0081132C /* ScrollWithMasonry */,
 				3348CCA7223A024F0020F41C /* RegularExpression */,
-				335B3B9E22420D0900DED730 /* PageView */,
 				336B000722B237A40061D6C4 /* MemoryLeak */,
 				333D133522B33D5F008D1EBB /* GCD */,
 				93058E7F241630F100B9D2F5 /* RelativeLabel */,
@@ -554,6 +547,7 @@
 				937705E32536D5DE00F832BD /* ConfigCocoaLumberjack */,
 				93801E7326A964C7008B219E /* RunLoop */,
 				93801E7826B00489008B219E /* CollectionView */,
+				93801E9126BD1101008B219E /* ImageImpove */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -616,6 +610,16 @@
 				93801E8426B29D8F008B219E /* FlowCollectionViewController.m */,
 			);
 			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		93801E9126BD1101008B219E /* ImageImpove */ = {
+			isa = PBXGroup;
+			children = (
+				93801E9626BD32D0008B219E /* IMG_5851.HEIC */,
+				93801E9226BD118B008B219E /* ImageImproveViewController.swift */,
+				93801E9426BD1A94008B219E /* ImageTableViewCell.swift */,
+			);
+			path = ImageImpove;
 			sourceTree = "<group>";
 		};
 		9390503C24C826A500E0085A /* MarginButton */ = {
@@ -781,6 +785,7 @@
 				33C7E1CF22375FD50004BC50 /* loading7.png in Resources */,
 				33C7E1D022375FD50004BC50 /* loading9.png in Resources */,
 				33C7E1D322375FD50004BC50 /* loading18.png in Resources */,
+				93801E9726BD32D0008B219E /* IMG_5851.HEIC in Resources */,
 				33C7E1D422375FD50004BC50 /* loading19.png in Resources */,
 				33C7E1D522375FD50004BC50 /* 1.JPG in Resources */,
 				33C7E1D722375FD50004BC50 /* 2.JPG in Resources */,
@@ -890,6 +895,7 @@
 				93801E7626A96504008B219E /* RunLoopViewController.m in Sources */,
 				93801E9026B3ECEC008B219E /* BannerLayout.m in Sources */,
 				33C7E1BA22375FD50004BC50 /* AnimationViewController.m in Sources */,
+				93801E9526BD1A94008B219E /* ImageTableViewCell.swift in Sources */,
 				33C7E1BB22375FD50004BC50 /* XWPresentOneTransition.m in Sources */,
 				33C7E1BC22375FD50004BC50 /* AppDelegate.m in Sources */,
 				336B000A22B237D90061D6C4 /* MemoryLeakCheckController.m in Sources */,
@@ -897,6 +903,7 @@
 				93058E822416312400B9D2F5 /* RelativeLabelViewController.m in Sources */,
 				33B6250B22C9AD7300A5F2FA /* NaviTransitionController2.m in Sources */,
 				33C7E1BF22375FD50004BC50 /* TransitionViewController.m in Sources */,
+				93801E9326BD118C008B219E /* ImageImproveViewController.swift in Sources */,
 				33C7E1C022375FD50004BC50 /* BezierView.m in Sources */,
 				9390503B24C8250100E0085A /* Student+CoreDataClass.m in Sources */,
 				9390503F24C826F500E0085A /* MarginButtonViewController.m in Sources */,
@@ -906,7 +913,6 @@
 				33C7E1C222375FD50004BC50 /* BezierDropView.m in Sources */,
 				33B6250822C9AD5000A5F2FA /* InteractiveTransition2.m in Sources */,
 				33C7E1C322375FD50004BC50 /* HomeViewController.m in Sources */,
-				335B3BA322420D2200DED730 /* PageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

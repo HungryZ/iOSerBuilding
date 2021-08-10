@@ -27,6 +27,7 @@ PODS:
   - HungryTools/Macro (1.4.2)
   - HungryTools/UITool (1.4.2)
   - IQKeyboardManager (6.5.6)
+  - Kingfisher (6.3.0)
   - Masonry (1.1.0)
   - MJExtension (3.3.0)
   - MJRefresh (3.7.2)
@@ -42,6 +43,7 @@ DEPENDENCIES:
   - HungryTools
   - HungryTools/Macro
   - IQKeyboardManager
+  - Kingfisher
   - Masonry
   - MJExtension
   - MJRefresh
@@ -56,6 +58,7 @@ SPEC REPOS:
     - CYLTabBarController
     - HungryTools
     - IQKeyboardManager
+    - Kingfisher
     - Masonry
     - MJExtension
     - MJRefresh
@@ -69,6 +72,7 @@ SPEC CHECKSUMS:
   CYLTabBarController: f5460b8446f82d016945d4d53895a1ef185b79e3
   HungryTools: 1df6edf09ce5a4b645562995e67f4ffe11ac9555
   IQKeyboardManager: 2a6e97afdafc7becf0cb17a9a8d795e3a980717f
+  Kingfisher: 6c3df386db71d82c0817a429d2c9421a77396529
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJExtension: 01704cca2b60a214c10761b6491eab74069d68a9
   MJRefresh: 30997d30b347c8e9508a4db11e3a690da0c9b85a
@@ -76,6 +80,6 @@ SPEC CHECKSUMS:
   YTKNetwork: c16be90b06be003de9e9cd0d3b187cc8eaf35c04
   ZHCPickerHelper: b29abf41326930ffdb2b0fe7b3274576515b8db6
 
-PODFILE CHECKSUM: 500ba27f7927007562b5b22edd0f521f1279d7ec
+PODFILE CHECKSUM: d45c022a0a3dc63ac80377538be2c037130c20f4
 
 COCOAPODS: 1.10.1

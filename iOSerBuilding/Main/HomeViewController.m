@@ -14,7 +14,6 @@
 #import "TransitionViewController.h"
 #import "ScrollMasonryController.h"
 #import "RegexViewController.h"
-#import "PageViewController.h"
 #import "MemoryLeakCheckController.h"
 #import "GCDViewController.h"
 #import "ScreenshotViewController.h"
@@ -63,7 +62,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    self.navigationController.navigationBar.translucent = NO;
+//    self.navigationController.navigationBar.translucent = NO;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -135,10 +134,6 @@
                 @"controller" : [RegexViewController class],
             },
             @{
-                @"title" : @"滑页浏览",
-                @"controller" : [PageViewController class],
-            },
-            @{
                 @"title" : @"内存泄漏检测",
                 @"controller" : [MemoryLeakCheckController class],
             },
@@ -173,6 +168,10 @@
             @{
                 @"title" : @"CollectionView",
                 @"controller" : [CollectionViewListController class],
+            },
+            @{
+                @"title" : @"图片显示优化",
+                @"controller" : [ImageImproveViewController class],
             },
         ];
     }
