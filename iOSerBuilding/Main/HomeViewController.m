@@ -23,6 +23,7 @@
 #import "JSInteractionViewController.h"
 #import "RunLoopViewController.h"
 #import "CollectionViewListController.h"
+#import "CustomKVOViewController.h"
 
 @interface HomeViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -172,6 +173,10 @@
             @{
                 @"title" : @"图片显示优化",
                 @"controller" : [ImageImproveViewController class],
+            },
+            @{
+                @"title" : @"CustomKVO",
+                @"controller" : [CustomKVOViewController class],
             },
         ];
     }

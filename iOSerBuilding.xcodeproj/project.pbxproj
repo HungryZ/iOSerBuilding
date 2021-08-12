@@ -64,6 +64,10 @@
 		33D18F30226EF296007AB1EE /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D18F2F226EF296007AB1EE /* libresolv.tbd */; };
 		7C9BEFFDC8069CEBBECBD9A2 /* Pods_iOSerBuilding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E869C9C7E1B396437807F5 /* Pods_iOSerBuilding.framework */; };
 		93058E822416312400B9D2F5 /* RelativeLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93058E812416312400B9D2F5 /* RelativeLabelViewController.m */; };
+		93691DDC26C2803900CCDBAC /* NSObject+KVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 93691DDB26C2803900CCDBAC /* NSObject+KVO.m */; };
+		93691DE126C3A85D00CCDBAC /* Student+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 93691DDF26C3A85D00CCDBAC /* Student+CoreDataClass.m */; };
+		93691DE226C3A85D00CCDBAC /* Student+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 93691DE026C3A85D00CCDBAC /* Student+CoreDataProperties.m */; };
+		93691DE526C3C96F00CCDBAC /* CustomKVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93691DE426C3C96F00CCDBAC /* CustomKVOViewController.m */; };
 		937705E62536D68600F832BD /* LogFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 937705E52536D68600F832BD /* LogFileManager.m */; };
 		93801E7626A96504008B219E /* RunLoopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93801E7526A96504008B219E /* RunLoopViewController.m */; };
 		93801E7B26B004C3008B219E /* BannerCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93801E7A26B004C3008B219E /* BannerCollectionViewController.m */; };
@@ -74,8 +78,6 @@
 		93801E9326BD118C008B219E /* ImageImproveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93801E9226BD118B008B219E /* ImageImproveViewController.swift */; };
 		93801E9526BD1A94008B219E /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93801E9426BD1A94008B219E /* ImageTableViewCell.swift */; };
 		93801E9726BD32D0008B219E /* IMG_5851.HEIC in Resources */ = {isa = PBXBuildFile; fileRef = 93801E9626BD32D0008B219E /* IMG_5851.HEIC */; };
-		9390503A24C8250100E0085A /* Student+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 9390503724C8250100E0085A /* Student+CoreDataProperties.m */; };
-		9390503B24C8250100E0085A /* Student+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 9390503924C8250100E0085A /* Student+CoreDataClass.m */; };
 		9390503F24C826F500E0085A /* MarginButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9390503E24C826F500E0085A /* MarginButtonViewController.m */; };
 		93B038142513483B007609CA /* JSInteractionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B038132513483B007609CA /* JSInteractionViewController.m */; };
 		93B0381D25134C2F007609CA /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 93B0381C25134C2F007609CA /* index.html */; };
@@ -177,6 +179,14 @@
 		66BF80B4859833650A1175BD /* Pods-iOSerBuilding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSerBuilding.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSerBuilding/Pods-iOSerBuilding.debug.xcconfig"; sourceTree = "<group>"; };
 		93058E802416312400B9D2F5 /* RelativeLabelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RelativeLabelViewController.h; sourceTree = "<group>"; };
 		93058E812416312400B9D2F5 /* RelativeLabelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RelativeLabelViewController.m; sourceTree = "<group>"; };
+		93691DDA26C2803900CCDBAC /* NSObject+KVO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+KVO.h"; sourceTree = "<group>"; };
+		93691DDB26C2803900CCDBAC /* NSObject+KVO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KVO.m"; sourceTree = "<group>"; };
+		93691DDD26C3A85D00CCDBAC /* Student+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Student+CoreDataClass.h"; sourceTree = "<group>"; };
+		93691DDE26C3A85D00CCDBAC /* Student+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Student+CoreDataProperties.h"; sourceTree = "<group>"; };
+		93691DDF26C3A85D00CCDBAC /* Student+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Student+CoreDataClass.m"; sourceTree = "<group>"; };
+		93691DE026C3A85D00CCDBAC /* Student+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Student+CoreDataProperties.m"; sourceTree = "<group>"; };
+		93691DE326C3C96F00CCDBAC /* CustomKVOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomKVOViewController.h; sourceTree = "<group>"; };
+		93691DE426C3C96F00CCDBAC /* CustomKVOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomKVOViewController.m; sourceTree = "<group>"; };
 		937705E42536D68600F832BD /* LogFileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogFileManager.h; sourceTree = "<group>"; };
 		937705E52536D68600F832BD /* LogFileManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogFileManager.m; sourceTree = "<group>"; };
 		93801E7426A96504008B219E /* RunLoopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopViewController.h; sourceTree = "<group>"; };
@@ -194,10 +204,6 @@
 		93801E9226BD118B008B219E /* ImageImproveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageImproveViewController.swift; sourceTree = "<group>"; };
 		93801E9426BD1A94008B219E /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
 		93801E9626BD32D0008B219E /* IMG_5851.HEIC */ = {isa = PBXFileReference; lastKnownFileType = file; path = IMG_5851.HEIC; sourceTree = "<group>"; };
-		9390503624C8250100E0085A /* Student+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Student+CoreDataProperties.h"; path = "/Users/hungry/XcodeProject/iOSerBuilding/iOSerBuilding/Main/Core Data/Student+CoreDataProperties.h"; sourceTree = "<absolute>"; };
-		9390503724C8250100E0085A /* Student+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "Student+CoreDataProperties.m"; path = "/Users/hungry/XcodeProject/iOSerBuilding/iOSerBuilding/Main/Core Data/Student+CoreDataProperties.m"; sourceTree = "<absolute>"; };
-		9390503824C8250100E0085A /* Student+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Student+CoreDataClass.h"; path = "/Users/hungry/XcodeProject/iOSerBuilding/iOSerBuilding/Main/Core Data/Student+CoreDataClass.h"; sourceTree = "<absolute>"; };
-		9390503924C8250100E0085A /* Student+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "Student+CoreDataClass.m"; path = "/Users/hungry/XcodeProject/iOSerBuilding/iOSerBuilding/Main/Core Data/Student+CoreDataClass.m"; sourceTree = "<absolute>"; };
 		9390503D24C826F500E0085A /* MarginButtonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarginButtonViewController.h; sourceTree = "<group>"; };
 		9390503E24C826F500E0085A /* MarginButtonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarginButtonViewController.m; sourceTree = "<group>"; };
 		93B038122513483B007609CA /* JSInteractionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSInteractionViewController.h; sourceTree = "<group>"; };
@@ -312,18 +318,18 @@
 			path = loading_img;
 			sourceTree = "<group>";
 		};
-		3341736521C3B3E1008B0C90 /* Core Data */ = {
+		3341736521C3B3E1008B0C90 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				9390503824C8250100E0085A /* Student+CoreDataClass.h */,
-				9390503924C8250100E0085A /* Student+CoreDataClass.m */,
-				9390503624C8250100E0085A /* Student+CoreDataProperties.h */,
-				9390503724C8250100E0085A /* Student+CoreDataProperties.m */,
+				93691DDD26C3A85D00CCDBAC /* Student+CoreDataClass.h */,
+				93691DDF26C3A85D00CCDBAC /* Student+CoreDataClass.m */,
+				93691DDE26C3A85D00CCDBAC /* Student+CoreDataProperties.h */,
+				93691DE026C3A85D00CCDBAC /* Student+CoreDataProperties.m */,
 				3341736621C3B5C0008B0C90 /* StudentModel.xcdatamodeld */,
 				33711B2F21C7783C00D69E0C /* CoreDataTestViewController.h */,
 				33711B3021C7783C00D69E0C /* CoreDataTestViewController.m */,
 			);
-			path = "Core Data";
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		3348CCA7223A024F0020F41C /* RegularExpression */ = {
@@ -530,7 +536,7 @@
 			children = (
 				3355296F2212AA7D0027C0A1 /* HomeViewController.h */,
 				335529702212AA7D0027C0A1 /* HomeViewController.m */,
-				3341736521C3B3E1008B0C90 /* Core Data */,
+				3341736521C3B3E1008B0C90 /* CoreData */,
 				335529722212AF2A0027C0A1 /* Bezier */,
 				335AC3BF221519AF00D5470A /* Animation */,
 				335AC3C322156A7000D5470A /* CATransition */,
@@ -548,6 +554,7 @@
 				93801E7326A964C7008B219E /* RunLoop */,
 				93801E7826B00489008B219E /* CollectionView */,
 				93801E9126BD1101008B219E /* ImageImpove */,
+				93691DD926C27A6000CCDBAC /* CustomKVO */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -575,6 +582,17 @@
 				93058E812416312400B9D2F5 /* RelativeLabelViewController.m */,
 			);
 			path = RelativeLabel;
+			sourceTree = "<group>";
+		};
+		93691DD926C27A6000CCDBAC /* CustomKVO */ = {
+			isa = PBXGroup;
+			children = (
+				93691DDA26C2803900CCDBAC /* NSObject+KVO.h */,
+				93691DDB26C2803900CCDBAC /* NSObject+KVO.m */,
+				93691DE326C3C96F00CCDBAC /* CustomKVOViewController.h */,
+				93691DE426C3C96F00CCDBAC /* CustomKVOViewController.m */,
+			);
+			path = CustomKVO;
 			sourceTree = "<group>";
 		};
 		937705E32536D5DE00F832BD /* ConfigCocoaLumberjack */ = {
@@ -872,6 +890,7 @@
 			files = (
 				33C7E1B422375FD50004BC50 /* ScrollMasonryController.m in Sources */,
 				3348CCAC223A027F0020F41C /* RegexViewController.m in Sources */,
+				93691DE526C3C96F00CCDBAC /* CustomKVOViewController.m in Sources */,
 				937705E62536D68600F832BD /* LogFileManager.m in Sources */,
 				33A7353922C4944E0020A5ED /* NaviTransitionController.m in Sources */,
 				33C7E1B522375FD50004BC50 /* ViewTransitionController.m in Sources */,
@@ -879,9 +898,9 @@
 				33C7E1B622375FD50004BC50 /* StudentModel.xcdatamodeld in Sources */,
 				33C7E1B722375FD50004BC50 /* PresentViewController.m in Sources */,
 				33A7355522C4BF480020A5ED /* ComOpenThreadOTScreenshotHelperSwizzleHelper.m in Sources */,
-				9390503A24C8250100E0085A /* Student+CoreDataProperties.m in Sources */,
 				33C7E1B822375FD50004BC50 /* CoreDataTestViewController.m in Sources */,
 				93B038142513483B007609CA /* JSInteractionViewController.m in Sources */,
+				93691DDC26C2803900CCDBAC /* NSObject+KVO.m in Sources */,
 				93801E8926B2AD5E008B219E /* CollectionViewListController.m in Sources */,
 				33A7355422C4BF480020A5ED /* UIView+ComOpenThreadOTScreenshotHelperStatusBarReference.m in Sources */,
 				93BC54E824CE6DEE005A8B30 /* OffScreenRenderedController.swift in Sources */,
@@ -903,9 +922,9 @@
 				93058E822416312400B9D2F5 /* RelativeLabelViewController.m in Sources */,
 				33B6250B22C9AD7300A5F2FA /* NaviTransitionController2.m in Sources */,
 				33C7E1BF22375FD50004BC50 /* TransitionViewController.m in Sources */,
+				93691DE226C3A85D00CCDBAC /* Student+CoreDataProperties.m in Sources */,
 				93801E9326BD118C008B219E /* ImageImproveViewController.swift in Sources */,
 				33C7E1C022375FD50004BC50 /* BezierView.m in Sources */,
-				9390503B24C8250100E0085A /* Student+CoreDataClass.m in Sources */,
 				9390503F24C826F500E0085A /* MarginButtonViewController.m in Sources */,
 				337BD38922C5E4DB00EAD627 /* InteractiveTransition.m in Sources */,
 				93801E8526B29D8F008B219E /* FlowCollectionViewController.m in Sources */,
@@ -913,6 +932,7 @@
 				33C7E1C222375FD50004BC50 /* BezierDropView.m in Sources */,
 				33B6250822C9AD5000A5F2FA /* InteractiveTransition2.m in Sources */,
 				33C7E1C322375FD50004BC50 /* HomeViewController.m in Sources */,
+				93691DE126C3A85D00CCDBAC /* Student+CoreDataClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
