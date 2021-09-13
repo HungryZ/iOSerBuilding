@@ -289,7 +289,11 @@
         disappearingBlock = PerformSEL(disappearingVC, @selector(zhc_navigationControllerSingleAppearenceConfig));
         
         // 当任意一个block存在说明前后两个VC样式不一样，需要刷新UI
-        BOOL needRefreshNavigationBar = appearingBlock || disappearingBlock;
+        BOOL haveDiffAppearence = appearingBlock || disappearingBlock;
+        // disappearingVC 没有遵守 ZHCNavigationControllerDelegate 协议，可能 disappearingVC 修改了导航栏样式，这种情况也需要刷新UI。（比如push进了一个三方SDK提供的VC，然后再pop回来）
+        BOOL fromUnZHCVC = ![disappearingVC conformsToProtocol:@protocol(ZHCNavigationControllerDelegate)];
+        
+        BOOL needRefreshNavigationBar = haveDiffAppearence || fromUnZHCVC;
 
         if (needRefreshNavigationBar) {
             if (appearingBlock) {

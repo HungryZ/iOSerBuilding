@@ -10,7 +10,32 @@
 @implementation MyFlowLayout {
     //这个数组就是我们自定义的布局配置数组
     NSMutableArray * _attributeAttay;
+    
+    CGFloat _leftLine;
+    CGFloat _rightLine;
+    
+    CGFloat _itemWidth;
+    
+    NSMutableArray *_itemFramesArray;
 }
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _leftLine = _rightLine = 0;
+        
+        CGFloat spaceSum = self.sectionInset.left + self.sectionInset.right + self.minimumInteritemSpacing;
+        _itemWidth = (kScreenWidth - spaceSum) / 2;
+        _itemFramesArray = [NSMutableArray new];
+    }
+    return self;
+}
+
+- (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds {
+    return YES;
+}
+
 //数组的相关设置在这个方法中
 //布局前的准备会调用这个方法
 //-(void)prepareLayout{
@@ -55,19 +80,33 @@
 //    }
 //
 //}
+
 //这个方法中返回我们的布局数组
 - (NSArray<UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect {
-    return [super layoutAttributesForElementsInRect:rect];
-    _attributeAttay = [NSMutableArray new];
-    for (int i = 0; i < 10; i++) {
-        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i inSection:0];
-        UICollectionViewLayoutAttributes *attri = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
-        attri.frame = CGRectMake(i % 2 == 0 ?: 190 , (i / 2) * 190, 180, rand() % 50 + 180);
-        
-        [_attributeAttay addObject:attri];
+    NSArray *array = [[NSArray alloc] initWithArray:[super layoutAttributesForElementsInRect:rect] copyItems:YES];
+    for (UICollectionViewLayoutAttributes *attri in array) {
+        if (attri.indexPath.item < _itemFramesArray.count) {
+            // 这个item已经计算过了，直接赋值
+            attri.frame = [_itemFramesArray[attri.indexPath.item] CGRectValue];
+            NSLog(@"----------");
+            LogRect(attri.frame);
+            continue;
+        }
+        CGFloat itemHeight = [self.dataSource myFlowLayout:self heightForItemAtIndexPath:attri.indexPath];
+        if (_leftLine <= _rightLine) {
+            // 加到左边
+            attri.frame = CGRectMake(self.sectionInset.left, _leftLine + self.minimumLineSpacing, _itemWidth, itemHeight);
+            _leftLine += self.minimumLineSpacing + itemHeight;
+        } else {
+            // 加到右边
+            attri.frame = CGRectMake(self.sectionInset.left + _itemWidth + self.minimumLineSpacing, _rightLine + self.minimumLineSpacing, _itemWidth, itemHeight);
+            _rightLine += self.minimumLineSpacing + itemHeight;
+        }
+        [_itemFramesArray addObject:[NSValue valueWithCGRect:attri.frame]];
+        LogRect(attri.frame);
     }
     
-    return _attributeAttay;
+    return array;
 }
 
 @end

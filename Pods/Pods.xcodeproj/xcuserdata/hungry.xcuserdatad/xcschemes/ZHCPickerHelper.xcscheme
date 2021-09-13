@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7BE24CB4AD9610A6D9542CA508517C04"
-               BuildableName = "ZHCPickerHelper.framework"
+               BuildableName = "libZHCPickerHelper.a"
                BlueprintName = "ZHCPickerHelper"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

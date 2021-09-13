@@ -31,6 +31,18 @@ PODS:
   - Masonry (1.1.0)
   - MJExtension (3.3.0)
   - MJRefresh (3.7.2)
+  - RxCocoa (6.2.0):
+    - RxRelay (= 6.2.0)
+    - RxSwift (= 6.2.0)
+  - RxRelay (6.2.0):
+    - RxSwift (= 6.2.0)
+  - RxSwift (6.2.0)
+  - SDCycleScrollView (1.82):
+    - SDWebImage (>= 5.0.0)
+  - SDWebImage (5.11.1):
+    - SDWebImage/Core (= 5.11.1)
+  - SDWebImage/Core (5.11.1)
+  - Then (2.7.0)
   - TZImagePickerController (3.6.2)
   - YTKNetwork (3.0.6):
     - AFNetworking/NSURLSession (~> 4.0)
@@ -47,6 +59,10 @@ DEPENDENCIES:
   - Masonry
   - MJExtension
   - MJRefresh
+  - RxCocoa
+  - RxSwift
+  - SDCycleScrollView
+  - Then
   - TZImagePickerController
   - YTKNetwork
   - ZHCPickerHelper
@@ -62,6 +78,12 @@ SPEC REPOS:
     - Masonry
     - MJExtension
     - MJRefresh
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - SDCycleScrollView
+    - SDWebImage
+    - Then
     - TZImagePickerController
     - YTKNetwork
     - ZHCPickerHelper
@@ -76,10 +98,16 @@ SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJExtension: 01704cca2b60a214c10761b6491eab74069d68a9
   MJRefresh: 30997d30b347c8e9508a4db11e3a690da0c9b85a
+  RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
+  RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
+  RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
+  SDCycleScrollView: a0d74c3384caa72bdfc81470bdbc8c14b3e1fbcf
+  SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
+  Then: acfe0be7e98221c6204e12f8161459606d5d822d
   TZImagePickerController: e1775fedb4058b78000fb00d9f6eeaedb445a1ed
   YTKNetwork: c16be90b06be003de9e9cd0d3b187cc8eaf35c04
   ZHCPickerHelper: b29abf41326930ffdb2b0fe7b3274576515b8db6
 
-PODFILE CHECKSUM: d45c022a0a3dc63ac80377538be2c037130c20f4
+PODFILE CHECKSUM: 107d792466bf2b9fb74f1aa170968bbfa6cf047b
 
 COCOAPODS: 1.10.1

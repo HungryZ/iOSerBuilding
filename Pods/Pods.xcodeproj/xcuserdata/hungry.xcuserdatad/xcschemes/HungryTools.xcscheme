@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C87D517FAFB6788CCD4A2708A65D3DF7"
-               BuildableName = "HungryTools.framework"
+               BuildableName = "libHungryTools.a"
                BlueprintName = "HungryTools"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

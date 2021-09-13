@@ -1,5 +1,5 @@
 platform :ios, '11.0'
-use_frameworks!
+use_modular_headers!
 source 'https://github.com/CocoaPods/Specs.git'
 
 # ruby grammar
@@ -19,8 +19,12 @@ targetsArray.each do |t|
         pod 'ZHCPickerHelper'
         pod 'TZImagePickerController'
         pod 'CocoaLumberjack'
+        pod 'SDCycleScrollView'
         
         pod 'Kingfisher'
+        pod 'RxSwift'
+        pod 'RxCocoa'
+        pod 'Then'
     end
     
 end

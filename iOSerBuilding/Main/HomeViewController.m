@@ -63,7 +63,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-//    self.navigationController.navigationBar.translucent = NO;
+    self.navigationController.navigationBar.translucent = NO;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -177,6 +177,10 @@
             @{
                 @"title" : @"CustomKVO",
                 @"controller" : [CustomKVOViewController class],
+            },
+            @{
+                @"title" : @"RxSwift",
+                @"controller" : [RxSwiftViewController class],
             },
         ];
     }

@@ -34,23 +34,23 @@
     return [super layoutAttributesForItemAtIndexPath:indexPath];
 }
 
-- (CGPoint)targetContentOffsetForProposedContentOffset:(CGPoint)proposedContentOffset withScrollingVelocity:(CGPoint)velocity {
-    CGPoint point = [super targetContentOffsetForProposedContentOffset:proposedContentOffset withScrollingVelocity:velocity];
-    NSLog(@"%f, %f", point.x, proposedContentOffset.x);
-    
-    float collectionViewCenterX = self.collectionView.frame.size.width / 2 + self.collectionView.contentOffset.x;
-    CGRect rect = CGRectMake(proposedContentOffset.x, 0, self.collectionView.bounds.size.width, self.collectionView.bounds.size.height);
-    NSArray *array = [[NSArray alloc] initWithArray:[super layoutAttributesForElementsInRect:rect] copyItems:YES];
-    CGFloat minDistance = MAXFLOAT;
-    for (UICollectionViewLayoutAttributes *attri in array) {
-        CGFloat distance = attri.center.x - collectionViewCenterX;
-        if (ABS(distance) < ABS(minDistance)) {
-            distance = minDistance;
-        }
-    }
-    NSLog(@"%f, %f", point.x, minDistance);
-    
-    return CGPointMake(0, proposedContentOffset.y);
-}
+//- (CGPoint)targetContentOffsetForProposedContentOffset:(CGPoint)proposedContentOffset withScrollingVelocity:(CGPoint)velocity {
+//    CGPoint point = [super targetContentOffsetForProposedContentOffset:proposedContentOffset withScrollingVelocity:velocity];
+//    NSLog(@"%f, %f", point.x, proposedContentOffset.x);
+//    
+//    float collectionViewCenterX = self.collectionView.frame.size.width / 2 + self.collectionView.contentOffset.x;
+//    CGRect rect = CGRectMake(proposedContentOffset.x, 0, self.collectionView.bounds.size.width, self.collectionView.bounds.size.height);
+//    NSArray *array = [[NSArray alloc] initWithArray:[super layoutAttributesForElementsInRect:rect] copyItems:YES];
+//    CGFloat minDistance = MAXFLOAT;
+//    for (UICollectionViewLayoutAttributes *attri in array) {
+//        CGFloat distance = attri.center.x - collectionViewCenterX;
+//        if (ABS(distance) < ABS(minDistance)) {
+//            distance = minDistance;
+//        }
+//    }
+//    NSLog(@"%f, %f", point.x, minDistance);
+//    
+//    return CGPointMake(0, proposedContentOffset.y);
+//}
 
 @end

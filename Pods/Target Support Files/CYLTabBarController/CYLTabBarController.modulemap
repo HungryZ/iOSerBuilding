@@ -1,4 +1,4 @@
-framework module CYLTabBarController {
+module CYLTabBarController {
   umbrella header "CYLTabBarController-umbrella.h"
 
   export *

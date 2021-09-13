@@ -1,4 +1,4 @@
-framework module YTKNetwork {
+module YTKNetwork {
   umbrella header "YTKNetwork-umbrella.h"
 
   export *

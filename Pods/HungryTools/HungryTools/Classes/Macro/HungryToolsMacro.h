@@ -57,5 +57,10 @@
 
 #define GroupedTable                        [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped]
 
+#define LogRect(rect)                       NSLog(@"CGRect(%.2f, %.2f, %.2f, %.2f)", rect.origin.x, \
+                                                                                     rect.origin.y, \
+                                                                                     rect.size.width, \
+                                                                                     rect.size.height)
+
 
 #endif /* HungryToolsMacro_h */

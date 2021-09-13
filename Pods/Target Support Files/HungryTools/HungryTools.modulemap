@@ -1,4 +1,4 @@
-framework module HungryTools {
+module HungryTools {
   umbrella header "HungryTools-umbrella.h"
 
   export *

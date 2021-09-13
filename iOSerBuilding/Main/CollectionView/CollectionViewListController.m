@@ -8,6 +8,7 @@
 #import "CollectionViewListController.h"
 #import "BannerCollectionViewController.h"
 #import "FlowCollectionViewController.h"
+#import "SDCycleScrollViewController.h"
 
 @interface CollectionViewListController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -33,7 +34,7 @@
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    return 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -41,9 +42,12 @@
     cell.selectionStyle = 0;
     switch (indexPath.row) {
         case 0:
-            cell.textLabel.text = @"Banner";
+            cell.textLabel.text = @"SDCycleScrollView";
             break;
         case 1:
+            cell.textLabel.text = @"Banner";
+            break;
+        case 2:
             cell.textLabel.text = @"Flow";
             break;
     }
@@ -57,9 +61,12 @@
     UIViewController *nextVC;
     switch (indexPath.row) {
         case 0:
-            nextVC = [BannerCollectionViewController new];
+            nextVC = [SDCycleScrollViewController new];
             break;
         case 1:
+            nextVC = [BannerCollectionViewController new];
+            break;
+        case 2:
             nextVC = [FlowCollectionViewController new];
             break;
     }

@@ -20,16 +20,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-//    [self zhc_observeKey:@"view" changeHander:^(id  _Nullable oldValue, id  _Nullable newValue) {
-//        NSLog(@"changed");
-//    }];
-//    self.view = [UIView new];
-    
-    
-    [self zhc_observeKey:@"testValue" changeHander:^(id  _Nullable oldValue, id  _Nullable newValue) {
+    [self zhc_observeKey:@"view" changeHander:^(id  _Nullable oldValue, id  _Nullable newValue) {
         NSLog(@"changed");
     }];
-    self.testValue = 1;
+    self.view = [UIView new];
+    
+    
+//    [self zhc_observeKey:@"testValue" changeHander:^(id  _Nullable oldValue, id  _Nullable newValue) {
+//        NSLog(@"changed");
+//    }];
+//    self.testValue = 1;
 }
 
 @end

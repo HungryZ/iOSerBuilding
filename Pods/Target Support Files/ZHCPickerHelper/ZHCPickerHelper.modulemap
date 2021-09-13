@@ -1,4 +1,4 @@
-framework module ZHCPickerHelper {
+module ZHCPickerHelper {
   umbrella header "ZHCPickerHelper-umbrella.h"
 
   export *

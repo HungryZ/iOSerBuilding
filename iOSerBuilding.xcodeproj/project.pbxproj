@@ -62,12 +62,14 @@
 		33C7E1E122375FD50004BC50 /* loading10.png in Resources */ = {isa = PBXBuildFile; fileRef = 33407F3522312022005259E2 /* loading10.png */; };
 		33C7E1E222375FD50004BC50 /* loading12.png in Resources */ = {isa = PBXBuildFile; fileRef = 33407F3622312022005259E2 /* loading12.png */; };
 		33D18F30226EF296007AB1EE /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D18F2F226EF296007AB1EE /* libresolv.tbd */; };
-		7C9BEFFDC8069CEBBECBD9A2 /* Pods_iOSerBuilding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E869C9C7E1B396437807F5 /* Pods_iOSerBuilding.framework */; };
+		90A3890B0D64ADA25B12E982 /* libPods-iOSerBuilding.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AB688557AA0061155CBAE2B /* libPods-iOSerBuilding.a */; };
 		93058E822416312400B9D2F5 /* RelativeLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93058E812416312400B9D2F5 /* RelativeLabelViewController.m */; };
 		93691DDC26C2803900CCDBAC /* NSObject+KVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 93691DDB26C2803900CCDBAC /* NSObject+KVO.m */; };
 		93691DE126C3A85D00CCDBAC /* Student+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 93691DDF26C3A85D00CCDBAC /* Student+CoreDataClass.m */; };
 		93691DE226C3A85D00CCDBAC /* Student+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 93691DE026C3A85D00CCDBAC /* Student+CoreDataProperties.m */; };
 		93691DE526C3C96F00CCDBAC /* CustomKVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93691DE426C3C96F00CCDBAC /* CustomKVOViewController.m */; };
+		93691DE826C64DF900CCDBAC /* SDCycleScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93691DE726C64DF900CCDBAC /* SDCycleScrollViewController.m */; };
+		93691DEB26CE58EA00CCDBAC /* RxSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93691DEA26CE58E900CCDBAC /* RxSwiftViewController.swift */; };
 		937705E62536D68600F832BD /* LogFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 937705E52536D68600F832BD /* LogFileManager.m */; };
 		93801E7626A96504008B219E /* RunLoopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93801E7526A96504008B219E /* RunLoopViewController.m */; };
 		93801E7B26B004C3008B219E /* BannerCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93801E7A26B004C3008B219E /* BannerCollectionViewController.m */; };
@@ -176,6 +178,7 @@
 		33E343DA22169CE20022A5C9 /* XWPresentOneTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XWPresentOneTransition.m; sourceTree = "<group>"; };
 		33E343DC2216A4C80022A5C9 /* PresentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PresentViewController.h; sourceTree = "<group>"; };
 		33E343DD2216A4C80022A5C9 /* PresentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PresentViewController.m; sourceTree = "<group>"; };
+		4AB688557AA0061155CBAE2B /* libPods-iOSerBuilding.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSerBuilding.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66BF80B4859833650A1175BD /* Pods-iOSerBuilding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSerBuilding.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSerBuilding/Pods-iOSerBuilding.debug.xcconfig"; sourceTree = "<group>"; };
 		93058E802416312400B9D2F5 /* RelativeLabelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RelativeLabelViewController.h; sourceTree = "<group>"; };
 		93058E812416312400B9D2F5 /* RelativeLabelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RelativeLabelViewController.m; sourceTree = "<group>"; };
@@ -187,6 +190,9 @@
 		93691DE026C3A85D00CCDBAC /* Student+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Student+CoreDataProperties.m"; sourceTree = "<group>"; };
 		93691DE326C3C96F00CCDBAC /* CustomKVOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomKVOViewController.h; sourceTree = "<group>"; };
 		93691DE426C3C96F00CCDBAC /* CustomKVOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomKVOViewController.m; sourceTree = "<group>"; };
+		93691DE626C64DF900CCDBAC /* SDCycleScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDCycleScrollViewController.h; sourceTree = "<group>"; };
+		93691DE726C64DF900CCDBAC /* SDCycleScrollViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDCycleScrollViewController.m; sourceTree = "<group>"; };
+		93691DEA26CE58E900CCDBAC /* RxSwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftViewController.swift; sourceTree = "<group>"; };
 		937705E42536D68600F832BD /* LogFileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogFileManager.h; sourceTree = "<group>"; };
 		937705E52536D68600F832BD /* LogFileManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogFileManager.m; sourceTree = "<group>"; };
 		93801E7426A96504008B219E /* RunLoopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopViewController.h; sourceTree = "<group>"; };
@@ -215,7 +221,6 @@
 		93BC54E724CE6DEE005A8B30 /* OffScreenRenderedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffScreenRenderedController.swift; sourceTree = "<group>"; };
 		93EB30E524CE73C000F4CEE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B178817138B031B8C485B1FA /* Pods-iOSerBuilding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSerBuilding.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSerBuilding/Pods-iOSerBuilding.release.xcconfig"; sourceTree = "<group>"; };
-		F6E869C9C7E1B396437807F5 /* Pods_iOSerBuilding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSerBuilding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,7 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33D18F30226EF296007AB1EE /* libresolv.tbd in Frameworks */,
-				7C9BEFFDC8069CEBBECBD9A2 /* Pods_iOSerBuilding.framework in Frameworks */,
+				90A3890B0D64ADA25B12E982 /* libPods-iOSerBuilding.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,7 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				33D18F2F226EF296007AB1EE /* libresolv.tbd */,
-				F6E869C9C7E1B396437807F5 /* Pods_iOSerBuilding.framework */,
+				4AB688557AA0061155CBAE2B /* libPods-iOSerBuilding.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -555,6 +560,7 @@
 				93801E7826B00489008B219E /* CollectionView */,
 				93801E9126BD1101008B219E /* ImageImpove */,
 				93691DD926C27A6000CCDBAC /* CustomKVO */,
+				93691DE926CE58CC00CCDBAC /* RxSwift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -595,6 +601,14 @@
 			path = CustomKVO;
 			sourceTree = "<group>";
 		};
+		93691DE926CE58CC00CCDBAC /* RxSwift */ = {
+			isa = PBXGroup;
+			children = (
+				93691DEA26CE58E900CCDBAC /* RxSwiftViewController.swift */,
+			);
+			path = RxSwift;
+			sourceTree = "<group>";
+		};
 		937705E32536D5DE00F832BD /* ConfigCocoaLumberjack */ = {
 			isa = PBXGroup;
 			children = (
@@ -618,6 +632,8 @@
 			children = (
 				93801E8726B2AD5E008B219E /* CollectionViewListController.h */,
 				93801E8826B2AD5E008B219E /* CollectionViewListController.m */,
+				93691DE626C64DF900CCDBAC /* SDCycleScrollViewController.h */,
+				93691DE726C64DF900CCDBAC /* SDCycleScrollViewController.m */,
 				93801E8E26B3ECEC008B219E /* BannerLayout.h */,
 				93801E8F26B3ECEC008B219E /* BannerLayout.m */,
 				93801E7926B004C3008B219E /* BannerCollectionViewController.h */,
@@ -721,7 +737,7 @@
 				33C7E1B322375FD50004BC50 /* Sources */,
 				33C7E1C422375FD50004BC50 /* Frameworks */,
 				33C7E1C622375FD50004BC50 /* Resources */,
-				18AA9E5D54E23D345F46CAC6 /* [CP] Embed Pods Frameworks */,
+				CFEC117B2077BBD6B7B4EFBB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -826,23 +842,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		18AA9E5D54E23D345F46CAC6 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-iOSerBuilding/Pods-iOSerBuilding-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-iOSerBuilding/Pods-iOSerBuilding-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOSerBuilding/Pods-iOSerBuilding-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		33C7E1B222375FD50004BC50 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -863,6 +862,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CFEC117B2077BBD6B7B4EFBB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOSerBuilding/Pods-iOSerBuilding-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOSerBuilding/Pods-iOSerBuilding-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOSerBuilding/Pods-iOSerBuilding-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -901,7 +917,9 @@
 				33C7E1B822375FD50004BC50 /* CoreDataTestViewController.m in Sources */,
 				93B038142513483B007609CA /* JSInteractionViewController.m in Sources */,
 				93691DDC26C2803900CCDBAC /* NSObject+KVO.m in Sources */,
+				93691DE826C64DF900CCDBAC /* SDCycleScrollViewController.m in Sources */,
 				93801E8926B2AD5E008B219E /* CollectionViewListController.m in Sources */,
+				93691DEB26CE58EA00CCDBAC /* RxSwiftViewController.swift in Sources */,
 				33A7355422C4BF480020A5ED /* UIView+ComOpenThreadOTScreenshotHelperStatusBarReference.m in Sources */,
 				93BC54E824CE6DEE005A8B30 /* OffScreenRenderedController.swift in Sources */,
 				33A7355322C4BF480020A5ED /* OTScreenshotHelper.m in Sources */,

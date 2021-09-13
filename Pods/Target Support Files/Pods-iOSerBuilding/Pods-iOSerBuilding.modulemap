@@ -1,4 +1,4 @@
-framework module Pods_iOSerBuilding {
+module Pods_iOSerBuilding {
   umbrella header "Pods-iOSerBuilding-umbrella.h"
 
   export *

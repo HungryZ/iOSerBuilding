@@ -9,7 +9,17 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class MyFlowLayout;
+
+@protocol MyFlowLayoutDataSource <NSObject>
+
+- (CGFloat)myFlowLayout:(MyFlowLayout *)layout heightForItemAtIndexPath:(NSIndexPath *)indexPath;
+
+@end
+
 @interface MyFlowLayout : UICollectionViewFlowLayout
+
+@property (nonatomic, weak) id<MyFlowLayoutDataSource> dataSource;
 
 @end
 

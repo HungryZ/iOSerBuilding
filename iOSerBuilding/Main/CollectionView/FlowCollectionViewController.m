@@ -8,7 +8,7 @@
 #import "FlowCollectionViewController.h"
 #import "MyFlowLayout.h"
 
-@interface FlowCollectionViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface FlowCollectionViewController () <UICollectionViewDataSource, UICollectionViewDelegate, MyFlowLayoutDataSource>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 
@@ -31,10 +31,16 @@
     }];
 }
 
+#pragma mark - MyFlowLayoutDataSource
+
+- (CGFloat)myFlowLayout:(MyFlowLayout *)layout heightForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return 80 + arc4random() % 180;
+}
+
 #pragma mark - UICollectionViewDataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 100;
+    return 1000;
 }
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -61,8 +67,9 @@
 - (UICollectionView *)collectionView {
     if (!_collectionView) {
         MyFlowLayout *layout = [MyFlowLayout new];
+        layout.dataSource = self;
         layout.scrollDirection = UICollectionViewScrollDirectionVertical;
-        layout.itemSize = CGSizeMake(80, 80);
+//        layout.itemSize = CGSizeMake(80, 80);
         _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
         _collectionView.dataSource = self;
         _collectionView.delegate = self;

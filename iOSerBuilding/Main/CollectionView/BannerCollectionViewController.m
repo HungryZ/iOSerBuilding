@@ -114,11 +114,13 @@
             }
         }
     }
-//    if (self.currentIndexPath.item > 499) {
-//        self.currentIndexPath = [NSIndexPath indexPathForItem:1 inSection:0];
-//        [scrollView scrollToItemAtIndexPath:self.currentIndexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
-////        return;
-//    }
+    if (self.currentIndexPath.item > 499) {
+//        dispatch_async(dispatch_get_main_queue(), ^{
+            self.currentIndexPath = [NSIndexPath indexPathForItem:10 inSection:0];
+            [scrollView scrollToItemAtIndexPath:self.currentIndexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
+//        });
+//        return;
+    }
     
     targetContentOffset->x = self.currentIndexPath.item * self.step - self.fixOffsetX;
 }
