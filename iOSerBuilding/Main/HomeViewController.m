@@ -182,6 +182,10 @@
                 @"title" : @"RxSwift",
                 @"controller" : [RxSwiftViewController class],
             },
+            @{
+                @"title" : @"DataStructure",
+                @"controller" : [DataStructureViewController class],
+            },
         ];
     }
     return [[_dataArray reverseObjectEnumerator] allObjects];

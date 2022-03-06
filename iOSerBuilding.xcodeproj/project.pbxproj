@@ -64,6 +64,8 @@
 		33D18F30226EF296007AB1EE /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D18F2F226EF296007AB1EE /* libresolv.tbd */; };
 		90A3890B0D64ADA25B12E982 /* libPods-iOSerBuilding.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AB688557AA0061155CBAE2B /* libPods-iOSerBuilding.a */; };
 		93058E822416312400B9D2F5 /* RelativeLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93058E812416312400B9D2F5 /* RelativeLabelViewController.m */; };
+		9353052A27D39E890008EBB3 /* DataStructureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9353052927D39E890008EBB3 /* DataStructureViewController.swift */; };
+		9353052C27D39F910008EBB3 /* BinaryTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9353052B27D39F910008EBB3 /* BinaryTree.swift */; };
 		93691DDC26C2803900CCDBAC /* NSObject+KVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 93691DDB26C2803900CCDBAC /* NSObject+KVO.m */; };
 		93691DE126C3A85D00CCDBAC /* Student+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 93691DDF26C3A85D00CCDBAC /* Student+CoreDataClass.m */; };
 		93691DE226C3A85D00CCDBAC /* Student+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 93691DE026C3A85D00CCDBAC /* Student+CoreDataProperties.m */; };
@@ -182,6 +184,8 @@
 		66BF80B4859833650A1175BD /* Pods-iOSerBuilding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSerBuilding.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSerBuilding/Pods-iOSerBuilding.debug.xcconfig"; sourceTree = "<group>"; };
 		93058E802416312400B9D2F5 /* RelativeLabelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RelativeLabelViewController.h; sourceTree = "<group>"; };
 		93058E812416312400B9D2F5 /* RelativeLabelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RelativeLabelViewController.m; sourceTree = "<group>"; };
+		9353052927D39E890008EBB3 /* DataStructureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureViewController.swift; sourceTree = "<group>"; };
+		9353052B27D39F910008EBB3 /* BinaryTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryTree.swift; sourceTree = "<group>"; };
 		93691DDA26C2803900CCDBAC /* NSObject+KVO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+KVO.h"; sourceTree = "<group>"; };
 		93691DDB26C2803900CCDBAC /* NSObject+KVO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KVO.m"; sourceTree = "<group>"; };
 		93691DDD26C3A85D00CCDBAC /* Student+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Student+CoreDataClass.h"; sourceTree = "<group>"; };
@@ -561,6 +565,7 @@
 				93801E9126BD1101008B219E /* ImageImpove */,
 				93691DD926C27A6000CCDBAC /* CustomKVO */,
 				93691DE926CE58CC00CCDBAC /* RxSwift */,
+				9353052827D39D840008EBB3 /* DataStructure */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -588,6 +593,15 @@
 				93058E812416312400B9D2F5 /* RelativeLabelViewController.m */,
 			);
 			path = RelativeLabel;
+			sourceTree = "<group>";
+		};
+		9353052827D39D840008EBB3 /* DataStructure */ = {
+			isa = PBXGroup;
+			children = (
+				9353052927D39E890008EBB3 /* DataStructureViewController.swift */,
+				9353052B27D39F910008EBB3 /* BinaryTree.swift */,
+			);
+			path = DataStructure;
 			sourceTree = "<group>";
 		};
 		93691DD926C27A6000CCDBAC /* CustomKVO */ = {
@@ -922,9 +936,11 @@
 				93691DEB26CE58EA00CCDBAC /* RxSwiftViewController.swift in Sources */,
 				33A7355422C4BF480020A5ED /* UIView+ComOpenThreadOTScreenshotHelperStatusBarReference.m in Sources */,
 				93BC54E824CE6DEE005A8B30 /* OffScreenRenderedController.swift in Sources */,
+				9353052A27D39E890008EBB3 /* DataStructureViewController.swift in Sources */,
 				33A7355322C4BF480020A5ED /* OTScreenshotHelper.m in Sources */,
 				33A7353D22C4B6510020A5ED /* ScreenshotViewController.m in Sources */,
 				333D133822B33D72008D1EBB /* GCDViewController.m in Sources */,
+				9353052C27D39F910008EBB3 /* BinaryTree.swift in Sources */,
 				93801E7B26B004C3008B219E /* BannerCollectionViewController.m in Sources */,
 				3348CCB1223A27E70020F41C /* NSString+Check.m in Sources */,
 				33C7E1B922375FD50004BC50 /* main.m in Sources */,

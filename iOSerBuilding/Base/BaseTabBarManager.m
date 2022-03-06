@@ -68,10 +68,10 @@
     if (!_controllersArray) {
         
         _controllersArray = @[
-                              [[UINavigationController alloc] initWithRootViewController:[HomeViewController new]],
-                              [[UINavigationController alloc] initWithRootViewController:[HomeViewController new]],
-                              [[UINavigationController alloc] initWithRootViewController:[HomeViewController new]],
-                              ];
+            [[UINavigationController alloc] initWithRootViewController:[HomeViewController new]],
+            [[UINavigationController alloc] initWithRootViewController:[HomeViewController new]],
+            [[UINavigationController alloc] initWithRootViewController:[HomeViewController new]],
+        ];
     }
     return _controllersArray;
 }
@@ -80,22 +80,22 @@
     if (!_attributesArray) {
         
         NSDictionary *item1 = @{
-                                CYLTabBarItemTitle          : @"列表",
-                                CYLTabBarItemImage          : @"home_tab",
-                                CYLTabBarItemSelectedImage  : @"home_tab",
-                                };
+            CYLTabBarItemTitle          : @"列表",
+            CYLTabBarItemImage          : @"home_tab",
+            CYLTabBarItemSelectedImage  : @"home_tab",
+        };
         
         NSDictionary *item2 = @{
-                                CYLTabBarItemTitle          : @"列表2",
-                                CYLTabBarItemImage          : @"home_tab",
-                                CYLTabBarItemSelectedImage  : @"home_tab",
-                                };
+            CYLTabBarItemTitle          : @"列表2",
+            CYLTabBarItemImage          : @"home_tab",
+            CYLTabBarItemSelectedImage  : @"home_tab",
+        };
         
         NSDictionary *item3 = @{
-                                CYLTabBarItemTitle          : @"列表3",
-                                CYLTabBarItemImage          : @"home_tab",
-                                CYLTabBarItemSelectedImage  : @"home_tab",
-                                };
+            CYLTabBarItemTitle          : @"列表3",
+            CYLTabBarItemImage          : @"home_tab",
+            CYLTabBarItemSelectedImage  : @"home_tab",
+        };
         
         _attributesArray = @[item1, item2, item3];
     }
