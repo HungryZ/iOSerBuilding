@@ -1,5 +1,5 @@
 //
-//  DataStructureViewController.swift
+//  BinaryTreeViewController.swift
 //  iOSerBuilding
 //
 //  Created by 张海川 on 2022/3/5.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DataStructureViewController: UIViewController {
+class BinaryTreeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

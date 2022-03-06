@@ -184,7 +184,7 @@
             },
             @{
                 @"title" : @"DataStructure",
-                @"controller" : [DataStructureViewController class],
+                @"controller" : [BinaryTreeViewController class],
             },
         ];
     }
