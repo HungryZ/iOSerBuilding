@@ -14,36 +14,40 @@ PODS:
   - AFNetworking/Serialization (4.0.1)
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
-  - CocoaLumberjack (3.7.2):
-    - CocoaLumberjack/Core (= 3.7.2)
-  - CocoaLumberjack/Core (3.7.2)
-  - CYLTabBarController (1.29.0):
-    - CYLTabBarController/Core (= 1.29.0)
-  - CYLTabBarController/Core (1.29.0)
+  - CocoaLumberjack (3.7.4):
+    - CocoaLumberjack/Core (= 3.7.4)
+  - CocoaLumberjack/Core (3.7.4)
+  - CYLTabBarController (1.29.2):
+    - CYLTabBarController/Core (= 1.29.2)
+  - CYLTabBarController/Core (1.29.2)
   - HungryTools (1.4.2):
     - HungryTools/Category (= 1.4.2)
     - HungryTools/UITool (= 1.4.2)
   - HungryTools/Category (1.4.2)
   - HungryTools/Macro (1.4.2)
   - HungryTools/UITool (1.4.2)
-  - IQKeyboardManager (6.5.6)
-  - Kingfisher (6.3.0)
+  - IQKeyboardManager (6.5.10)
+  - Kingfisher (6.3.1)
   - Masonry (1.1.0)
-  - MJExtension (3.3.0)
-  - MJRefresh (3.7.2)
-  - RxCocoa (6.2.0):
-    - RxRelay (= 6.2.0)
-    - RxSwift (= 6.2.0)
-  - RxRelay (6.2.0):
-    - RxSwift (= 6.2.0)
-  - RxSwift (6.2.0)
+  - MJExtension (3.4.1)
+  - MJRefresh (3.7.5)
+  - RxCocoa (6.5.0):
+    - RxRelay (= 6.5.0)
+    - RxSwift (= 6.5.0)
+  - RxRelay (6.5.0):
+    - RxSwift (= 6.5.0)
+  - RxSwift (6.5.0)
   - SDCycleScrollView (1.82):
     - SDWebImage (>= 5.0.0)
-  - SDWebImage (5.11.1):
-    - SDWebImage/Core (= 5.11.1)
-  - SDWebImage/Core (5.11.1)
-  - Then (2.7.0)
-  - TZImagePickerController (3.6.2)
+  - SDWebImage (5.13.2):
+    - SDWebImage/Core (= 5.13.2)
+  - SDWebImage/Core (5.13.2)
+  - Then (3.0.0)
+  - TZImagePickerController (3.8.3):
+    - TZImagePickerController/Basic (= 3.8.3)
+    - TZImagePickerController/Location (= 3.8.3)
+  - TZImagePickerController/Basic (3.8.3)
+  - TZImagePickerController/Location (3.8.3)
   - YTKNetwork (3.0.6):
     - AFNetworking/NSURLSession (~> 4.0)
   - ZHCPickerHelper (1.0.0)
@@ -90,21 +94,21 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
-  CocoaLumberjack: b7e05132ff94f6ae4dfa9d5bce9141893a21d9da
-  CYLTabBarController: f5460b8446f82d016945d4d53895a1ef185b79e3
+  CocoaLumberjack: 543c79c114dadc3b1aba95641d8738b06b05b646
+  CYLTabBarController: db44b5901a28693a8a4279e4721b3aafdd36c178
   HungryTools: 1df6edf09ce5a4b645562995e67f4ffe11ac9555
-  IQKeyboardManager: 2a6e97afdafc7becf0cb17a9a8d795e3a980717f
-  Kingfisher: 6c3df386db71d82c0817a429d2c9421a77396529
+  IQKeyboardManager: 45a1fa55c1a5b02c61ac0fd7fd5b62bb4ad20d97
+  Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  MJExtension: 01704cca2b60a214c10761b6491eab74069d68a9
-  MJRefresh: 30997d30b347c8e9508a4db11e3a690da0c9b85a
-  RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
-  RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
-  RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
+  MJExtension: 21c5f6f8c4d5d8844b7ae8fbae08fed0b501f961
+  MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
+  RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
+  RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
+  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   SDCycleScrollView: a0d74c3384caa72bdfc81470bdbc8c14b3e1fbcf
-  SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
-  Then: acfe0be7e98221c6204e12f8161459606d5d822d
-  TZImagePickerController: e1775fedb4058b78000fb00d9f6eeaedb445a1ed
+  SDWebImage: 72f86271a6f3139cc7e4a89220946489d4b9a866
+  Then: 844265ae87834bbe1147d91d5d41a404da2ec27d
+  TZImagePickerController: e9909edbadf7381140efc5b5c9f5bdbfd630f7d4
   YTKNetwork: c16be90b06be003de9e9cd0d3b187cc8eaf35c04
   ZHCPickerHelper: b29abf41326930ffdb2b0fe7b3274576515b8db6
 

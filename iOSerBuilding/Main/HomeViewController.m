@@ -24,6 +24,7 @@
 #import "RunLoopViewController.h"
 #import "CollectionViewListController.h"
 #import "CustomKVOViewController.h"
+#import "MessageViewController.h"
 
 @interface HomeViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -185,6 +186,10 @@
             @{
                 @"title" : @"DataStructure",
                 @"controller" : [BinaryTreeViewController class],
+            },
+            @{
+                @"title" : @"Message",
+                @"controller" : [MessageViewController class],
             },
         ];
     }

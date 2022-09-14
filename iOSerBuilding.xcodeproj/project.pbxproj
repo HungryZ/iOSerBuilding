@@ -68,6 +68,8 @@
 		9353052C27D39F910008EBB3 /* BinaryTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9353052B27D39F910008EBB3 /* BinaryTree.swift */; };
 		9353061F27D4D5CC0008EBB3 /* BluetoothViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9353061E27D4D5CC0008EBB3 /* BluetoothViewController.swift */; };
 		9353062227D4D6750008EBB3 /* NSData+Init.m in Sources */ = {isa = PBXBuildFile; fileRef = 9353062127D4D6750008EBB3 /* NSData+Init.m */; };
+		9353062527D4EB540008EBB3 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9353062427D4EB540008EBB3 /* MessageViewController.swift */; };
+		9353062827D4F8A00008EBB3 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9353062727D4F8A00008EBB3 /* MessageViewController.m */; };
 		93691DDC26C2803900CCDBAC /* NSObject+KVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 93691DDB26C2803900CCDBAC /* NSObject+KVO.m */; };
 		93691DE126C3A85D00CCDBAC /* Student+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 93691DDF26C3A85D00CCDBAC /* Student+CoreDataClass.m */; };
 		93691DE226C3A85D00CCDBAC /* Student+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 93691DE026C3A85D00CCDBAC /* Student+CoreDataProperties.m */; };
@@ -191,6 +193,9 @@
 		9353061E27D4D5CC0008EBB3 /* BluetoothViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothViewController.swift; sourceTree = "<group>"; };
 		9353062027D4D6750008EBB3 /* NSData+Init.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+Init.h"; sourceTree = "<group>"; };
 		9353062127D4D6750008EBB3 /* NSData+Init.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+Init.m"; sourceTree = "<group>"; };
+		9353062427D4EB540008EBB3 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		9353062627D4F8A00008EBB3 /* MessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		9353062727D4F8A00008EBB3 /* MessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		93691DDA26C2803900CCDBAC /* NSObject+KVO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+KVO.h"; sourceTree = "<group>"; };
 		93691DDB26C2803900CCDBAC /* NSObject+KVO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KVO.m"; sourceTree = "<group>"; };
 		93691DDD26C3A85D00CCDBAC /* Student+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Student+CoreDataClass.h"; sourceTree = "<group>"; };
@@ -572,6 +577,7 @@
 				93691DE926CE58CC00CCDBAC /* RxSwift */,
 				9353052827D39D840008EBB3 /* DataStructure */,
 				9353061D27D4D5B60008EBB3 /* Bluetooth */,
+				9353062327D4EB030008EBB3 /* Message */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -618,6 +624,16 @@
 				9353062127D4D6750008EBB3 /* NSData+Init.m */,
 			);
 			path = Bluetooth;
+			sourceTree = "<group>";
+		};
+		9353062327D4EB030008EBB3 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				9353062427D4EB540008EBB3 /* MessageViewController.swift */,
+				9353062627D4F8A00008EBB3 /* MessageViewController.h */,
+				9353062727D4F8A00008EBB3 /* MessageViewController.m */,
+			);
+			path = Message;
 			sourceTree = "<group>";
 		};
 		93691DD926C27A6000CCDBAC /* CustomKVO */ = {
@@ -948,6 +964,7 @@
 				33C7E1B822375FD50004BC50 /* CoreDataTestViewController.m in Sources */,
 				93B038142513483B007609CA /* JSInteractionViewController.m in Sources */,
 				93691DDC26C2803900CCDBAC /* NSObject+KVO.m in Sources */,
+				9353062527D4EB540008EBB3 /* MessageViewController.swift in Sources */,
 				93691DE826C64DF900CCDBAC /* SDCycleScrollViewController.m in Sources */,
 				93801E8926B2AD5E008B219E /* CollectionViewListController.m in Sources */,
 				93691DEB26CE58EA00CCDBAC /* RxSwiftViewController.swift in Sources */,
@@ -961,6 +978,7 @@
 				93801E7B26B004C3008B219E /* BannerCollectionViewController.m in Sources */,
 				3348CCB1223A27E70020F41C /* NSString+Check.m in Sources */,
 				33C7E1B922375FD50004BC50 /* main.m in Sources */,
+				9353062827D4F8A00008EBB3 /* MessageViewController.m in Sources */,
 				93B4F2CB250B7443003A6C4B /* AFTestViewController.m in Sources */,
 				93801E7626A96504008B219E /* RunLoopViewController.m in Sources */,
 				93801E9026B3ECEC008B219E /* BannerLayout.m in Sources */,

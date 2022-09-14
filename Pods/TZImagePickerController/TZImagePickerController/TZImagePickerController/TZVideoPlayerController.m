@@ -19,6 +19,7 @@
     AVPlayer *_player;
     AVPlayerLayer *_playerLayer;
     UIButton *_playButton;
+    UIImage *_playButtonNormalImage;
     UIImage *_cover;
     NSString *_outputPath;
     NSString *_errorMsg;
@@ -174,7 +175,8 @@
     _playerLayer.frame = self.view.bounds;
     CGFloat toolBarHeight = 44 + [TZCommonTools tz_safeAreaInsets].bottom;
     _toolBar.frame = CGRectMake(0, self.view.tz_height - toolBarHeight, self.view.tz_width, toolBarHeight);
-    _doneButton.frame = CGRectMake(self.view.tz_width - 44 - 12, 0, 44, 44);
+    [_doneButton sizeToFit];
+    _doneButton.frame = CGRectMake(self.view.tz_width - _doneButton.tz_width - 12, 0, MAX(44, _doneButton.tz_width), 44);
     _playButton.frame = CGRectMake(0, statusBarAndNaviBarHeight, self.view.tz_width, self.view.tz_height - statusBarAndNaviBarHeight - toolBarHeight);
     if (tzImagePickerVc.allowEditVideo) {
         _editButton.frame = CGRectMake(12, 0, 44, 44);
@@ -197,6 +199,7 @@
         [_player play];
         [self.navigationController setNavigationBarHidden:YES];
         _toolBar.hidden = YES;
+        _playButtonNormalImage = [_playButton imageForState:UIControlStateNormal];
         [_playButton setImage:nil forState:UIControlStateNormal];
         [UIApplication sharedApplication].statusBarHidden = YES;
     } else {
@@ -237,13 +240,13 @@
 }
 
 - (void)dismissAndCallDelegateMethod {
-    UIViewController *vc = self.navigationController;
-    if (!vc) {
-        vc = self;
-    }
     TZImagePickerController *imagePickerVc = (TZImagePickerController *)self.navigationController;
+    if (!imagePickerVc) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+        return;
+    }
     if (imagePickerVc.autoDismiss) {
-        [vc dismissViewControllerAnimated:YES completion:^{
+        [imagePickerVc dismissViewControllerAnimated:YES completion:^{
             [self callDelegateMethod];
         }];
     } else {
@@ -285,7 +288,8 @@
     [_player pause];
     _toolBar.hidden = NO;
     [self.navigationController setNavigationBarHidden:NO];
-    [_playButton setImage:[UIImage tz_imageNamedFromMyBundle:@"MMVideoPreviewPlay"] forState:UIControlStateNormal];
+    UIImage *normalImage = _playButtonNormalImage ?: [UIImage tz_imageNamedFromMyBundle:@"MMVideoPreviewPlay"];
+    [_playButton setImage:normalImage forState:UIControlStateNormal];
     
     if (self.needShowStatusBar) {
         [UIApplication sharedApplication].statusBarHidden = NO;

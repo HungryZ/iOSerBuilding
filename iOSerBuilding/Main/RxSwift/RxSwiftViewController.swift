@@ -10,6 +10,10 @@ import RxSwift
 import RxCocoa
 import Then
 
+struct Test {
+    var num: Int
+}
+
 @objc class RxSwiftViewController: UIViewController {
     
     let disposeBag = DisposeBag()
@@ -32,5 +36,13 @@ import Then
             print(next as String)
         }.disposed(by: disposeBag)
 
+        
+        var test = Test(num: 4)
+        print(withUnsafePointer(to: &test, {$0}))
+        test.num = 5
+        print(withUnsafePointer(to: &test, {$0}))
+        
+        var test2 = test
+        print(withUnsafePointer(to: &test2, {$0}))
     }
 }
