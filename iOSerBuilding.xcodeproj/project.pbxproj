@@ -80,7 +80,6 @@
 		93691DE226C3A85D00CCDBAC /* Student+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 93691DE026C3A85D00CCDBAC /* Student+CoreDataProperties.m */; };
 		93691DE526C3C96F00CCDBAC /* CustomKVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93691DE426C3C96F00CCDBAC /* CustomKVOViewController.m */; };
 		93691DE826C64DF900CCDBAC /* SDCycleScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93691DE726C64DF900CCDBAC /* SDCycleScrollViewController.m */; };
-		93691DEB26CE58EA00CCDBAC /* RxSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93691DEA26CE58E900CCDBAC /* RxSwiftViewController.swift */; };
 		937705E62536D68600F832BD /* LogFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 937705E52536D68600F832BD /* LogFileManager.m */; };
 		93801E7626A96504008B219E /* RunLoopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93801E7526A96504008B219E /* RunLoopViewController.m */; };
 		93801E7B26B004C3008B219E /* BannerCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93801E7A26B004C3008B219E /* BannerCollectionViewController.m */; };
@@ -91,6 +90,8 @@
 		93801E9326BD118C008B219E /* ImageImproveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93801E9226BD118B008B219E /* ImageImproveViewController.swift */; };
 		93801E9526BD1A94008B219E /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93801E9426BD1A94008B219E /* ImageTableViewCell.swift */; };
 		93801E9726BD32D0008B219E /* IMG_5851.HEIC in Resources */ = {isa = PBXBuildFile; fileRef = 93801E9626BD32D0008B219E /* IMG_5851.HEIC */; };
+		9388E52528D600670016EE3D /* RxSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9388E52328D600670016EE3D /* RxSwiftViewController.swift */; };
+		9388E52628D600670016EE3D /* RxSwiftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9388E52428D600670016EE3D /* RxSwiftViewController.xib */; };
 		9390503F24C826F500E0085A /* MarginButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9390503E24C826F500E0085A /* MarginButtonViewController.m */; };
 		93B038142513483B007609CA /* JSInteractionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B038132513483B007609CA /* JSInteractionViewController.m */; };
 		93B0381D25134C2F007609CA /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 93B0381C25134C2F007609CA /* index.html */; };
@@ -220,7 +221,6 @@
 		93691DE426C3C96F00CCDBAC /* CustomKVOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomKVOViewController.m; sourceTree = "<group>"; };
 		93691DE626C64DF900CCDBAC /* SDCycleScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDCycleScrollViewController.h; sourceTree = "<group>"; };
 		93691DE726C64DF900CCDBAC /* SDCycleScrollViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDCycleScrollViewController.m; sourceTree = "<group>"; };
-		93691DEA26CE58E900CCDBAC /* RxSwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftViewController.swift; sourceTree = "<group>"; };
 		937705E42536D68600F832BD /* LogFileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogFileManager.h; sourceTree = "<group>"; };
 		937705E52536D68600F832BD /* LogFileManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogFileManager.m; sourceTree = "<group>"; };
 		93801E7426A96504008B219E /* RunLoopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopViewController.h; sourceTree = "<group>"; };
@@ -238,6 +238,8 @@
 		93801E9226BD118B008B219E /* ImageImproveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageImproveViewController.swift; sourceTree = "<group>"; };
 		93801E9426BD1A94008B219E /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
 		93801E9626BD32D0008B219E /* IMG_5851.HEIC */ = {isa = PBXFileReference; lastKnownFileType = file; path = IMG_5851.HEIC; sourceTree = "<group>"; };
+		9388E52328D600670016EE3D /* RxSwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftViewController.swift; sourceTree = "<group>"; };
+		9388E52428D600670016EE3D /* RxSwiftViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RxSwiftViewController.xib; sourceTree = "<group>"; };
 		9390503D24C826F500E0085A /* MarginButtonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarginButtonViewController.h; sourceTree = "<group>"; };
 		9390503E24C826F500E0085A /* MarginButtonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarginButtonViewController.m; sourceTree = "<group>"; };
 		93B038122513483B007609CA /* JSInteractionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSInteractionViewController.h; sourceTree = "<group>"; };
@@ -689,7 +691,8 @@
 		93691DE926CE58CC00CCDBAC /* RxSwift */ = {
 			isa = PBXGroup;
 			children = (
-				93691DEA26CE58E900CCDBAC /* RxSwiftViewController.swift */,
+				9388E52328D600670016EE3D /* RxSwiftViewController.swift */,
+				9388E52428D600670016EE3D /* RxSwiftViewController.xib */,
 			);
 			path = RxSwift;
 			sourceTree = "<group>";
@@ -899,6 +902,8 @@
 				87CA8B1C29E585E7002E2C66 /* 1.JPG in Resources */,
 				87BA2D0B2B0D8BD20023B1E7 /* LICENSE in Resources */,
 				33C7E1CA22375FD50004BC50 /* loading20.png in Resources */,
+				33C7E1CB22375FD50004BC50 /* 0.JPG in Resources */,
+				9388E52628D600670016EE3D /* RxSwiftViewController.xib in Resources */,
 				33C7E1CC22375FD50004BC50 /* loading4.png in Resources */,
 				33C7E1CD22375FD50004BC50 /* loading1.png in Resources */,
 				33C7E1CE22375FD50004BC50 /* loading11.png in Resources */,
@@ -1005,12 +1010,12 @@
 				33A7355522C4BF480020A5ED /* ComOpenThreadOTScreenshotHelperSwizzleHelper.m in Sources */,
 				33C7E1B822375FD50004BC50 /* CoreDataTestViewController.m in Sources */,
 				93B038142513483B007609CA /* JSInteractionViewController.m in Sources */,
+				9388E52528D600670016EE3D /* RxSwiftViewController.swift in Sources */,
 				93691DDC26C2803900CCDBAC /* NSObject+KVO.m in Sources */,
 				87BA2D0D2B0D8BD20023B1E7 /* Aspects.m in Sources */,
 				9353062527D4EB540008EBB3 /* MessageViewController.swift in Sources */,
 				93691DE826C64DF900CCDBAC /* SDCycleScrollViewController.m in Sources */,
 				93801E8926B2AD5E008B219E /* CollectionViewListController.m in Sources */,
-				93691DEB26CE58EA00CCDBAC /* RxSwiftViewController.swift in Sources */,
 				33A7355422C4BF480020A5ED /* UIView+ComOpenThreadOTScreenshotHelperStatusBarReference.m in Sources */,
 				93BC54E824CE6DEE005A8B30 /* OffScreenRenderedController.swift in Sources */,
 				9353052A27D39E890008EBB3 /* BinaryTreeViewController.swift in Sources */,

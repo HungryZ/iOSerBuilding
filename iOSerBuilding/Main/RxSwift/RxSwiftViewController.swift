@@ -2,7 +2,7 @@
 //  RxSwiftViewController.swift
 //  iOSerBuilding
 //
-//  Created by 张海川 on 2021/8/19.
+//  Created by 张海川 on 2022/9/17.
 //
 
 import UIKit
@@ -10,39 +10,57 @@ import RxSwift
 import RxCocoa
 import Then
 
-struct Test {
-    var num: Int
-}
-
-@objc class RxSwiftViewController: UIViewController {
+class RxSwiftViewController: UIViewController {
     
     let disposeBag = DisposeBag()
-    
-    lazy var textField = UITextField(frame: CGRect(x: 100, y: 100, width: 100, height: 50)).then {
-        $0.text = "10000"
-    }
-    
-    deinit {
-        print("\(type(of: self).description()).\(#function)")
-    }
 
+    @IBOutlet weak var usernameOutlet: UITextField!
+    @IBOutlet weak var usernameValidOutlet: UILabel!
+    
+    @IBOutlet weak var passwordOutlet: UITextField!
+    @IBOutlet weak var passwordValidOutlet: UILabel!
+    
+    @IBOutlet weak var doSomethingOutlet: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.addSubview(textField);
         
-//        textField.rx.text.on(<#T##event: Event<String?>##Event<String?>#>)
-        textField.rx.text.orEmpty.changed.subscribe { next in
-            print(next as String)
+        let minimalUsernameLength: Int = 4
+        let minimalPasswordLength: Int = 4
+
+        usernameValidOutlet.text = "Username has to be at least \(minimalUsernameLength) characters"
+        passwordValidOutlet.text = "Password has to be at least \(minimalPasswordLength) characters"
+        
+        let usernameValid = usernameOutlet.rx.text.orEmpty
+            .map { $0.count >= minimalUsernameLength }
+            .share(replay: 1)
+        
+        let passwordValid = passwordOutlet.rx.text.orEmpty
+            .map { $0.count >= minimalPasswordLength }
+            .share(replay: 1)
+        
+        let everythingValid = Observable.combineLatest(
+            usernameValid,
+            passwordValid
+        ) { $0 && $1 }
+            .share(replay: 1)
+        
+        usernameValid.bind(to: usernameValidOutlet.rx.isHidden).disposed(by: disposeBag)
+        passwordValid.bind(to: passwordValidOutlet.rx.isHidden).disposed(by: disposeBag)
+        everythingValid.bind(to: doSomethingOutlet.rx.isEnabled).disposed(by: disposeBag)
+        
+        doSomethingOutlet.rx.tap.subscribe { [weak self] what in
+            self?.showAlert()
         }.disposed(by: disposeBag)
-
         
-        var test = Test(num: 4)
-        print(withUnsafePointer(to: &test, {$0}))
-        test.num = 5
-        print(withUnsafePointer(to: &test, {$0}))
+    }
+    
+    func showAlert() {
+        let alertVC = UIAlertController(title: "RxExample",
+                                        message: "This is wonderful",
+                                        preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "OK", style: .default))
         
-        var test2 = test
-        print(withUnsafePointer(to: &test2, {$0}))
+        navigationController?.present(alertVC, animated: true)
     }
 }
