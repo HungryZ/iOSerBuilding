@@ -102,7 +102,7 @@
     
     [self zhc_pushViewController:viewController animated:animated];
     
-    [self refreshNavigationBarAppearenceIfneeded:0];
+    [self refreshNavigationBarAppearenceIfneeded:0 must:NO];
 }
 
 - (void)zhc_setViewControllers:(NSArray<UIViewController *> *)viewControllers animated:(BOOL)animated {
@@ -114,12 +114,12 @@
     
     [self zhc_setViewControllers:viewControllers animated:animated];
     
-    [self refreshNavigationBarAppearenceIfneeded:0];
+    [self refreshNavigationBarAppearenceIfneeded:0 must:YES];
 }
 
 - (UIViewController *)zhc_popViewControllerAnimated:(BOOL)animated {
     
-    [self refreshNavigationBarAppearenceIfneeded:1];
+    [self refreshNavigationBarAppearenceIfneeded:1 must:NO];
     
     return [self zhc_popViewControllerAnimated:animated];
 }
@@ -261,7 +261,7 @@
 }
 
 // 在push之后或pop之前调用 0入栈 1出栈
-- (void)refreshNavigationBarAppearenceIfneeded:(int)type {
+- (void)refreshNavigationBarAppearenceIfneeded:(int)type must:(BOOL)mustRefresh {
     if (self.viewControllers.count == 0) {
         // 其实并不会等于零
         return;
@@ -288,12 +288,17 @@
         appearingBlock = PerformSEL(appearingVC, @selector(zhc_navigationControllerSingleAppearenceConfig));
         disappearingBlock = PerformSEL(disappearingVC, @selector(zhc_navigationControllerSingleAppearenceConfig));
         
-        // 当任意一个block存在说明前后两个VC样式不一样，需要刷新UI
-        BOOL haveDiffAppearence = appearingBlock || disappearingBlock;
-        // disappearingVC 没有遵守 ZHCNavigationControllerDelegate 协议，可能 disappearingVC 修改了导航栏样式，这种情况也需要刷新UI。（比如push进了一个三方SDK提供的VC，然后再pop回来）
-        BOOL fromUnZHCVC = ![disappearingVC conformsToProtocol:@protocol(ZHCNavigationControllerDelegate)];
-        
-        BOOL needRefreshNavigationBar = haveDiffAppearence || fromUnZHCVC;
+        BOOL needRefreshNavigationBar;
+        if (mustRefresh) {
+            needRefreshNavigationBar = YES;
+        } else {
+            // 当任意一个block存在说明前后两个VC样式不一样，需要刷新UI
+            BOOL haveDiffAppearence = appearingBlock || disappearingBlock;
+            // disappearingVC 没有遵守 ZHCNavigationControllerDelegate 协议，可能 disappearingVC 修改了导航栏样式，这种情况也需要刷新UI。（比如push进了一个三方SDK提供的VC，然后再pop回来）
+            BOOL fromUnZHCVC = ![disappearingVC conformsToProtocol:@protocol(ZHCNavigationControllerDelegate)];
+            
+            needRefreshNavigationBar = haveDiffAppearence || fromUnZHCVC;
+        }
 
         if (needRefreshNavigationBar) {
             if (appearingBlock) {

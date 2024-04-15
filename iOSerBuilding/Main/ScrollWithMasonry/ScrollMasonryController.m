@@ -16,12 +16,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+//    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 300, 500)];
+//    scrollView.backgroundColor = UIColor.cyanColor;
+//    scrollView.contentSize = CGSizeMake(300, 1050);
+//
+//    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 1000, 100, 100)];
+//    view.backgroundColor = UIColor.orangeColor;
+//
+//    [self.view addSubview:scrollView];
+//    [scrollView addSubview:view];
+    
 //    [self demo1];
     UIScrollView * scrollView = [UIScrollView new];
     scrollView.backgroundColor = [UIColor orangeColor];
     [self.view addSubview:scrollView];
     [scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(UIEdgeInsetsMake(kNaviHeight, 0, kTabHeight - 49, 0));
+        make.edges.mas_equalTo(0);
     }];
     
     UIView * baseView = [UIView new];

@@ -18,7 +18,38 @@
     // Do any additional setup after loading the view.
     
 //    [self semaphoreDemo];
-    [self serialDemo];
+//    [self serialDemo];
+    
+//    dispatch_queue_t queue = dispatch_queue_create("serialDemo", DISPATCH_QUEUE_SERIAL);
+//    dispatch_queue_t queue = dispatch_queue_create("serialDemo", DISPATCH_QUEUE_CONCURRENT);
+//    
+//    // 并发还是串行取决于 queue 的类型，并发会有最大线程数限制，不会一次性开辟100条线程（可以用来并发遍历（遍历内部配合锁使用））
+//    dispatch_apply(100, queue, ^(size_t iteration) {
+//        NSLog(@"%zu start", iteration);
+//        sleep(1 + arc4random() % 3);
+//        NSLog(@"%zu end", iteration);
+//    });
+//    NSLog(@"done");
+    
+    self.view.backgroundColor = UIColor.redColor;
+    UIButton *button = [UIButton new];
+    [button setTitle:@"button" forState:UIControlStateNormal];
+    button.frame = CGRectMake(100, 100, 100, 100);
+    [self.view addSubview:button];
+    
+    UIContentUnavailableConfiguration *config = [UIContentUnavailableConfiguration emptyConfiguration];
+    config.text = @"没有数据";
+    config.secondaryText = @"......";
+    UIButtonConfiguration *buttonConfig = [UIButtonConfiguration filledButtonConfiguration];
+    buttonConfig.title = @"加载数据";
+    config.button = buttonConfig;
+    UIContentUnavailableView *unavailableView = [[UIContentUnavailableView alloc] initWithConfiguration:config];
+    
+    self.contentUnavailableConfiguration = config;
+}
+
+- (void)viewIsAppearing:(BOOL)animated {
+    [super viewIsAppearing:animated];
 }
 
 - (void)groupDemo {

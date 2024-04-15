@@ -62,6 +62,17 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    NSLog(@"%@", deviceToken);
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+    
+}
+
+#pragma mark -
+
 - (void)configLog {
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
     DDFileLogger *fileLogger = [[DDFileLogger alloc] initWithLogFileManager:[LogFileManager new]];

@@ -18,66 +18,91 @@ typedef void(^RetainBlock)(void);
 
 @implementation MemoryLeakCheckController
 
-- (void)dealloc
-{
-    
+- (void)dealloc {
+    NSLog(@"%s", __func__);
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    NSLog(@"引用计数0 --- %ld", CFGetRetainCount((CFTypeRef)self));
     _block = ^{
-        [self printMessage];
+//        NSLog(@"引用计数1.5 --- %ld", CFGetRetainCount((CFTypeRef)self));
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            NSLog(@"引用计数1.6 --- %ld", CFGetRetainCount((CFTypeRef)self));
+//        });
+        ^{
+            ^{
+                ^{
+                    ^{
+                        NSLog(@"引用计数1.4 --- %ld", CFGetRetainCount((CFTypeRef)self));
+                        ^{
+                            NSLog(@"引用计数1.5 --- %ld", CFGetRetainCount((CFTypeRef)self));
+                            ^{
+                                ^{
+                                    ^{
+                                        ^{
+                                            ^{
+                                                ^{
+                                                    ^{
+                                                        NSLog(@"引用计数1.6 --- %ld", CFGetRetainCount((CFTypeRef)self));
+                                                    }();
+                                                    NSLog(@"引用计数1.7 --- %ld", CFGetRetainCount((CFTypeRef)self));
+                                                }();
+                                                NSLog(@"引用计数1.8 --- %ld", CFGetRetainCount((CFTypeRef)self));
+                                            }();
+                                            NSLog(@"引用计数1.9 --- %ld", CFGetRetainCount((CFTypeRef)self));
+                                        }();
+                                    }();
+                                }();
+                            }();
+                        }();
+                    }();
+                }();
+            }();
+        }();
+//        NSLog(@"引用计数2 --- %ld", CFGetRetainCount((CFTypeRef)self));
     };
+    NSLog(@"引用计数1 --- %ld", CFGetRetainCount((CFTypeRef)self));
     _block();
+    NSLog(@"引用计数3 --- %ld", CFGetRetainCount((CFTypeRef)self));
     
-//    UITextField * field0 = [UITextField new];
-//    field0.delegate = field0;
-//    field0.backgroundColor = UIColor.orangeColor;
-//    [self.view addSubview:field0];
-//    [field0 mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.center.mas_equalTo(0);
-//        make.size.mas_equalTo(CGSizeMake(300, 44));
-//    }];
+//    [self seeRetainCountFromARC];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
     
-//    ZHCTextField * field = [ZHCTextField new];
-//    field.backgroundColor = UIColor.purpleColor;
-//
-//    field.fieldType = ZHCFieldTypeNumber;
-//    field.leftTextColor = UIColor.lightGrayColor;
-//    field.leftTextFontSize = 12.f;
-//    field.leftText = @"¥";
-//    field.maxLength = 2;
-//    field.layer.cornerRadius = 4;
-//    field.clipsToBounds = YES;
-//    field.showBottomLine = NO;
-//
-//    UILabel * rightView = [UILabel labelWithFontSize:12 textColor:UIColor.whiteColor text:@"万元"];
-//    rightView.frame = CGRectMake(0, 0, 42, 25);
-//    rightView.backgroundColor = ThemeColor;
-//    rightView.textAlignment = NSTextAlignmentCenter;
-//    field.rightView = rightView;
-//    field.rightViewMode = UITextFieldViewModeAlways;
-//    [self.view addSubview:field];
-//    [field mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.centerX.mas_equalTo(0);
-//        make.centerY.mas_equalTo(0);
-//        make.size.mas_equalTo(CGSizeMake(300, 44));
-//    }];
+    NSLog(@"引用计数5 --- %ld", CFGetRetainCount((CFTypeRef)self));
 }
 
 - (void)printMessage {
     NSLog(@"%s", __func__);
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)seeRetainCountFromARC {
+    
+    NSObject *objOC = [[NSObject alloc] init];
+    CFTypeRef objCF = (__bridge CFTypeRef)objOC;
+    
+    // 最初的引用计数
+//     NSInteger retainCount = CFGetRetainCount(objCF);
+    // 这里可以不用以 bridge前缀转换，但是如果拆开就得加上 bridge
+    NSInteger retainCount = CFGetRetainCount((CFTypeRef)objOC);
+    NSLog(@"最初 --引用计数 --- %ld", retainCount);
+    
+    // 引用计数加1
+    CFRetain(objCF);
+    NSLog(@"retain ---引用计数 --- %ld", CFGetRetainCount(objCF));
+    // 引用计数减1
+    CFRelease(objCF);
+    NSLog(@"release -引用计数 --- %ld", CFGetRetainCount(objCF));
+    
+    // 使用_bridge_retained为前缀转换，引用计数会加1 obiCF=( bridge retained CFTypeRef)obiOC;
+    NSLog(@"bridge_retained-引用计数 --- %ld", CFGetRetainCount(objCF));
+    
+    // 当把objoc设为nil，在ARC下引用计数为0，系统会自动销毁objoc对象
+    objOC = nil;
 }
-*/
 
 @end

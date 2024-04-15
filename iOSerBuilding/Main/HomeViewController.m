@@ -25,6 +25,8 @@
 #import "CollectionViewListController.h"
 #import "CustomKVOViewController.h"
 #import "MessageViewController.h"
+#import "WatermarkViewController.h"
+#import <UserNotifications/UserNotifications.h>
 
 @interface HomeViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -65,6 +67,38 @@
     [super viewWillAppear:animated];
     
     self.navigationController.navigationBar.translucent = NO;
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+        [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert | UNAuthorizationOptionBadge | UNAuthorizationOptionSound)
+                              completionHandler:^(BOOL granted, NSError * _Nullable error) {
+            if (granted) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [[UIApplication sharedApplication] registerForRemoteNotifications];
+                });
+            }
+//            completionHandler(granted, error);
+        }];
+        NSLog(@"");
+    });
+    
+    NSLog(@"");
+    
+    UIView *viewA = [UIView new];
+    UIView *viewB = [UIView new];
+    UIView *viewC = [UIView new];
+    viewC.tag = 199999;
+    
+    [viewB addSubview:viewC];
+    [viewA addSubview:viewB];
+    [self.view addSubview:viewA];
+    
+    UIView *tagView = [self.view viewWithTag:199999];
+    NSLog(@"");
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -190,6 +224,10 @@
             @{
                 @"title" : @"Message",
                 @"controller" : [MessageViewController class],
+            },
+            @{
+                @"title" : @"水印",
+                @"controller" : [WatermarkViewController class],
             },
         ];
     }

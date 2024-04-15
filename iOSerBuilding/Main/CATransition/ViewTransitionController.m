@@ -48,7 +48,7 @@ static int _imageIndex = 0;
         if (_imageIndex > 2) {
             _imageIndex = 0;
         }
-        NSString *imageName = [NSString stringWithFormat:@"%d.JPG",_imageIndex];
+        NSString *imageName = [NSString stringWithFormat:@"%d.JPG", _imageIndex];
         self.imageV.image = [UIImage imageNamed:imageName];
         
         dir = @"fromRight";
@@ -58,7 +58,7 @@ static int _imageIndex = 0;
         if (_imageIndex < 0) {
             _imageIndex = 2;
         }
-        NSString *imageName = [NSString stringWithFormat:@"%d.JPG",_imageIndex];
+        NSString *imageName = [NSString stringWithFormat:@"%d.JPG", _imageIndex];
         self.imageV.image = [UIImage imageNamed:imageName];
         
         dir = @"fromLeft";

@@ -20,7 +20,10 @@ targetsArray.each do |t|
         pod 'TZImagePickerController'
         pod 'CocoaLumberjack'
         pod 'SDCycleScrollView'
+        pod 'YYKit'
+        pod 'Aspects'
         
+        # Swift
         pod 'Kingfisher'
         pod 'RxSwift'
         pod 'RxCocoa'
